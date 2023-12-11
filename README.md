@@ -1,9 +1,9 @@
-# [RebelGroup](https://fastfood-topchik.netlify.app)
+# [RebelGroup](https://rebelgroup.netlify.app)
 
 ---
 
-[Ссылка на макет](https://www.figma.com/file/llCuJEWmdFrLUlUsIyyOPn/топчик?type=design&node-id=895-3623&mode=design&t=FZ1NYUovr0RlmQW8-0) <br>
-[Деплой](https://fastfood-topchik.netlify.app)
+[Ссылка на макет](https://www.figma.com/file/xgnUJSPyYTzn2YoTmEV2oZ/Rebel-group?type=design&node-id=189-2&mode=design&t=p5D8oRdzdOBnl9av-0) <br>
+[Деплой](https://rebelgroup.netlify.app)
 
 ---
 
