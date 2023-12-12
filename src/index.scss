@@ -4,6 +4,10 @@
 @import "./scss/style";
 
 @import "./scss/components/modal";
+@import "./scss/components/footer";
+
+@import "./scss/pages/main-page/main-banner";
+@import "./scss/pages/main-page/main-brand";
 
 .mobile {
 	display: none;
@@ -19,7 +23,6 @@ body {
 @media (max-width: 48em) {
 	.mobile {
 		display: flex;
-		flex-direction: column;
 	}
 	.desktop {
 		display: none;

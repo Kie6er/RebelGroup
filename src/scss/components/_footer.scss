@@ -1,0 +1,118 @@
+.footer {
+	// .footer__inner
+	&__inner {
+	}
+	// .footer__top
+	&__top {
+		&-wrapper {
+			padding-bottom: 3rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	// .footer__logo
+	&__logo {
+		width: 11rem;
+	}
+	// .footer__nav
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 12rem;
+		// .footer__nav-item
+		&-item {
+			text-transform: uppercase;
+			transition: color 0.2s linear;
+			&:hover {
+				transition: color 0.2s linear;
+				color: $orange;
+			}
+		}
+	}
+	// .footer__main
+	&__main {
+		position: relative;
+		padding: 3rem 0;
+		border: 0.1rem solid $darkGray;
+		border-left: none;
+		border-right: none;
+		// .footer__main-wrapper
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+		// .footer__main-item
+		&-item {
+			display: flex;
+			flex-direction: column;
+			width: 22.4rem;
+			gap: 1.6rem;
+		}
+		// .footer__main-title
+		&-title {
+			color: $lightGray;
+			a {
+				text-transform: uppercase;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		// .footer__main-list
+		&-list {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+
+			li a {
+				display: block;
+				color: $darkGray;
+				font-size: 1.6rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 0.064rem;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		// .footer__main-info
+		&-info {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+			margin-bottom: 0.6rem;
+			p {
+				color: $darkGray;
+				font-size: 1.6rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 0.064rem;
+			}
+		}
+		// .footer__main-social
+		&-social {
+			position: absolute;
+			bottom: 1rem;
+			gap: 2rem;
+		}
+	}
+	// .footer__bottom
+	&__bottom {
+		// .footer__bottom-wrapper
+		&-wrapper {
+			padding: 3rem 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		// .footer__bottom-copyrights
+		&-copyrights {
+			color: #6e7477;
+		}
+	}
+}
