@@ -5,3 +5,5 @@ import "./index.scss";
 import "./js/components/modal";
 import "./js/components/form";
 import "./js/components/header";
+
+import "./js/pages/main-page";
