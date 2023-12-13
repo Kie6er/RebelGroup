@@ -1,6 +1,9 @@
 .footer {
 	// .footer__inner
 	&__inner {
+		&.mobile {
+			flex-direction: column;
+		}
 	}
 	// .footer__top
 	&__top {
@@ -113,6 +116,135 @@
 		// .footer__bottom-copyrights
 		&-copyrights {
 			color: #6e7477;
+		}
+	}
+}
+@media (max-width: 48em) {
+	.footer {
+		// .footer__top
+		&__top {
+			&-wrapper {
+				padding-bottom: 4rem;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 6.4rem;
+				justify-content: space-between;
+				border-bottom: 0.2rem solid $darkGray;
+			}
+		}
+		// .footer__logo
+		&__logo {
+			width: 12rem;
+		}
+		// .footer__nav
+		&__nav {
+			display: flex;
+			align-items: center;
+			gap: 12rem;
+			// .footer__nav-item
+			&-item {
+				text-transform: uppercase;
+				transition: color 0.2s linear;
+				&:hover {
+					transition: color 0.2s linear;
+					color: $orange;
+				}
+			}
+		}
+		// .footer__main
+		&__main {
+			padding: 4rem 0 5.6rem;
+			border: none;
+			// .footer__main-wrapper
+			&-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;
+				gap: 3.2rem 0;
+			}
+			// .footer__main-item
+			&-item {
+				display: flex;
+				flex-direction: column;
+				width: 50%;
+				gap: 1.6rem;
+				margin-bottom: 1.2rem;
+			}
+			// .footer__main-title
+			&-title {
+				display: flex;
+				align-items: center;
+
+				color: $white;
+				text-transform: uppercase;
+				line-height: 120%; /* 18px */
+				letter-spacing: 0.12rem;
+
+				span svg {
+					width: 6rem;
+					height: 6rem;
+				}
+			}
+			// .footer__main-list
+			&-list {
+				display: none;
+				flex-direction: column;
+				gap: 1.2rem;
+				height: 0;
+				overflow: hidden;
+
+				li a {
+					display: block;
+					color: $darkGray;
+					font-size: 1.6rem;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					letter-spacing: 0.064rem;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			// .footer__main-info
+			&-info {
+				width: 100%;
+				gap: 0.8rem;
+				margin-bottom: 0;
+				p {
+					font-size: 3rem;
+					letter-spacing: 0.12rem;
+				}
+			}
+			// .footer__main-social
+			&-social {
+				position: static;
+				gap: 0.5rem;
+			}
+		}
+		// .footer__bottom
+		&__bottom {
+			// .footer__bottom-wrapper
+			&-wrapper {
+				border-top: 0.2rem solid $darkGray;
+				padding: 5.6rem 0 9rem;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				gap: 5.6rem;
+			}
+			// .footer__bottom-copyrights
+			&-copyrights {
+				font-size: 3rem;
+				line-height: normal;
+				letter-spacing: 0.06rem;
+			}
+		}
+		&__btn {
+			margin: 6.4rem 0;
 		}
 	}
 }
