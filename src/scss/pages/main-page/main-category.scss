@@ -1,0 +1,103 @@
+.main-category {
+	padding: 11rem 0;
+	background: url(./assets/images/main-page/category/category-bg.png) center / cover no-repeat;
+	// .main-category__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
+	}
+	// .main-category__header
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		max-width: 176rem;
+		width: 100%;
+		margin: 0 auto;
+	}
+	// .main-category__title
+	&__title {
+		text-transform: uppercase;
+	}
+	// .main-category__btn
+	&__btn {
+	}
+	// .main-category__wrapper
+	&__wrapper {
+		overflow: hidden;
+		position: relative;
+		max-width: 192rem;
+		width: 100%;
+		margin: 0 auto;
+	}
+	&__icon {
+		position: absolute;
+		width: 37.7rem;
+		height: 23.9rem;
+		z-index: -1;
+		opacity: 0.04;
+	}
+	// .main-category__slider
+	&__slider {
+		width: 86rem;
+		padding-left: 8rem;
+		&-wrapper.swiper-wrapper {
+		}
+		&-slide.swiper-slide {
+			width: 86rem;
+			height: 80rem;
+		}
+		&-fraction {
+		}
+		&-footer {
+		}
+	}
+}
+.category-slide {
+	// .category-slide__wrapper
+	&__wrapper {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 3.2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		background:
+			url(../assets/images/main-page/category/grain-mask.png) center/ cover no-repeat,
+			radial-gradient(156.56% 156.56% at 50% 50%, #5f6466 0.59%, rgba(55, 56, 60, 0) 100%, rgba(55, 56, 60, 0) 100%);
+	}
+	// .category-slide__text
+	&__text {
+		letter-spacing: 0.16rem;
+		text-transform: uppercase;
+	}
+	// .category-slide__img
+	&__img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	// .category-slide__count
+	&__count {
+		position: absolute;
+		left: -6rem;
+		top: 50%;
+		transform: translateY(-60%);
+		color: rgba(0, 0, 0, 0.2);
+		font-family: Oswald;
+		font-size: 28rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: 2.24rem;
+		text-transform: uppercase;
+	}
+}
+.slider-fraction {
+}
