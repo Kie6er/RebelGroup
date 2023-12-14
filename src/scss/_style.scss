@@ -159,6 +159,15 @@
 		height: 6rem;
 	}
 }
+.slider-navigation {
+	display: flex;
+	align-items: center;
+	gap: 3.2rem;
+	&__btn {
+		width: 4rem;
+		height: 4rem;
+	}
+}
 
 @media (max-width: 48em) {
 	.h1 {
@@ -218,16 +227,17 @@
 		}
 	}
 	.request-dev {
+		gap: 0.8rem;
 		// .request-dev__text
 		&__text {
 			p {
-				font-size: 2.4rem;
+				font-size: 2rem;
 			}
 
 			strong {
-				font-size: 2.8rem;
+				font-size: 2.4rem;
 				span {
-					font-size: 2.7rem;
+					font-size: 2.4rem;
 				}
 			}
 		}
@@ -243,6 +253,13 @@
 		&-item {
 			width: 10rem;
 			height: 10rem;
+		}
+	}
+	.slider-navigation {
+		gap: 1.6rem;
+		&__btn {
+			width: 8rem;
+			height: 8rem;
 		}
 	}
 }
