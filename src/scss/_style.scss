@@ -168,6 +168,50 @@
 		height: 4rem;
 	}
 }
+.btn-tertiary {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	color: $orange;
+
+	strong {
+		display: block;
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 2.4rem; /* 120% */
+		padding: 0.8rem;
+		padding-left: 0;
+	}
+
+	span {
+		display: block;
+		width: 4rem;
+		height: 4rem;
+	}
+}
+.slider-fraction {
+	display: flex;
+	align-items: flex-end;
+	flex: 0;
+
+	font-family: "Roboto";
+	font-size: 3rem;
+	font-style: normal;
+	font-weight: 200;
+	line-height: normal;
+	text-transform: uppercase;
+
+	> .swiper-pagination-total {
+		color: $lightGray;
+		font-family: "Roboto";
+		font-size: 2rem;
+		font-style: normal;
+		font-weight: 200;
+		line-height: normal;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+}
 
 @media (max-width: 48em) {
 	.h1 {
@@ -189,11 +233,9 @@
 		line-height: 130%; /* 120% */
 	}
 	.text-16 {
-		font-size: 1.6rem;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 2rem; /* 125% */
-		letter-spacing: 0.128rem;
+		font-size: 3rem;
+		letter-spacing: normal;
+		letter-spacing: 0.12rem;
 	}
 	.btn-primary {
 		gap: 0.8rem;
@@ -260,6 +302,27 @@
 		&__btn {
 			width: 8rem;
 			height: 8rem;
+		}
+	}
+	.btn-tertiary {
+		gap: 1rem;
+		strong {
+			font-size: 3rem;
+			line-height: 130%; /* 120% */
+			padding: 2rem 0;
+		}
+
+		span {
+			width: 8rem;
+			height: 8rem;
+		}
+	}
+	.slider-fraction {
+		font-size: 6rem;
+
+		> .swiper-pagination-total {
+			font-size: 4rem;
+			margin-bottom: 0.6rem;
 		}
 	}
 }
