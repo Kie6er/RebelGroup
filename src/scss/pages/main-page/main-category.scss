@@ -41,13 +41,17 @@
 	}
 	// .main-category__slider
 	&__slider {
-		width: 86rem;
-		padding-left: 8rem;
+		padding: 0 8rem;
+		overflow: hidden;
 		&-wrapper.swiper-wrapper {
 		}
 		&-slide.swiper-slide {
-			width: 86rem;
-			height: 80rem;
+			&.swiper-slide-active {
+			}
+			&.swiper-slide-prev {
+			}
+			&.swiper-slide-next {
+			}
 		}
 		&-fraction {
 		}
@@ -56,6 +60,7 @@
 	}
 }
 .category-slide {
+	height: 100%;
 	// .category-slide__wrapper
 	&__wrapper {
 		overflow: hidden;
@@ -69,7 +74,12 @@
 
 		background:
 			url(../assets/images/main-page/category/grain-mask.png) center/ cover no-repeat,
-			radial-gradient(156.56% 156.56% at 50% 50%, #5f6466 0.59%, rgba(55, 56, 60, 0) 100%, rgba(55, 56, 60, 0) 100%);
+			radial-gradient(
+				156.56% 156.56% at 50% 50%,
+				#5f6466 0.59%,
+				rgba(55, 56, 60, 0) 100%,
+				rgba(55, 56, 60, 0) 100%
+			);
 	}
 	// .category-slide__text
 	&__text {
