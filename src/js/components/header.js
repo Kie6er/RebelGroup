@@ -19,6 +19,13 @@ function openBurgerMenu() {
 		}
 	});
 
+	$(document).on('keyup', evt => {
+		if (evt.keyCode === 27) {
+			$('.header').removeClass('active');
+			$('body').removeClass('lock');
+		}
+	});
+
 	$('.header__overlay').on('click', () => {
 		$('.header').removeClass('active');
 		$('body').removeClass('lock');
