@@ -1,0 +1,368 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+
+	&.active {
+		.header__inner {
+			padding: 3.2rem 0 4.8rem;
+			transition: max-height 0.5s linear;
+			max-height: 76.3rem;
+		}
+		.burger-btn span {
+			&:nth-child(1) {
+				transition: transform 0.3s linear;
+				transform: rotate(45deg) translateY(-1.1rem);
+			}
+
+			&:nth-child(2) {
+				transition: transform 0.3s linear;
+				transform: rotate(-45deg);
+			}
+
+			&:nth-child(3) {
+				transition: transform 0.3s linear;
+				transform: rotate(45deg) translateY(1.1rem);
+			}
+		}
+		.header__menu {
+			opacity: 1;
+			transition: opacity 0.3s linear;
+		}
+		.header__overlay,
+		.header__background {
+			opacity: 1;
+			transition: opacity 0.5s linear;
+		}
+	}
+	// .header__inner
+	&__inner {
+		transition: max-height 0.2s linear;
+		max-height: 11.2rem;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		gap: 8rem;
+		padding: 3.2rem 0;
+		position: relative;
+		z-index: 1001;
+	}
+	// .header__burger-btn
+	&__burger-btn {
+		width: 5.6rem;
+		gap: 1rem;
+	}
+	&__background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 0.5s linear;
+		background: url(../../assets/images/header-bg.jpg) center / cover no-repeat, #000;
+	}
+	&__overlay {
+		transition: opacity 0.3s linear;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 999;
+
+		width: 100%;
+		height: 100vh;
+		background: lightgray 50% / cover no-repeat, #000;
+		backdrop-filter: blur(50px);
+	}
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		gap: 8rem;
+		opacity: 0;
+		transition: opacity 0.1s linear;
+		&-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			li {
+				&.active {
+					color: $orange;
+				}
+			}
+
+			li button {
+				transition: color 0.2s linear;
+				font-family: 'Oswald';
+				font-size: 3.2rem;
+				font-style: normal;
+				font-weight: 300;
+				line-height: normal;
+				letter-spacing: 0.384rem;
+				text-transform: uppercase;
+
+				&:hover {
+					transition: color 0.2s linear;
+					color: $orange;
+				}
+			}
+		}
+		&-bottom {
+			max-height: 23.2rem;
+			overflow: auto;
+			margin-bottom: 2.4rem;
+			&::-webkit-scrollbar {
+				width: 0.5rem; /* ширина scrollbar */
+			}
+			&::-webkit-scrollbar-thumb {
+				background-color: $darkGray; /* цвет плашки */
+				border-radius: 2rem; /* закругления плашки */
+			}
+			&--container {
+				display: none;
+				&.active {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 5rem 15rem;
+				}
+			}
+			&--nav {
+				display: flex;
+				flex-direction: column;
+				gap: 2.4rem;
+
+				li {
+					display: flex;
+					align-items: center;
+					gap: 2.4rem;
+					height: 4rem;
+					cursor: pointer;
+					span {
+						display: none;
+						width: 4rem;
+					}
+					&:hover {
+						span {
+							display: block;
+						}
+						a {
+							transition: color 0.2s linear;
+							color: $orange;
+						}
+					}
+					a {
+						transition: color 0.2s linear;
+						color: $white;
+						font-family: Roboto;
+						font-size: 2rem;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 2.4rem; /* 120% */
+						letter-spacing: 0.16rem;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+		&-social {
+			display: flex;
+			justify-content: center;
+			.social {
+				gap: 2rem;
+			}
+		}
+	}
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .header__logo
+	&__logo {
+		width: 10rem;
+		height: 8rem;
+		margin-left: 12rem;
+	}
+	// .header__phone
+	&__phone {
+		a.desktop {
+			display: block;
+			color: $white;
+			text-align: right;
+			font-family: 'Aneliza';
+			font-size: 2rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+		}
+	}
+}
+.burger-btn {
+	display: flex;
+	flex-direction: column;
+
+	span {
+		transition: transform 0.3s linear;
+		display: block;
+		height: 0.2rem;
+		background-color: $white;
+		&:nth-child(1) {
+			width: 50%;
+			transform-origin: left center;
+		}
+
+		&:nth-child(2) {
+			width: 100%;
+			transform-origin: center;
+		}
+
+		&:nth-child(3) {
+			width: 50%;
+			align-self: flex-end;
+			transform-origin: right center;
+		}
+	}
+}
+@media (max-width: 48em) {
+	.header {
+		&.active {
+			.header__inner {
+				overflow: auto;
+				padding: 3.2rem 0;
+				max-height: 100vh;
+			}
+			.header__background {
+				opacity: 0.5;
+			}
+		}
+		// .header__inner
+		&__inner {
+			max-height: 12.8rem;
+			gap: 11.2rem;
+		}
+		// .header__burger-btn
+		&__burger-btn {
+			width: 6rem;
+			height: auto;
+			gap: 1.2rem;
+		}
+		&__background {
+			height: 100vh;
+		}
+		&__menu {
+			gap: 12.8rem;
+			&-top {
+				display: none;
+				&.active {
+					display: flex;
+				}
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 4rem;
+
+				li {
+					&.active {
+						color: $white;
+					}
+				}
+
+				li button {
+					font-size: 4.8rem;
+					font-weight: 400;
+					letter-spacing: auto;
+				}
+			}
+			&-bottom {
+				display: none;
+				max-height: 100%;
+				overflow: visible;
+				margin-bottom: 0;
+				&.active {
+					display: block;
+				}
+				&--container {
+					display: none;
+					&.active {
+						flex-direction: column;
+						gap: 4rem;
+					}
+				}
+				&--nav {
+					gap: 4rem;
+					li {
+						gap: 3.2rem;
+						height: 6rem;
+						span {
+							display: none;
+							width: 6rem;
+						}
+
+						a {
+							font-family: 'Oswald';
+							font-size: 4rem;
+							line-height: normal; /* 120% */
+							letter-spacing: auto;
+						}
+					}
+				}
+			}
+			&-social {
+				justify-content: flex-start;
+				.social {
+					gap: 4rem;
+				}
+			}
+			&-btn {
+				.btn-primary {
+					padding: 2rem 6.4rem;
+					strong {
+						padding: 1.6rem;
+						font-size: 4rem;
+					}
+				}
+			}
+		}
+		&__top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		// .header__logo
+		&__logo {
+			width: 12rem;
+			height: 9.6rem;
+			margin-left: 0;
+		}
+		&__back-btn.mobile {
+			display: none;
+			&.active {
+				display: block;
+				width: 6rem;
+				height: 6rem;
+			}
+		}
+		// .header__phone
+		&__phone {
+			a.desktop {
+				display: none;
+			}
+			a.mobile {
+				display: block;
+				width: 5rem;
+			}
+		}
+	}
+	.burger-btn {
+		display: none;
+		&.active {
+			display: flex;
+		}
+		span {
+			height: 0.3rem;
+		}
+	}
+}

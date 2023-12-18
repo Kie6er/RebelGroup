@@ -7,7 +7,8 @@
 		position: relative;
 		display: flex;
 		height: 108rem;
-		background: url(../assets/images/main-page/banner-bg.png) center / cover no-repeat;
+		background: url(../assets/images/main-page/banner-bg.png) center / cover
+			no-repeat;
 	}
 	&__bg {
 		display: flex;
@@ -65,9 +66,7 @@
 	overflow: hidden;
 	&.active {
 		.banner-item__img {
-			transition:
-				transform 0.8s ease-in-out,
-				filter 0.8s ease-in-out;
+			transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
 			filter: blur(0);
 			transform: scale(1);
 		}
@@ -105,9 +104,7 @@
 	}
 	// .banner-item__img
 	&__img {
-		transition:
-			transform 0.8s ease-in-out,
-			filter 0.8s ease-in-out;
+		transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
 		width: 70.6rem;
 		height: 93.5rem;
 		transform: scale(0.8);
@@ -139,7 +136,7 @@
 	// .banner-item__title
 	&__title {
 		color: $white;
-		font-family: "Oswald";
+		font-family: 'Oswald';
 		font-size: 3.6rem;
 		font-style: normal;
 		font-weight: 400;
@@ -166,7 +163,8 @@
 			display: flex;
 			flex-direction: column;
 			height: 138.6rem;
-			background: url(../assets/images/main-page/banner-bg.png) top / 100% 58% no-repeat;
+			background: url(../assets/images/main-page/banner-bg.png) top / 100% 58%
+				no-repeat;
 		}
 		&__bg {
 			order: 2;
@@ -202,9 +200,7 @@
 	.banner-item {
 		&.active {
 			.banner-item__img {
-				transition:
-					transform 0.8s ease-in-out,
-					filter 0.8s ease-in-out;
+				transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
 				filter: none;
 				transform: scale(1);
 			}

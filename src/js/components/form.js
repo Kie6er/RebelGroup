@@ -6,11 +6,11 @@ $(document).ready(function () {
 	const phone = document.querySelectorAll('[type="tel"]');
 	const maskOptions = {
 		mask: '+{7} (000) 000-00-00',
-	}
+	};
 
 	phone.forEach(function (element) {
 		const mask = IMask(element, maskOptions);
-	})
+	});
 
 	$('.form').on('submit', (evt) => {
 		evt.preventDefault();
@@ -26,9 +26,9 @@ $(document).ready(function () {
 			// }
 			currentForm.find('input').val('');
 			currentForm.find('textarea').val('');
-		};
-	})
-})
+		}
+	});
+});
 
 function switchModalContent(modal) {
 	$(modal).find('.modal-content--first').removeClass('active');
@@ -44,7 +44,10 @@ function validationForm(form) {
 		if ($(element).data('minLength')) {
 			if ($(element).val().length < 18) {
 				removeError($(element));
-				createError($(element), `Минимальное кол-во символов: ${$(element).data('minLength')}`)
+				createError(
+					$(element),
+					`Минимальное кол-во символов: ${$(element).data('minLength')}`
+				);
 				result = false;
 			}
 		}
@@ -52,7 +55,7 @@ function validationForm(form) {
 		if ($(element).data('required')) {
 			if ($(element).val().length == 0) {
 				removeError($(element));
-				createError($(element), 'Заполните поле')
+				createError($(element), 'Заполните поле');
 				result = false;
 			}
 		}
@@ -64,7 +67,7 @@ function validationForm(form) {
 		if ($(element).data('required')) {
 			if ($(element).val().length == 0) {
 				removeError($(element));
-				createError($(element), 'Заполните поле')
+				createError($(element), 'Заполните поле');
 				result = false;
 			}
 		}
@@ -82,7 +85,5 @@ function validationForm(form) {
 		const errorText = $(`<p class="error-text">${text}</p>`);
 		input.parent().addClass('error').append(errorText);
 	}
-
-	return result
+	return result;
 }
-

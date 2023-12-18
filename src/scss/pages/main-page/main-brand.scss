@@ -41,7 +41,7 @@
 		background-color: $orange;
 
 		&::after {
-			content: "";
+			content: '';
 			width: 2.1591rem;
 			height: 17.6849rem;
 			transform: rotate(-47.251deg);
@@ -70,7 +70,7 @@
 
 		p {
 			color: $darkGray;
-			font-family: "Oswald";
+			font-family: 'Oswald';
 			font-size: 2rem;
 			font-style: normal;
 			font-weight: 400;
@@ -150,7 +150,7 @@
 			width: 19.2rem;
 			color: $orange;
 			text-align: center;
-			font-family: "Oswald";
+			font-family: 'Oswald';
 			font-size: 5.3rem;
 			font-style: normal;
 			font-weight: 400;
@@ -159,7 +159,7 @@
 		}
 		p {
 			color: $white;
-			font-family: "Oswald";
+			font-family: 'Oswald';
 			font-size: 27.1rem;
 			font-style: normal;
 			font-weight: 700;
