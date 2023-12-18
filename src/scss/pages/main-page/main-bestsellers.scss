@@ -2,14 +2,15 @@
 	position: relative;
 	overflow: hidden;
 	&::after {
-		content: "";
+		content: '';
 		width: 100%;
 		height: 81.7rem;
 		position: absolute;
 		left: 0;
 		bottom: 0;
 		z-index: -1;
-		background: url(./assets/images/main-page/best-bg.png) center / cover no-repeat;
+		background: url(./assets/images/main-page/best-bg.png) center / cover
+			no-repeat;
 	}
 	// .main-bestsellers__inner
 	&__inner {
@@ -53,7 +54,7 @@
 				width: max-content;
 				text-wrap: nowrap;
 				color: #232323;
-				font-family: "Oswald";
+				font-family: 'Oswald';
 				font-size: 22.9rem;
 				font-style: normal;
 				font-weight: 400;
@@ -119,7 +120,7 @@
 	}
 	// .bestsellers-slide__volume
 	&__volume {
-		font-family: "Roboto";
+		font-family: 'Roboto';
 		font-size: 1.6rem;
 		font-style: normal;
 		font-weight: 400;

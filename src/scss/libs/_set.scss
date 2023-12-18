@@ -110,13 +110,13 @@ section {
 	margin-bottom: $sectionMargin;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
 
-input[type="number"] {
+input[type='number'] {
 	-moz-appearance: textfield;
 }
 
@@ -130,7 +130,9 @@ input[type="number"] {
 	html {
 		font-size: 5px;
 		font-size: 1.5625vw;
-		font-size: calc((100 / $mobileLayout) * 5vw); // где 375 это ширина моб версии макета
+		font-size: calc(
+			(100 / $mobileLayout) * 5vw
+		); // где 375 это ширина моб версии макета
 		-webkit-text-size-adjust: none;
 	}
 

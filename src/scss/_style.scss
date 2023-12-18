@@ -1,19 +1,19 @@
 .h1 {
-	font-family: "Oswald";
+	font-family: 'Oswald';
 	font-size: 7rem;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 120%;
 }
 .h2 {
-	font-family: "Oswald";
+	font-family: 'Oswald';
 	font-size: 5rem;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
 }
 .h3 {
-	font-family: "Oswald";
+	font-family: 'Oswald';
 	font-size: 3.2rem;
 	font-style: normal;
 	font-weight: 400;
@@ -42,9 +42,7 @@
 	border: 0.1rem solid $white;
 	color: $orange;
 
-	transition:
-		background 0.2s linear,
-		color 0.2s linear;
+	transition: background 0.2s linear, color 0.2s linear;
 	strong {
 		display: block;
 		font-size: 2rem;
@@ -64,9 +62,7 @@
 	}
 
 	&:hover {
-		transition:
-			background 0.2s linear,
-			color 0.2s linear;
+		transition: background 0.2s linear, color 0.2s linear;
 		background-color: $white;
 		color: $black;
 
@@ -119,7 +115,7 @@
 		align-items: flex-end;
 		p {
 			color: $darkGray;
-			font-family: "Avanti";
+			font-family: 'Avanti';
 			font-size: 1.4rem;
 			font-style: normal;
 			font-weight: 400;
@@ -128,7 +124,7 @@
 
 		strong {
 			color: $white;
-			font-family: "Circe";
+			font-family: 'Circe';
 			font-size: 1.8rem;
 			font-style: normal;
 			font-weight: 700;
@@ -194,7 +190,7 @@
 	align-items: flex-end;
 	flex: 0;
 
-	font-family: "Roboto";
+	font-family: 'Roboto';
 	font-size: 3rem;
 	font-style: normal;
 	font-weight: 200;
@@ -203,7 +199,7 @@
 
 	> .swiper-pagination-total {
 		color: $lightGray;
-		font-family: "Roboto";
+		font-family: 'Roboto';
 		font-size: 2rem;
 		font-style: normal;
 		font-weight: 200;
@@ -218,7 +214,7 @@
 		font-size: 6.4rem;
 	}
 	.h2 {
-		font-family: "Oswald";
+		font-family: 'Oswald';
 		font-size: 5rem;
 		font-style: normal;
 		font-weight: 400;
