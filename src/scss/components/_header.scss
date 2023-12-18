@@ -34,6 +34,7 @@
 		.header__overlay,
 		.header__background {
 			opacity: 1;
+			visibility: visible;
 			transition: opacity 0.5s linear;
 		}
 	}
@@ -62,12 +63,14 @@
 		height: 100%;
 		width: 100%;
 		opacity: 0;
-		transition: opacity 0.5s linear;
+		visibility: hidden;
+		transition: opacity 0.5s linear, visibility 0.1s linear 0.5s;
 		background: url(../../assets/images/header-bg.jpg) center / cover no-repeat, #000;
 	}
 	&__overlay {
-		transition: opacity 0.3s linear;
+		transition: opacity 0.3s linear, visibility 0.1s linear 0.3s;
 		opacity: 0;
+		visibility: hidden;
 		position: absolute;
 		top: 0;
 		left: 0;

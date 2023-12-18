@@ -1,17 +1,17 @@
-@import "./scss/fonts";
-@import "./scss/libs/settings";
-@import "./scss/libs/set";
-@import "./scss/style";
+@import './scss/fonts';
+@import './scss/libs/settings';
+@import './scss/libs/set';
+@import './scss/style';
 
-@import "./scss/components/modal";
-@import "./scss/components/footer";
-@import "./scss/components/header";
+@import './scss/components/modal';
+@import './scss/components/footer';
+@import './scss/components/header';
 
-@import "./scss/pages/main-page/main-banner";
-@import "./scss/pages/main-page/main-brand";
-@import "./scss/pages/main-page/main-category";
-@import "./scss/pages/main-page/main-bestsellers";
-@import "./scss/pages/main-page/main-mission";
+@import './scss/pages/main-page/main-banner';
+@import './scss/pages/main-page/main-brand';
+@import './scss/pages/main-page/main-category';
+@import './scss/pages/main-page/main-bestsellers';
+@import './scss/pages/main-page/main-mission';
 
 .mobile {
 	display: none;
