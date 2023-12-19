@@ -1,0 +1,324 @@
+html {
+	--scaleLine: 0;
+	--transformImage: 450%;
+}
+.main-inspired {
+	overflow: hidden;
+	// .main-inspired__inner
+	&__inner {
+		position: relative;
+		height: 98.6rem;
+		width: 100%;
+	}
+	// .main-inspired__text
+	&__text {
+		position: absolute;
+		top: 21.8rem;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		text-transform: uppercase;
+		p span {
+			color: $orange;
+		}
+	}
+	// .main-inspired__canvas
+	&__canvas {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&__scissors {
+		position: absolute;
+		width: 14.3rem;
+		height: 9.05rem;
+		transform: rotate(20deg);
+		opacity: 0.05;
+		top: 26.5rem;
+		right: 10rem;
+		z-index: -3;
+	}
+	&__blade {
+		position: absolute;
+		width: 14.6rem;
+		height: 14.6rem;
+		left: 59.3rem;
+		bottom: 25.8rem;
+		z-index: -3;
+		opacity: 0.5;
+	}
+	// .main-inspired__lines
+	&__lines {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		&-item {
+			position: absolute;
+			z-index: -2;
+			&.line-item {
+				&::after,
+				&::before {
+					content: '';
+					display: block;
+					background-color: $white;
+					position: absolute;
+				}
+				&--1 {
+					width: 61.5rem;
+					height: 87.95rem;
+					top: 8.4rem;
+					right: 0;
+
+					&::after {
+						width: 100%;
+						height: 0.1rem;
+						left: 0;
+						top: 32.5rem;
+						transform: scaleX(var(--scaleLine));
+					}
+					&::before {
+						height: 100%;
+						top: 0;
+						left: -0.1rem;
+						width: 0.1rem;
+						transform: scaleY(var(--scaleLine));
+					}
+				}
+				&--2 {
+					width: 29.5rem;
+					height: 39.8rem;
+					top: 1.2rem;
+					right: 0;
+
+					&::after {
+						width: 108%;
+						height: 0.1rem;
+						left: -2rem;
+						top: 20rem;
+						transform: scaleX(var(--scaleLine));
+					}
+					&::before {
+						height: 100%;
+						top: 0;
+						left: -0.1rem;
+						width: 0.1rem;
+						transform: scaleY(var(--scaleLine));
+					}
+				}
+				&--3 {
+					width: 41.7rem;
+					height: 94.4rem;
+					top: 0;
+					left: 0;
+
+					&::after {
+						width: 100%;
+						height: 0.1rem;
+						left: 0;
+						top: 56.8rem;
+						transform: scaleX(var(--scaleLine));
+					}
+					&::before {
+						height: 100%;
+						top: 0;
+						right: 0;
+						width: 0.1rem;
+						transform: scaleY(var(--scaleLine));
+					}
+				}
+				&--4 {
+					width: 20.2rem;
+					height: 94.7rem;
+					bottom: 0;
+					left: 41.8rem;
+
+					&::after {
+						width: 100%;
+						height: 0.1rem;
+						left: 0;
+						top: 45.9rem;
+						transform: scaleX(var(--scaleLine));
+					}
+					&::before {
+						height: 100%;
+						top: 0;
+						right: 0;
+						width: 0.1rem;
+						transform: scaleY(var(--scaleLine));
+					}
+				}
+				&--5 {
+					width: 32.4rem;
+					height: 41.3rem;
+					bottom: 12.2rem;
+					left: 61.9rem;
+
+					&::after {
+						width: 100%;
+						height: 0.1rem;
+						left: 0;
+						top: 22.4rem;
+						transform: scaleX(var(--scaleLine));
+					}
+					&::before {
+						height: 100%;
+						top: 0;
+						right: 0;
+						width: 0.1rem;
+						transform: scaleY(var(--scaleLine));
+					}
+				}
+				&--6 {
+					width: 37rem;
+					height: 19.6rem;
+					bottom: 33.9rem;
+					right: 61.7rem;
+
+					&::after {
+						width: 26.4rem;
+						height: 0.1rem;
+						left: 0;
+						top: 0;
+						transform: scaleX(var(--scaleLine));
+					}
+					&::before {
+						width: 19.9rem;
+						height: 0.1rem;
+						right: 0;
+						bottom: 0;
+						transform: scaleX(var(--scaleLine));
+					}
+				}
+				&--7 {
+					width: 44.4rem;
+					height: 27.8rem;
+					top: 11.2rem;
+					left: 44.5rem;
+
+					&::after {
+						width: 34.2rem;
+						height: 0.1rem;
+						right: 0;
+						top: 0;
+						transform: scaleX(var(--scaleLine));
+					}
+					&::before {
+						width: 17.4rem;
+						height: 0.1rem;
+						left: 0;
+						bottom: 0;
+						transform: scaleX(var(--scaleLine));
+					}
+				}
+				&--8 {
+					width: 89.7rem;
+					height: 1.5rem;
+					bottom: 12.2rem;
+					left: 4.6rem;
+
+					&::after {
+						width: 37.1rem;
+						height: 0.1rem;
+						left: 0;
+						top: 0;
+						transform: scaleX(var(--scaleLine));
+					}
+					&::before {
+						width: 22.3rem;
+						height: 0.1rem;
+						right: 0;
+						bottom: 0;
+						transform: scaleX(var(--scaleLine));
+					}
+				}
+			}
+		}
+	}
+	// .main-inspired__photos
+	&__photos {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		img {
+			position: absolute;
+			will-change: transform;
+			&:nth-child(1) {
+				bottom: 19.7rem;
+				right: 114.1rem;
+
+				width: 20rem;
+				height: 28.8rem;
+				transform: translateX(calc(var(--transformImage) * -1));
+			}
+			&:nth-child(2) {
+				bottom: 34.1rem;
+				right: 61.7rem;
+
+				width: 19.9rem;
+				height: 15.8rem;
+				transform: translateX(var(--transformImage));
+			}
+			&:nth-child(3) {
+				top: 11.1rem;
+				right: 29.7rem;
+
+				width: 31.8rem;
+				height: 29.8rem;
+				transform: translateY(calc(var(--transformImage) * -1));
+			}
+			&:nth-child(4) {
+				bottom: 13.7rem;
+				left: 9.5rem;
+
+				width: 22.1rem;
+				height: 28rem;
+				transform: translateY(var(--transformImage));
+			}
+			&:nth-child(5) {
+				left: 41.8rem;
+				top: 23.1rem;
+
+				width: 20.1rem;
+				height: 15.8rem;
+				transform: translateY(calc(var(--transformImage) * -1));
+			}
+			&:nth-child(6) {
+				right: 0;
+				top: 5.3rem;
+
+				width: 29.4rem;
+				height: 15.8rem;
+				transform: translateX(var(--transformImage));
+			}
+			&:nth-child(7) {
+				bottom: 2.5rem;
+				left: 62rem;
+
+				width: 32.1rem;
+				height: 28.5rem;
+				transform: translateY(var(--transformImage));
+			}
+			&:nth-child(8) {
+				right: 0;
+				bottom: 4.2rem;
+
+				width: 61.5rem;
+				height: 53.3rem;
+				transform: translateX(var(--transformImage));
+			}
+			&:nth-child(9) {
+				left: 0;
+				top: 3.5rem;
+
+				width: 41.5rem;
+				height: 53.3rem;
+				transform: translateY(calc(var(--transformImage) * -1));
+			}
+		}
+	}
+}

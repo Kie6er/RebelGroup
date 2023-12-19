@@ -1,0 +1,141 @@
+.main-evolution {
+	margin-top: -24rem;
+	padding-top: 24rem;
+	overflow: hidden;
+	// .main-evolution__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
+	}
+	// .main-evolution__header
+	&__title {
+		text-transform: uppercase;
+	}
+	// .main-evolution__wrapper
+	&__wrapper {
+		position: relative;
+		padding: 10.9rem 0;
+		padding-left: 17rem;
+	}
+	&__slider-navigation {
+		position: absolute;
+		z-index: 2;
+		width: auto;
+		bottom: 0;
+		left: 55%;
+		transform: translateX(-50%);
+	}
+	// .main-evolution__bg
+	&__bg {
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 57.2rem;
+		height: 81.7rem;
+	}
+	// .main-evolution__scissors
+	&__scissors {
+		position: absolute;
+		opacity: 0.08;
+		top: -22rem;
+		right: -20rem;
+		width: 56.3rem;
+		height: 35.7rem;
+		transform: rotate(-59deg);
+	}
+}
+.evolution-slide {
+	// .evolution-slide__wrapper
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+	// .evolution-slide__image
+	&__image {
+		width: 84.7rem;
+		height: 59.9rem;
+	}
+	// .evolution-slide__info
+	&__info {
+		width: 58.8rem;
+	}
+	// .evolution-slide__title
+	&__title {
+		text-transform: uppercase;
+		margin-bottom: 2rem;
+		p span {
+			color: $orange;
+		}
+	}
+	// .evolution-slide__text
+	&__text {
+		margin-bottom: 2.8rem;
+	}
+}
+@media (max-width: 48em) {
+	.main-evolution {
+		margin-top: 0;
+		padding-top: 0;
+		// .main-evolution__inner
+		&__inner {
+			gap: 6.4rem;
+		}
+		// .main-evolution__header
+		&__title {
+			text-transform: uppercase;
+			font-size: 5.6rem;
+			line-height: 120%;
+		}
+		// .main-evolution__wrapper
+		&__wrapper {
+			padding: 0;
+		}
+		&__slider-navigation {
+			bottom: 53rem;
+			left: unset;
+			right: 0;
+			transform: none;
+		}
+		// .main-evolution__bg
+		&__bg {
+			top: 0;
+			transform: none;
+			width: 38.6rem;
+			height: 59.6rem;
+		}
+	}
+	.evolution-slide {
+		// .evolution-slide__wrapper
+		&__wrapper {
+			overflow: hidden;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 6.4rem;
+		}
+		// .evolution-slide__image
+		&__image {
+			width: 52.8rem;
+			height: 37.2rem;
+			align-self: flex-end;
+			padding: 11.2rem 0;
+			box-sizing: content-box;
+		}
+		// .evolution-slide__info
+		&__info {
+			width: 58.8rem;
+		}
+		// .evolution-slide__title
+		&__title {
+			margin-bottom: 2.4rem;
+		}
+		// .evolution-slide__text
+		&__text {
+			margin-bottom: 4rem;
+		}
+	}
+}
