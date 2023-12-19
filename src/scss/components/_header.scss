@@ -98,19 +98,22 @@
 				}
 			}
 
-			li button {
-				transition: color 0.2s linear;
-				font-family: 'Oswald';
-				font-size: 3.2rem;
-				font-style: normal;
-				font-weight: 300;
-				line-height: normal;
-				letter-spacing: 0.384rem;
-				text-transform: uppercase;
-
-				&:hover {
+			li {
+				button,
+				a {
 					transition: color 0.2s linear;
-					color: $orange;
+					font-family: 'Oswald';
+					font-size: 3.2rem;
+					font-style: normal;
+					font-weight: 300;
+					line-height: normal;
+					letter-spacing: 0.384rem;
+					text-transform: uppercase;
+
+					&:hover {
+						transition: color 0.2s linear;
+						color: $orange;
+					}
 				}
 			}
 		}
@@ -273,10 +276,13 @@
 					}
 				}
 
-				li button {
-					font-size: 4.8rem;
-					font-weight: 400;
-					letter-spacing: auto;
+				li {
+					button,
+					a {
+						font-size: 4.8rem;
+						font-weight: 400;
+						letter-spacing: auto;
+					}
 				}
 			}
 			&-bottom {
