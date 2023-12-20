@@ -48,6 +48,7 @@
     "jquery": "^3.7.1",
     "jsdom": "^22.1.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "ymaps": "^0.2.1"
   }
 }
