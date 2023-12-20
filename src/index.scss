@@ -4,6 +4,7 @@
 @import './scss/style';
 
 @import './scss/components/modal';
+@import './scss/components/map';
 @import './scss/components/footer';
 @import './scss/components/header';
 
@@ -15,6 +16,10 @@
 @import './scss/pages/main-page/main-evolution';
 @import './scss/pages/main-page/main-trends';
 @import './scss/pages/main-page/main-inspired';
+
+@import './scss/pages/style/style';
+@import './scss/pages/business/business';
+@import './scss/pages/contacts/contacts';
 
 .mobile {
 	display: none;
