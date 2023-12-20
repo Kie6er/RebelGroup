@@ -12,7 +12,7 @@ function remToPx(remValue) {
 	return Math.round(pxValue) + 'px';
 }
 $(document).ready(() => {
-	if ($('.main-bestsellers__ticker').length > 0) {
+	if ($('.main-bestsellers__ticker').length) {
 		let mainBestsellersSlider = new Swiper('.main-bestsellers__ticker', {
 			modules: [Autoplay],
 			slidesPerView: 'auto',
@@ -35,7 +35,7 @@ $(document).ready(() => {
 			// },
 		});
 	}
-	if ($('.main-bestsellers__slider').length > 0) {
+	if ($('.main-bestsellers__slider').length) {
 		let mainBestsellersSlider = new Swiper('.main-bestsellers__slider', {
 			modules: [Pagination],
 			speed: 800,
@@ -55,7 +55,7 @@ $(document).ready(() => {
 			},
 		});
 	}
-	if ($('.main-evolution__slider').length > 0) {
+	if ($('.main-evolution__slider').length) {
 		let mainBestsellersSlider = new Swiper('.main-evolution__slider', {
 			modules: [Navigation, EffectFade],
 			slidesPerView: 1,
@@ -70,8 +70,22 @@ $(document).ready(() => {
 			},
 		});
 	}
+	if ($('.main-category__slider').length > 0) {
+		let mainCategorySlider = new Swiper('.main-category__slider', {
+			modules: [Navigation],
+			spaceBetween: `${remToPx(4)}rem`,
+			direction: 'horizontal',
+			slidesPerView: 2,
+			loop: true,
+			speed: 1200,
+			navigation: {
+				nextEl: '.main-category__slider-navigation-btn--next',
+				prevEl: '.main-category__slider-navigation-btn--prev',
+			},
+		});
+	}
 	if ($(window).outerWidth() <= 768) {
-		if ($('.main-brand__slider').length > 0) {
+		if ($('.main-brand__slider').length) {
 			let mainBrandSlider = new Swiper('.main-brand__slider', {
 				modules: [Navigation, EffectFade],
 				slidesPerView: 1,
@@ -86,7 +100,7 @@ $(document).ready(() => {
 				},
 			});
 		}
-		if ($('.main-trends__slider').length > 0) {
+		if ($('.main-trends__slider').length) {
 			let mainBrandSlider = new Swiper('.main-trends__slider', {
 				modules: [Navigation, EffectFade],
 				slidesPerView: 1,
@@ -107,13 +121,5 @@ $(document).ready(() => {
 			});
 		}
 	} else {
-		// if ($('.main-category__slider').length > 0) {
-		// 	let mainCategorySlider = new Swiper('.main-category__slider', {
-		// 		spaceBetween: `${remToPx(4)}rem`,
-		// 		direction: 'horizontal',
-		// 		slidesPerView: 3,
-		// 		width: 200
-		// 	})
-		// }
 	}
 });

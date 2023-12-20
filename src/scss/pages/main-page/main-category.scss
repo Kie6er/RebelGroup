@@ -41,19 +41,39 @@
 	}
 	// .main-category__slider
 	&__slider {
-		padding: 0 8rem;
-		overflow: hidden;
+		height: 80rem;
+
 		&-wrapper.swiper-wrapper {
+			padding: 0 8rem;
 		}
 		&-slide.swiper-slide {
+			transition: all 0.8s linear;
+			width: 41rem !important;
+			height: 50rem !important;
 			&.swiper-slide-active {
+				transition: all 0.8s linear;
+				width: 86rem !important;
+				height: 80rem !important;
 			}
 			&.swiper-slide-prev {
+				transition: all 0.8s linear;
+				width: 86rem !important;
+				height: 80rem !important;
 			}
 			&.swiper-slide-next {
+				transition: all 0.8s linear;
+				width: 41rem !important;
+				height: 50rem !important;
+				align-self: flex-end;
 			}
 		}
 		&-fraction {
+		}
+		&-navigation {
+			position: absolute;
+			right: 10rem;
+			bottom: 0;
+			z-index: 10;
 		}
 		&-footer {
 		}
@@ -72,14 +92,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 
-		background:
-			url(../assets/images/main-page/category/grain-mask.png) center/ cover no-repeat,
-			radial-gradient(
-				156.56% 156.56% at 50% 50%,
-				#5f6466 0.59%,
-				rgba(55, 56, 60, 0) 100%,
-				rgba(55, 56, 60, 0) 100%
-			);
+		background: url(../assets/images/main-page/category/grain-mask.png) center/ cover no-repeat, radial-gradient(156.56% 156.56% at 50% 50%, #5f6466 0.59%, rgba(55, 56, 60, 0) 100%, rgba(55, 56, 60, 0) 100%);
 	}
 	// .category-slide__text
 	&__text {
