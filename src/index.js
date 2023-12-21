@@ -12,4 +12,3 @@ import './js/utils/swiper';
 import './js/utils/animation';
 
 import './js/pages/main-page';
-import './js/pages/for_business';

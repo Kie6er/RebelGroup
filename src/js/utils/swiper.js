@@ -24,15 +24,6 @@ $(document).ready(() => {
 				delay: 0,
 				disableOnInteraction: false, // отключаем возможность отлючить анимацию при касании
 			},
-			// breakpoints: { //стандартные настройки, котрые не так важны
-			// 	769: {
-			// 		slidesPerView: 7,
-			// 	},
-			// 	320: {
-			// 		slidesPerView: 2.25,
-			// 		spaceBetween: rem(2.4),
-			// 	},
-			// },
 		});
 	}
 	if ($('.main-bestsellers__slider').length) {
@@ -70,7 +61,7 @@ $(document).ready(() => {
 			},
 		});
 	}
-	if ($('.main-category__slider').length > 0) {
+	if ($('.main-category__slider').length) {
 		let mainCategorySlider = new Swiper('.main-category__slider', {
 			modules: [Navigation],
 			spaceBetween: `${remToPx(4)}rem`,
@@ -81,6 +72,50 @@ $(document).ready(() => {
 			navigation: {
 				nextEl: '.main-category__slider-navigation-btn--next',
 				prevEl: '.main-category__slider-navigation-btn--prev',
+			},
+		});
+	}
+	if ($('.work_with__slider').length) {
+		const busSwiper = new Swiper('.work_with__slider', {
+			slidesPerView: 1.25,
+			spaceBetween: 12,
+			modules: [Navigation],
+			speed: 700,
+			navigation: {
+				prevEl: '.work_with__navigation-prev',
+				nextEl: '.work_with__navigation-next',
+			},
+			breakpoints: {
+				769: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+			},
+		});
+	}
+	if ($('.barbershop-advantages__slider').length) {
+		let barbershopAdvantagesSlider = new Swiper('.barbershop-advantages__slider', {
+			modules: [Navigation, Pagination, EffectCreative],
+			slidesPerView: 2,
+			spaceBetween: `${remToPx(2)}rem`,
+			direction: 'horizontal',
+			speed: 1200,
+			navigation: {
+				prevEl: '.barbershop-advantages__slider-navigation-btn--prev',
+				nextEl: '.barbershop-advantages__slider-navigation-btn--next',
+			},
+			pagination: {
+				type: 'fraction',
+				el: '.barbershop-advantages__slider-fraction',
+			},
+			effect: 'creative',
+			creativeEffect: {
+				next: {
+					translate: ['39.6rem', '20.1rem', 0],
+				},
+				prev: {
+					translate: ['-39.5rem', '33.5rem', 0],
+				},
 			},
 		});
 	}
@@ -120,6 +155,16 @@ $(document).ready(() => {
 				},
 			});
 		}
-	} else {
+		if ($('.work_info__slider').length) {
+			const workInfoSwip = new Swiper('.work_info__slider', {
+				slidesPerView: 1,
+				modules: [EffectFade, Navigation],
+				effect: 'fade',
+				navigation: {
+					prevEl: '.work_info__navigation-prev',
+					nextEl: '.work_info__navigation-next',
+				},
+			});
+		}
 	}
 });

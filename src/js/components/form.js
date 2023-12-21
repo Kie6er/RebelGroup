@@ -12,7 +12,7 @@ $(document).ready(function () {
 		const mask = IMask(element, maskOptions);
 	});
 
-	$('.form').on('submit', (evt) => {
+	$('.form').on('submit', evt => {
 		evt.preventDefault();
 		const currentForm = $(evt.currentTarget);
 
@@ -44,10 +44,7 @@ function validationForm(form) {
 		if ($(element).data('minLength')) {
 			if ($(element).val().length < 18) {
 				removeError($(element));
-				createError(
-					$(element),
-					`Минимальное кол-во символов: ${$(element).data('minLength')}`
-				);
+				createError($(element), `Минимальное кол-во символов: ${$(element).data('minLength')}`);
 				result = false;
 			}
 		}
@@ -55,23 +52,23 @@ function validationForm(form) {
 		if ($(element).data('required')) {
 			if ($(element).val().length == 0) {
 				removeError($(element));
-				createError($(element), 'Заполните поле');
+				createError($(element), 'Поле должно быть заполнено');
 				result = false;
 			}
 		}
 	});
 
-	form.find('.textarea-review').each(function (index, element) {
-		removeError($(element));
+	// form.find('.textarea-review').each(function (index, element) {
+	// 	removeError($(element));
 
-		if ($(element).data('required')) {
-			if ($(element).val().length == 0) {
-				removeError($(element));
-				createError($(element), 'Заполните поле');
-				result = false;
-			}
-		}
-	});
+	// 	if ($(element).data('required')) {
+	// 		if ($(element).val().length == 0) {
+	// 			removeError($(element));
+	// 			createError($(element), 'Заполните поле');
+	// 			result = false;
+	// 		}
+	// 	}
+	// });
 
 	function removeError(input) {
 		const parent = input.parent();
