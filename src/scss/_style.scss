@@ -41,6 +41,8 @@
 	border-radius: 1rem;
 	border: 0.1rem solid $white;
 	color: $orange;
+	width: max-content;
+	overflow: hidden;
 
 	transition: background 0.2s linear, color 0.2s linear;
 	strong {
@@ -55,23 +57,38 @@
 		display: block;
 		width: 4rem;
 		height: 4rem;
-
-		svg path {
-			transition: fill 0.2s linear;
+		transition: width 0.3s linear;
+		&:first-child {
+			width: 0;
 		}
 	}
 
 	&:hover {
-		transition: background 0.2s linear, color 0.2s linear;
-		background-color: $white;
-		color: $black;
-
-		span svg path {
-			transition: fill 0.2s linear;
-			fill: $black;
+		span {
+			&:first-child {
+				width: 4rem;
+				transition: width 0.3s linear;
+			}
+			&:last-child {
+				width: 0;
+				transition: width 0.3s linear;
+			}
 		}
 	}
 }
+.error {
+	position: relative;
+	&-text {
+		position: absolute;
+		bottom: -2.2rem;
+		left: 0;
+		color: $orange;
+		font-size: 1.6rem;
+		line-height: normal;
+		letter-spacing: 0.064rem;
+	}
+}
+
 .btn-secondary {
 	width: 13rem;
 	height: 6rem;
@@ -169,6 +186,8 @@
 	align-items: center;
 	gap: 0.4rem;
 	color: $orange;
+	overflow: hidden;
+	width: max-content;
 
 	strong {
 		display: block;
@@ -177,12 +196,34 @@
 		line-height: 2.4rem; /* 120% */
 		padding: 0.8rem;
 		padding-left: 0;
+		transition: padding 0.3s linear;
 	}
 
 	span {
 		display: block;
 		width: 4rem;
 		height: 4rem;
+		transition: width 0.3s linear;
+		&:first-child {
+			width: 0;
+		}
+	}
+
+	&:hover {
+		strong {
+			transition: padding 0.3s linear;
+			padding-left: 0.8rem;
+		}
+		span {
+			&:first-child {
+				width: 4rem;
+				transition: width 0.3s linear;
+			}
+			&:last-child {
+				width: 0;
+				transition: width 0.3s linear;
+			}
+		}
 	}
 }
 .slider-fraction {
@@ -251,6 +292,13 @@
 			width: 8rem;
 			height: 8rem;
 		}
+		&:hover {
+			span {
+				&:first-child {
+					width: 8rem;
+				}
+			}
+		}
 	}
 	.btn-secondary {
 		width: 20rem;
@@ -265,6 +313,17 @@
 		span {
 			width: 8rem;
 			height: 8rem;
+		}
+	}
+	.error {
+		position: relative;
+		&-text {
+			position: absolute;
+			bottom: -4.8rem;
+			left: 0;
+			font-size: 3rem;
+			line-height: 140%;
+			letter-spacing: auto;
 		}
 	}
 	.request-dev {
@@ -318,6 +377,17 @@
 		span {
 			width: 8rem;
 			height: 8rem;
+		}
+
+		&:hover {
+			strong {
+				padding-left: 0;
+			}
+			span {
+				&:first-child {
+					width: 8rem;
+				}
+			}
 		}
 	}
 	.slider-fraction {
