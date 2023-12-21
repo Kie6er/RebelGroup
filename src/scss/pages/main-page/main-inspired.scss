@@ -247,6 +247,7 @@ html {
 		img {
 			position: absolute;
 			will-change: transform;
+			opacity: 0;
 			&:nth-child(1) {
 				bottom: 19.7rem;
 				right: 114.1rem;

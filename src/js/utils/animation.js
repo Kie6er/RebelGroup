@@ -11,6 +11,7 @@ $(document).ready(function () {
 		// desktop
 		$('.main-trends').length && !ScrollTrigger.isTouch && trendAnimation();
 		$('.main-inspired').length && !ScrollTrigger.isTouch && inspiredAnimation();
+		$('.philosophy-content').length && !ScrollTrigger.isTouch && philosophyAnimation();
 	});
 	matchMedia.add('(max-width: 768px)', () => {
 		// mobile
@@ -80,7 +81,6 @@ function trendAnimation() {
 			);
 	}
 }
-
 function inspiredAnimation() {
 	let inspiredPhotos = gsap.utils.toArray('.main-inspired__photos img');
 	let inspiredLines = gsap.utils.toArray('.line-item');
@@ -138,6 +138,7 @@ function inspiredAnimation() {
 								startAt: {
 									'--transformImage': 450,
 								},
+								opacity: 1,
 								'--transformImage': 0,
 								ease: 'power1.inOut',
 								scrollTrigger: {
@@ -156,6 +157,7 @@ function inspiredAnimation() {
 								startAt: {
 									'--transformImage': 120,
 								},
+								opacity: 1,
 								'--transformImage': 0,
 								duration: 2,
 								scrollTrigger: {
@@ -182,4 +184,22 @@ function inspiredAnimation() {
 				scrub: 3,
 			},
 		});
+}
+function philosophyAnimation() {
+	let container = gsap.utils.toArray('.philosophy-item');
+
+	container.forEach(el => {
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				start: 'top 75%',
+				end: 'center 75%',
+				scrub: 3,
+				ease: 'power1.inOut',
+			},
+		}).from($(el).find('.philosophy-item__title'), {
+			color: 'rgba(75, 75, 75, 0.5)',
+			y: '5rem',
+		});
+	});
 }
