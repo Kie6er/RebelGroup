@@ -126,6 +126,25 @@ $(document).ready(() => {
 			},
 		});
 	}
+  if ($('.catalog-category__slider').length > 0) {
+		let slider = new Swiper('.catalog-category__slider', {
+			modules: [Navigation],
+			direction: 'horizontal',
+			slidesPerView: 1.3,
+			speed: 1200,
+      loop: true,
+			navigation: {
+				nextEl: '.catalog-category__slider-navigation-btn--next',
+				prevEl: '.catalog-category__slider-navigation-btn--prev',
+			},
+      breakpoints: {
+				768: {
+          slidesPerView: 4,
+          spaceBetween: `${remToPx(2)}rem`,
+				},
+			},
+		});
+	}
 	if ($(window).outerWidth() <= 768) {
 		if ($('.main-brand__slider').length) {
 			let mainBrandSlider = new Swiper('.main-brand__slider', {
