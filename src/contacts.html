@@ -1,103 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Контакты</title>
-    </head>
-    <body>
-        <main>
-            <section class="contacts">
-                <div class="contacts__container container">
-                    <div class="contacts__back">
-                        <img src="./assets/images/metal_back.png" alt="" />
-                    </div>
-                    <h2 class="contacts__title h1">контакты</h2>
-                    <div class="contacts__main">
-                        <div id="map" class="contacts__main-map"></div>
-                        <ul class="contacts__lists">
-                            <li class="contacts__lists-item">
-                                <span class="contacts__lists-name">АДРЕС</span>
-                                <span class="contacts__lists-info">Москва, ул. Бауманская, 6, БЦ «Виктория Плаза»</span>
-                            </li>
-                            <li class="contacts__lists-item">
-                                <span class="contacts__lists-name">ТЕЛЕФОН</span>
-                                <span class="contacts__lists-info">+7 (495) 696-31-32</span>
-                            </li>
-                        </ul>
-                        <div class="contacts__mails">
-                            <div class="contacts__mails-title">e-mail</div>
-                            <ul class="contacts__mails-list">
-                                <li class="contacts__mails-item">
-                                    <span class="contacts__mails-name">ask@rebelgroup.ru</span>
-                                    <span class="contacts__mails-desc"
-                                        >Оставить отзыв о работе менеджера или качестве товара</span
-                                    >
-                                </li>
-                                <li class="contacts__mails-item">
-                                    <span class="contacts__mails-name">pr@rebelgroup.ru</span>
-                                    <span class="contacts__mails-desc"
-                                        >Предложить участие в выставке, коллаборацию или публикацию в СМИ</span
-                                    >
-                                </li>
-                                <li class="contacts__mails-item">
-                                    <span class="contacts__mails-name">opt@rebelgroup.ru</span>
-                                    <span class="contacts__mails-desc"
-                                        >Связаться по вопросу оптовых закупок или дилерских условий</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Контакты</title>
+	</head>
+	<body>
+		<include src="./components/header.html"></include>
+		<main>
+			<section class="contacts">
+				<div class="contacts__container container">
+					<div class="contacts__back">
+						<img src="./assets/images/metal_back.png" alt="" />
+					</div>
+					<h2 class="contacts__title h1">контакты</h2>
+					<div class="contacts__main">
+						<div id="map" class="contacts__main-map"></div>
+						<ul class="contacts__lists">
+							<li class="contacts__lists-item">
+								<span class="contacts__lists-name">АДРЕС</span>
+								<span class="contacts__lists-info">Москва, ул. Бауманская, 6, БЦ «Виктория Плаза»</span>
+							</li>
+							<li class="contacts__lists-item">
+								<span class="contacts__lists-name">ТЕЛЕФОН</span>
+								<span class="contacts__lists-info">+7 (495) 696-31-32</span>
+							</li>
+						</ul>
+						<div class="contacts__mails">
+							<div class="contacts__mails-title">e-mail</div>
+							<ul class="contacts__mails-list">
+								<li class="contacts__mails-item">
+									<span class="contacts__mails-name">ask@rebelgroup.ru</span>
+									<span class="contacts__mails-desc">Оставить отзыв о работе менеджера или качестве товара</span>
+								</li>
+								<li class="contacts__mails-item">
+									<span class="contacts__mails-name">pr@rebelgroup.ru</span>
+									<span class="contacts__mails-desc">Предложить участие в выставке, коллаборацию или публикацию в СМИ</span>
+								</li>
+								<li class="contacts__mails-item">
+									<span class="contacts__mails-name">opt@rebelgroup.ru</span>
+									<span class="contacts__mails-desc">Связаться по вопросу оптовых закупок или дилерских условий</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="feedback">
+				<div class="feedback__container container">
+					<form class="feedback__form">
+						<div class="feedback__form-back">
+							<img src="./assets/images/form_back.png" alt="" />
+						</div>
+						<h4 class="feedback__form-title">Свяжитесь с нами</h4>
+						<div class="feedback__form-container">
+							<div class="feedback__form-wrapper">
+								<input type="text" class="feedback__form-inp" />
+								<label class="feedback__form-label">ФИО <b>*</b></label>
+							</div>
+							<div class="feedback__form-wrapper">
+								<input type="text" class="feedback__form-inp" />
+								<label class="feedback__form-label">номер телефона <b>*</b></label>
+							</div>
+							<div class="feedback__form-wrapper">
+								<input type="text" class="feedback__form-inp" />
+								<label class="feedback__form-label">Ваш комментарий </label>
+							</div>
+						</div>
 
-            <section class="feedback">
-                <div class="feedback__container container">
-                    <form class="feedback__form">
-                        <div class="feedback__form-back">
-                            <img src="./assets/images/form_back.png" alt="" />
-                        </div>
-                        <h4 class="feedback__form-title">Свяжитесь с нами</h4>
-                        <div class="feedback__form-container">
-                            <div class="feedback__form-wrapper">
-                                <input type="text" class="feedback__form-inp" />
-                                <label class="feedback__form-label">ФИО <b>*</b></label>
-                            </div>
-                            <div class="feedback__form-wrapper">
-                                <input type="text" class="feedback__form-inp" />
-                                <label class="feedback__form-label">номер телефона <b>*</b></label>
-                            </div>
-                            <div class="feedback__form-wrapper">
-                                <input type="text" class="feedback__form-inp" />
-                                <label class="feedback__form-label">Ваш комментарий </label>
-                            </div>
-                        </div>
-
-                        <button class="feedback__form-btn btn-primary">
-                            <strong>отправить</strong>
-                            <span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="40"
-                                    height="41"
-                                    viewBox="0 0 40 41"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z"
-                                        fill="#DD921E"
-                                    />
-                                </svg>
-                            </span>
-                        </button>
-                    </form>
-                    <div class="feedback__img">
-                        <img src="./assets/images/feedback.png" alt="" />
-                    </div>
-                </div>
-            </section>
-        </main>
-        <include src="./components/footer.html"></include>
-    </body>
+						<button class="feedback__form-btn btn-primary">
+							<strong>отправить</strong>
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+									<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E" />
+								</svg>
+							</span>
+						</button>
+					</form>
+					<div class="feedback__img">
+						<img src="./assets/images/feedback.png" alt="" />
+					</div>
+				</div>
+			</section>
+		</main>
+		<include src="./components/footer.html"></include>
+	</body>
 </html>
