@@ -23,6 +23,10 @@
 @import './scss/pages/business/business';
 @import './scss/pages/contacts/contacts';
 
+@import './scss/pages/catalog/catalog-banner.scss';
+@import './scss/pages/catalog/catalog-category.scss';
+@import './scss/pages/catalog/catalog-cosmetic.scss';
+
 .mobile {
 	display: none;
 }
