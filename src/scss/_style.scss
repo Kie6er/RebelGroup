@@ -208,6 +208,9 @@
 		margin-bottom: 1rem;
 	}
 }
+.wrapper {
+	padding-top: 11.2rem;
+}
 
 @media (max-width: 48em) {
 	.h1 {
@@ -293,6 +296,10 @@
 			height: 10rem;
 		}
 	}
+	.wrapper {
+		padding-top: 12.8rem;
+	}
+
 	.slider-navigation {
 		gap: 1.6rem;
 		&__btn {
