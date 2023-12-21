@@ -151,6 +151,7 @@
 	}
 	// .barbershop-advantages__wrapper
 	&__wrapper {
+		overflow: hidden;
 		gap: 2rem;
 		display: flex;
 		justify-content: space-between;
@@ -171,7 +172,7 @@
 		width: 37.5rem;
 		height: 33.5rem;
 		position: relative;
-		z-index: 100;
+		z-index: 10;
 	}
 	// .barbershop-advantages__center
 	&__center {
@@ -184,18 +185,12 @@
 		flex-direction: column;
 		justify-content: space-between;
 	}
-	// .barbershop-advantages__slider-wrapper
-	&__slider-wrapper.swiper-wrapper {
-	}
 	// .barbershop-advantages__slider-slide
 	&__slider-slide.swiper-slide {
 		width: 37.5rem;
 		height: 33.5rem;
 		position: relative;
 		z-index: -1;
-		&.swiper-slide-next + .swiper-slide {
-			opacity: 0;
-		}
 	}
 	&__slider-footer {
 		display: flex;
@@ -221,6 +216,8 @@
 	}
 	// .barbershop-advantages__img
 	&__img {
+		position: relative;
+		z-index: 10;
 		width: 57.3rem;
 		height: 67rem;
 	}
@@ -388,6 +385,107 @@
 		// .barbershop-master__btn
 		&__btn {
 			margin-top: 0;
+		}
+	}
+	.barbershop-advantages {
+		// .barbershop-advantages__inner
+		&__inner {
+			gap: 6.4rem;
+		}
+		&__container {
+			padding: 0;
+		}
+		// .barbershop-advantages__title
+		&__title {
+			padding: 0 3.2rem;
+			text-transform: uppercase;
+			text-align: left;
+			font-size: 6.4rem;
+			line-height: 120%; /* 3.8413rem */
+		}
+		// .barbershop-advantages__wrapper
+		&__wrapper {
+			overflow: hidden;
+			gap: 6.4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		// .barbershop-advantages__left
+		&__left {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 0 3.2rem;
+		}
+		// .barbershop-advantages__text
+		&__text {
+			line-height: 120%; /* 1.8rem */
+			letter-spacing: 0.24rem;
+		}
+		// .barbershop-advantages__small-img
+		&__small-img {
+			width: 28rem;
+			height: 25rem;
+			position: relative;
+			z-index: 10;
+		}
+		// .barbershop-advantages__center
+		&__center {
+			width: 100%;
+		}
+		// .barbershop-advantages__slider
+		&__slider {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 0 3.2rem;
+		}
+		// .barbershop-advantages__slider-slide
+		&__slider-slide.swiper-slide {
+			width: 54.2rem;
+			height: 44.4rem;
+			border: 0.2rem solid $darkGray;
+		}
+		// .barbershop-advantages__right
+		&__right {
+			padding: 0 3.2rem;
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+		// .barbershop-advantages__img
+		&__img {
+			width: 31.2rem;
+			height: 36.4rem;
+		}
+	}
+	.barbershop-slide {
+		// .barbershop-slide__wrapper
+		&__wrapper {
+			width: 100%;
+			height: 100%;
+			padding: 3.2rem;
+			background: #171717;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 3rem;
+			overflow: hidden;
+		}
+		// .barbershop-slide__title
+		&__title {
+			width: 80%;
+			font-size: 3.2rem;
+			font-weight: 500;
+			line-height: normal;
+		}
+		// .barbershop-slide__description
+		&__description {
+			color: $lightGray;
+			width: 100%;
+			overflow: auto;
 		}
 	}
 }
