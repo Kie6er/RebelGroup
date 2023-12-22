@@ -9,8 +9,7 @@
 		left: 0;
 		bottom: 0;
 		z-index: -1;
-		background: url(./assets/images/main-page/best-bg.png) center / cover
-			no-repeat;
+		background: url(./assets/images/main-page/best-bg.png) center / cover no-repeat;
 	}
 	// .main-bestsellers__inner
 	&__inner {
@@ -50,6 +49,8 @@
 			transition-timing-function: linear !important;
 		}
 		&-slide.swiper-slide {
+			width: initial !important;
+			margin-right: 10rem;
 			span {
 				width: max-content;
 				text-wrap: nowrap;
