@@ -18,6 +18,7 @@
     margin-bottom: 5.6rem;
     @include media-screen {
       padding: 0 3.2rem;
+      margin-bottom: 6.6rem;
     }
   }
   &__slider {
@@ -101,6 +102,7 @@
       @include media-screen {
         font-size: 39rem;
         left: -11.5rem;
+        top: 49%;
       }
     }
     &-img {
