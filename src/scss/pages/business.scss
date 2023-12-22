@@ -319,10 +319,6 @@
 					opacity: 0;
 					transform: scale(0);
 				}
-				&:not(:empty) ~ .feedback__form-label {
-					opacity: 0;
-					transform: scale(0);
-				}
 
 				&::placeholder {
 					color: #4b4b4b;
