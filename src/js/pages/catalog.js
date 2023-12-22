@@ -32,14 +32,39 @@ $(document).ready(() => {
         $(this).removeClass('active');
         drop.slideDown({
           start: function () {
-            $(this).css({
-              display: "grid"
-            })
+            if (screen.width > 768) {
+              $(this).css({
+                display: "grid"
+              })
+            } else {
+              $(this).css({
+                display: "flex"
+              })
+            }
           },
           duration: 300,
         });
         $(this).addClass('active');
       }
+    });
+
+    let filterCount = 0;
+    $('.catalog-cosmetic__filter-input').click(function() {
+      if ($(this).prop('checked')) {
+        filterCount += 1;
+      } else {
+        filterCount -= 1;
+      }
+      if (filterCount === 0) {
+        $('.catalog-cosmetic__filter-text span').html('');
+      } else {
+        $('.catalog-cosmetic__filter-text span').html(`(${filterCount})`);
+      }
+    });
+
+    $('.catalog-cosmetic__filter-close').click(function() {
+      $('.catalog-cosmetic__filter-drop').slideUp(300);
+      $('.catalog-cosmetic__filter-text').removeClass('active');
     });
 
     document.addEventListener('click', (e) => {
