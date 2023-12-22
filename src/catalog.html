@@ -156,15 +156,79 @@
                 <path d="M11.25 8.125H2.5" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M8.75 18.125H16.25C17.625 18.125 18.75 18.75 18.75 20.625V23.125C18.75 25 17.625 25.625 16.25 25.625H8.75C7.375 25.625 6.25 25 6.25 23.125V20.625C6.25 18.75 7.375 18.125 8.75 18.125Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M13.75 4.375H21.25C22.625 4.375 23.75 5 23.75 6.875V9.375C23.75 11.25 22.625 11.875 21.25 11.875H13.75C12.375 11.875 11.25 11.25 11.25 9.375V6.875C11.25 5 12.375 4.375 13.75 4.375Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+              </svg>
+              <span></span>
+            </div>
+            <div class="catalog-cosmetic__filter-drop">
+              <div class="catalog-cosmetic__filter-top">
+                <div class="catalog-cosmetic__filter-title text-16">фильтр <span></span> </div>
+                <div class="catalog-cosmetic__filter-close">
+                  <img src="./assets/images/catalog/cosmetic/close-icon.svg" alt="">
+                </div>
+              </div>
+              <fieldset class="catalog-cosmetic__filter-field _category">
+                <legend class="catalog-cosmetic__filter-legend text-20-r">
+                  категория
+                </legend>
+                <label class="catalog-cosmetic__filter-label">
+                  <input type="checkbox" class="catalog-cosmetic__filter-input">
+                  Крем и бальзам для бороды <span>(8)</span>
+                </label>
+                <label class="catalog-cosmetic__filter-label">
+                  <input type="checkbox" class="catalog-cosmetic__filter-input">
+                  Масло для бороды <span>(2)</span>
+                </label>
+                <label class="catalog-cosmetic__filter-label">
+                  <input type="checkbox" class="catalog-cosmetic__filter-input">
+                  Расчески и щетки <span>(8)</span>
+                </label>
+                <label class="catalog-cosmetic__filter-label">
+                  <input type="checkbox" class="catalog-cosmetic__filter-input">
+                  Шампунь для бороды <span>(8)</span>
+                </label>
+              </fieldset>
+              <fieldset class="catalog-cosmetic__filter-field _price">
+                <legend class="catalog-cosmetic__filter-legend text-20-r">
+                  цена
+                </legend>
+                <input type="text" id="price-range-1" readonly class="catalog-cosmetic__filter-input-slider">
+                <input type="text" id="price-range-2" readonly class="catalog-cosmetic__filter-input-slider">
+                <div class="catalog-cosmetic__filter-slider"></div>
+                <div class="catalog-cosmetic__filter-values text-20-r"></div>
+              </fieldset>
+              <button class="catalog-cosmetic__filter-reset-btn">сбросить</button>
             </div>
           </div>
           <div class="catalog-cosmetic__sort">
-            <div class="catalog-cosmetic__sort-text">сортировка
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                <path d="M9 12L14.351 17.5118C14.983 18.1627 16.017 18.1627 16.649 17.5118L22 12" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
+            <fieldset class="catalog-cosmetic__sort-field">
+              <legend class="catalog-cosmetic__sort-text">сортировка
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <path d="M9 12L14.351 17.5118C14.983 18.1627 16.017 18.1627 16.649 17.5118L22 12" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </legend>
+              <div class="catalog-cosmetic__sort-drop">
+                <input id="default" type="radio" class="catalog-cosmetic__sort-input"  checked name="catalog-sort">
+                <label for="default" class="catalog-cosmetic__sort-label">
+                  по умолчанию
+                </label>
+
+                <input id="popular" type="radio" class="catalog-cosmetic__sort-input" name="catalog-sort">
+                <label for="popular" class="catalog-cosmetic__sort-label">
+                  популярные
+                </label>
+
+                <input id="price-asc" type="radio" class="catalog-cosmetic__sort-input" name="catalog-sort">
+                <label for="price-asc" class="catalog-cosmetic__sort-label">
+                  цена по возрастанию
+                </label>
+                
+                <input id="price-desc" type="radio" class="catalog-cosmetic__sort-input" name="catalog-sort">
+                <label for="price-desc" class="catalog-cosmetic__sort-label">
+                  цена по быванию
+                </label>
+              </div>
+            </fieldset>
+
           </div>
         </form>
         <div class="catalog-cosmetic__list">
