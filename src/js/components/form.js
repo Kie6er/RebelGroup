@@ -17,13 +17,12 @@ $(document).ready(function () {
 		const currentForm = $(evt.currentTarget);
 
 		if (validationForm(currentForm) === true) {
-			// if (currentForm.hasClass('review-modal__form')) {
-			// 	switchModalContent('.review-modal');
-			// } else if (currentForm.hasClass('vacancy-modal__form')) {
-			// 	switchModalContent('.vacancy-modal');
-			// } else if (currentForm.hasClass('footer__form')) {
-			// 	openModal('.subscribe')
-			// }
+			if (currentForm.hasClass('feedback-modal__form')) {
+				switchModalContent('.feedback-modal');
+			} else if (currentForm.hasClass('feedback__form')) {
+				switchModalContent('.feedback-modal');
+				openModal('.feedback-modal');
+			}
 			currentForm.find('input').val('');
 			currentForm.find('textarea').val('');
 		}

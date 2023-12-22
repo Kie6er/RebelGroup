@@ -1,12 +1,12 @@
 import $ from 'jquery';
 $(document).ready(function () {
-	$(document).on('keyup', (evt) => {
+	$(document).on('keyup', evt => {
 		evt.keyCode === 27 ? closeModal() : null;
 	});
 
-	// $('[data-modal="review"]').on("click", () => {
-	// 	openModal(".review-modal");
-	// });
+	$('[data-modal="feedback"]').on('click', () => {
+		openModal('.feedback-modal');
+	});
 
 	$('.modal-back').on('click', closeModal);
 	$('.modal-exit').on('click', closeModal);

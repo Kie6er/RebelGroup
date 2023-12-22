@@ -14,7 +14,19 @@
 						<img src="./assets/images/business/banner.png" alt="" />
 					</div>
 					<div class="banner__bottom">
-						<button class="btn banner__bottom-btn">оставить заявку <img src="./assets/images/style/arrow__right.svg" alt="" /></button>
+						<button class="btn-primary banner__bottom-btn" data-modal="feedback">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+									<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E" />
+								</svg>
+							</span>
+							<strong>оставить заявку</strong>
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+									<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E" />
+								</svg>
+							</span>
+						</button>
 						<div class="banner__bottom-text">
 							<div class="banner__bottom-title">rebel для бизнеса</div>
 							<div class="banner__bottom-desc">повышайте стандарты качества с нашей эксклюзивной линейкой косметики</div>
@@ -206,27 +218,31 @@
 			</section>
 			<section class="feedback">
 				<div class="feedback__container container">
-					<form class="feedback__form">
-						<div class="feedback__form-back">
+					<form class="feedback__form form">
+						<div class="feedback__form-back form-back">
 							<img src="./assets/images/form_back.png" alt="" />
 						</div>
-						<h4 class="feedback__form-title">Свяжитесь с нами</h4>
-						<div class="feedback__form-container">
-							<div class="feedback__form-wrapper">
-								<input type="text" class="feedback__form-inp" />
-								<label class="feedback__form-label">ФИО <b>*</b></label>
-							</div>
-							<div class="feedback__form-wrapper">
-								<input type="text" class="feedback__form-inp" />
-								<label class="feedback__form-label">номер телефона <b>*</b></label>
-							</div>
-							<div class="feedback__form-wrapper">
-								<input type="text" class="feedback__form-inp" />
-								<label class="feedback__form-label">Ваш комментарий </label>
-							</div>
+						<h4 class="feedback__form-title form-title">Свяжитесь с нами</h4>
+						<div class="feedback__form-container form-container">
+							<label class="feedback__form-wrapper form-wrapper">
+								<input type="text" class="feedback__form-inp form-inp" data-required="true" />
+								<div class="feedback__form-label form-label">ФИО <b>*</b></div>
+							</label>
+							<label class="feedback__form-wrapper form-wrapper">
+								<input type="tel" class="feedback__form-inp form-inp" data-required="true" data-min-length="11" />
+								<div class="feedback__form-label form-label">номер телефона <b>*</b></div>
+							</label>
+							<label class="feedback__form-wrapper form-wrapper">
+								<input type="text" class="feedback__form-inp form-inp" />
+								<div class="feedback__form-label form-label">Ваш комментарий</div>
+							</label>
 						</div>
-
-						<button class="feedback__form-btn btn-primary">
+						<button class="feedback__form-btn form-btn btn-primary">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+									<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E" />
+								</svg>
+							</span>
 							<strong>отправить</strong>
 							<span>
 								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
@@ -242,5 +258,6 @@
 			</section>
 		</main>
 		<include src="./components/footer.html"></include>
+		<include src="./components/modal.html"></include>
 	</body>
 </html>
