@@ -13,30 +13,253 @@
       font-size: 3rem;
     }
   }
-  &__filter-text {
-    display: flex;
-    gap: 1.4rem;
-    align-items: center;
-    svg {
-      width: 3rem;
-      height: 3rem;
-      @include media-screen {
-        width: 6rem;
-        height: 6rem;
+  &__filter {
+    position: relative;
+    &-text {
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
+      cursor: pointer;
+      svg {
+        width: 3rem;
+        height: 3rem;
+        @include media-screen {
+          width: 6rem;
+          height: 6rem;
+        }
       }
     }
-  }
-  &__sort-text {
-    display: flex;
-    gap: 1.4rem;
-    align-items: center;
-    svg {
-      width: 3rem;
-      height: 3rem;
-      @include media-screen {
-        width: 6rem;
-        height: 6rem;
+    &-field {
+      border: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      &._category {
+        grid-row: 1 / 4;
+        grid-column: 1;
+        @include media-screen {
+          grid-row: 2;
+          grid-column: 1;
+        }
       }
+      &._price {
+        grid-row: 1 / 2;
+        grid-column: 2;
+        width: 20rem;
+        @include media-screen {
+          grid-row: 3;
+          grid-column: 1;
+        }
+      }
+    }
+    &-drop {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 5rem;
+      background-color: $black;
+      padding: 4rem;
+      z-index: 1;
+      column-gap: 6rem;
+      border: 1px solid rgba(194, 194, 194, 0.20);
+      @include media-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-top {
+      display: none;
+      @include media-screen {
+        display: flex;
+        grid-row: 1;
+        grid-column: 1;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10rem;
+      }
+    }
+    &-close {
+      width: 6rem;
+      height: 6rem;
+      position: absolute;
+      right: 0;
+    }
+    &-legend {
+      margin-bottom: 2.4rem;
+    }
+    &-label {
+      white-space: nowrap;
+      color: #909091;
+      transition: color 0.4s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    &-values {
+      white-space: nowrap;
+      color: rgba(255, 255, 255, 0.50);
+    }
+    &-input {
+      /* Add if not using autoprefixer */
+      -webkit-appearance: none;
+      appearance: none;
+      /* For iOS < 15 to remove gradient background */
+      background-color: transparent;
+      /* Not removed via appearance */
+      margin: 0;
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      border: solid 0.1rem #909091;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0.8rem;
+      &:checked {
+        border-color: #FFF;
+        &:after {
+          content: '';
+          display: block;
+          background-image: url(./assets/images/catalog/cosmetic/checkbox-icon.svg);
+          background-repeat: no-repeat;
+          background-size: 100%;
+          width: 1.2rem;
+          height: 0.9rem;
+        }
+      }
+    }
+    &-input:checked + .catalog-cosmetic__sort-label {
+      color: rgba(194, 194, 194, 0.70);
+    }
+    &-reset-btn {
+      grid-row: 3 / 3;
+      grid-column: 2;
+      color: $orange;
+      font-family: Roboto;
+      font-size: 2.0rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0.16rem;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      @include media-screen {
+        grid-row: 4;
+        grid-column: 1;
+      }
+    }
+    &-input-slider {
+      display: none;
+    }
+    &-slider {
+      &.noUi-horizontal {
+        height: 0.2rem;
+        border: none;
+        background: rgb(54 54 54);
+        margin-top: 1rem;
+        .noUi-connect {
+          background: #FFF;
+        }
+        .noUi-connects {
+          background: rgb(54 54 54);
+        }
+        .noUi-handle {
+          width: 1.3rem;
+          height: 1.4rem;
+          border-radius: 50%;
+          background: #FFF;
+          right: 0rem;
+          top: -0.7rem;
+          cursor: pointer;
+          &::after {
+            display: none;
+          }
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+  &__sort {
+    &-text {
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
+      cursor: pointer;
+      svg {
+        width: 3rem;
+        height: 3rem;
+        transform: rotate(0deg);
+        transition: transform 0.4s ease;
+        @include media-screen {
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+      &.active {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+      &.active + .catalog-cosmetic__sort-drop {
+        display: flex;
+      }
+    }
+    &-field {
+      border: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+    }
+    &-drop {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 2.5rem;
+      background-color: $black;
+      padding: 4rem;
+      // display: flex;
+      flex-direction: column;
+      // gap: 3.2rem;
+      z-index: 1;
+      border: 1px solid rgba(194, 194, 194, 0.20);
+      @include media-screen {
+        padding: 4.8rem;
+      }
+    }
+    &-label {
+      white-space: nowrap;
+      color: #FFF;
+      transition: color 0.4s ease;
+      cursor: pointer;
+      padding: 1.6rem 0;
+      border-top: solid 0.1rem rgb(39 39 39);
+      @include media-screen {
+        padding: 2.4rem 0;
+        line-height: 120%; 
+      }
+      &:nth-child(2) {
+        border: none;
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+    &-input {
+      display: none;
+    }
+    &-input:checked + .catalog-cosmetic__sort-label {
+      color: rgba(194, 194, 194, 0.70);
     }
   }
   &__list {
