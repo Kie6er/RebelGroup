@@ -485,6 +485,8 @@ html {
 		// .main-inspired__photos
 		&__photos {
 			img {
+				opacity: 1;
+
 				&:nth-child(1) {
 					bottom: 26rem;
 					right: unset;
