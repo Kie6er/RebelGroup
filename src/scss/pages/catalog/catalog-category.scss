@@ -8,6 +8,9 @@
       padding: 0;
     }
   }
+  &__title {
+    text-transform: uppercase;
+  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -84,9 +87,9 @@
     // }
     &-count {
       position: absolute;
-      left: -6rem;
+      left: -8rem;
       top: 50%;
-      transform: translateY(-60%);
+      transform: translateY(-58%);
       color: rgba(0, 0, 0, 0.2);
       font-family: Oswald;
       font-size: 28rem;
