@@ -110,6 +110,7 @@ $(document).ready(() => {
 			},
 			effect: 'creative',
 			creativeEffect: {
+				limitProgress: 2,
 				next: {
 					translate: ['39.6rem', '20.1rem', 0],
 				},
