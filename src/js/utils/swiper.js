@@ -16,7 +16,7 @@ $(document).ready(() => {
 		let mainBestsellersSlider = new Swiper('.main-bestsellers__ticker', {
 			modules: [Autoplay],
 			slidesPerView: 'auto',
-			speed: 20000, //задаем скорость движения нашей бегущей строки
+			speed: 15000, //задаем скорость движения нашей бегущей строки
 			loop: true, //зацикливаем, что бы движание было бесконечным
 			allowTouchMove: false, // можно ещё отключить свайп
 			autoplay: {
