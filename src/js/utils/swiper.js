@@ -111,6 +111,7 @@ $(document).ready(() => {
 			},
 			effect: window.outerWidth > 768 ? 'creative' : 'slide',
 			creativeEffect: {
+				limitProgress: 2,
 				next: {
 					translate: ['39.6rem', '20.1rem', 0],
 				},
