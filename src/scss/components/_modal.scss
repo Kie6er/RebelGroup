@@ -137,4 +137,7 @@
 			line-height: 130%; /* 120% */
 		}
 	}
+	.barbershop-slide.swiper-slide-next ~ .swiper-slide {
+		transform: none !important; 
+	  }
 }
