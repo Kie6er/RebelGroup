@@ -98,7 +98,42 @@ $(document).ready(() => {
 			},
 		});
 	}
-	if ($('.barbershop-advantages__slider').length) {
+	// if ($('.barbershop-advantages__slider').length) {
+	// 	let barbershopAdvantagesSlider = new Swiper('.barbershop-advantages__slider', {
+	// 		modules: [Navigation, Pagination, EffectCreative],
+	// 		slidesPerView: 'auto',
+	// 		spaceBetween: `${remToPx(2)}rem`,
+	// 		direction: 'horizontal',
+	// 		autoHeight: true,
+	// 		speed: 1200,
+	// 		navigation: {
+	// 			prevEl: '.barbershop-advantages__slider-navigation-btn--prev',
+	// 			nextEl: '.barbershop-advantages__slider-navigation-btn--next',
+	// 		},
+	// 		pagination: {
+	// 			type: 'fraction',
+	// 			el: '.barbershop-advantages__slider-fraction',
+	// 		},
+	// 		effect: window.outerWidth > 768 ? 'creative' : 'slide',
+	// 		creativeEffect: {
+	// 			limitProgress: 2,
+	// 			next: {
+	// 				translate: ['39.6rem', '20.1rem', 0],
+	// 			},
+	// 			prev: {
+	// 				translate: ['-39.5rem', '33.5rem', 0],
+	// 			},
+	// 		},
+	// 		breakpoints: {
+	// 			768: {
+	// 				slidesPerView: 2,
+	// 				spaceBetween: `${remToPx(2.4)}rem`,
+	// 			},
+	// 		},
+	// 	});
+	// }
+  var interleaveOffset = 0.5;
+  if ($('.barbershop-advantages__slider').length) {
 		let barbershopAdvantagesSlider = new Swiper('.barbershop-advantages__slider', {
 			modules: [Navigation, Pagination, EffectCreative],
 			slidesPerView: 'auto',
@@ -106,6 +141,7 @@ $(document).ready(() => {
 			direction: 'horizontal',
 			autoHeight: true,
 			speed: 1200,
+      allowTouchMove: true,
 			navigation: {
 				prevEl: '.barbershop-advantages__slider-navigation-btn--prev',
 				nextEl: '.barbershop-advantages__slider-navigation-btn--next',
@@ -126,6 +162,7 @@ $(document).ready(() => {
 			},
 			breakpoints: {
 				768: {
+          allowTouchMove: false,
 					slidesPerView: 2,
 					spaceBetween: `${remToPx(2.4)}rem`,
 				},
