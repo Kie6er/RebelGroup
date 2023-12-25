@@ -198,6 +198,8 @@
 		justify-content: space-between;
 		background: $orange;
 		padding: 0.7rem 2.2rem;
+		position: relative;
+		z-index: 10;
 	}
 	&__slider-fraction {
 		color: #171717;
