@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
-import { Navigation, Autoplay, EffectFade, EffectCreative, Pagination } from 'swiper/modules';
+import { Navigation, Autoplay, EffectFade, EffectCreative, Pagination, Controller } from 'swiper/modules';
 function remToPx(remValue) {
 	// Получаем текущий базовый размер шрифта (font-size) из элемента <html>
 	var htmlFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
@@ -122,6 +122,100 @@ $(document).ready(() => {
 				768: {
 					slidesPerView: 2,
 					spaceBetween: `${remToPx(2.4)}rem`,
+				},
+			},
+		});
+	}
+  if ($('.catalog-banner__img-slider').length > 0) {
+		let imgSlider = new Swiper('.catalog-banner__img-slider', {
+			modules: [Navigation, Controller, Pagination, EffectCreative],
+			direction: 'horizontal',
+			slidesPerView: 1,
+			speed: 1200,
+      // loop: true,
+			navigation: {
+				nextEl: '.catalog-banner__slider-navigation-btn--next',
+				prevEl: '.catalog-banner__slider-navigation-btn--prev',
+			},
+      pagination: {
+        type: 'fraction',
+        el: '.catalog-banner__slider-pagination-frac'
+      },
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          translate: ["-100%", 0, 0],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
+      breakpoints: {
+				768: {
+          creativeEffect: {
+            prev: {
+              shadow: true,
+              translate: ["-60%", 0, -100],
+              opacity: 0,
+              scale: 0.2,
+            },
+            next: {
+              translate: ["100%", 0, 0],
+            },
+          },
+				},
+			},
+		});
+    let textSlider = new Swiper('.catalog-banner__text-slider', {
+			modules: [Navigation, Controller, EffectCreative],
+			direction: 'horizontal',
+			slidesPerView: 1,
+			speed: 1200,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          translate: ["-100%", 0, 0],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
+      breakpoints: {
+				768: {
+          creativeEffect: {
+            prev: {
+              shadow: true,
+              translate: ["-200%", 0, -100],
+              scale: 0.2,
+              opacity: 0,
+            },
+            next: {
+              translate: ["100%", 0, 0],
+              opacity: 0,
+            },
+          },
+				},
+			},
+		});
+    // Assign each other controls
+    textSlider.controller.control = imgSlider;
+    imgSlider.controller.control = textSlider;
+	}
+  if ($('.catalog-category__slider').length > 0) {
+		let slider = new Swiper('.catalog-category__slider', {
+			modules: [Navigation],
+			direction: 'horizontal',
+			slidesPerView: 1.3,
+			speed: 1200,
+      loop: true,
+			navigation: {
+				nextEl: '.catalog-category__slider-navigation-btn--next',
+				prevEl: '.catalog-category__slider-navigation-btn--prev',
+			},
+      breakpoints: {
+				768: {
+          slidesPerView: 4,
+          spaceBetween: `${remToPx(2)}rem`,
 				},
 			},
 		});
