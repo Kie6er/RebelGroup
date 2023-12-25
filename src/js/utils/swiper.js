@@ -98,7 +98,6 @@ $(document).ready(() => {
 			},
 		});
 	}
-  var interleaveOffset = 0.5;
   if ($('.barbershop-advantages__slider').length) {
 		let barbershopAdvantagesSlider = new Swiper('.barbershop-advantages__slider', {
 			modules: [Navigation, Pagination, EffectCreative],
