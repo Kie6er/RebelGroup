@@ -1,14 +1,6 @@
-.swiper-slide{
-	// transform: translate(-39.5rem, 33.5rem);
-	// &-active{
-	// 	transform: translate(-79rem, 0rem) !important;
-	// }
-}
-.barbershop-slide.swiper-slide{
-	
-}
 .barbershop-slide.swiper-slide-next ~ .swiper-slide{
-    transform: translate(0rem, 20rem) !important;
+  --transVal: calc((var(--ind) - 1) * -36rem);
+    transform: translate( var(--transVal), 20rem) !important;
 }
 
 

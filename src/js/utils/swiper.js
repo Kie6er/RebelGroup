@@ -98,7 +98,7 @@ $(document).ready(() => {
 			},
 		});
 	}
-	if ($('.barbershop-advantages__slider').length) {
+  if ($('.barbershop-advantages__slider').length) {
 		let barbershopAdvantagesSlider = new Swiper('.barbershop-advantages__slider', {
 			modules: [Navigation, Pagination, EffectCreative],
 			slidesPerView: 'auto',
@@ -106,6 +106,7 @@ $(document).ready(() => {
 			direction: 'horizontal',
 			autoHeight: true,
 			speed: 1200,
+      allowTouchMove: true,
 			navigation: {
 				prevEl: '.barbershop-advantages__slider-navigation-btn--prev',
 				nextEl: '.barbershop-advantages__slider-navigation-btn--next',
@@ -126,6 +127,7 @@ $(document).ready(() => {
 			},
 			breakpoints: {
 				768: {
+          allowTouchMove: false,
 					slidesPerView: 2,
 					spaceBetween: `${remToPx(2.4)}rem`,
 				},
