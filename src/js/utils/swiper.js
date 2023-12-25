@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
-import { Navigation, Autoplay, EffectFade, EffectCreative, Pagination, Controller } from 'swiper/modules';
+import { Navigation, Autoplay, EffectFade, EffectCreative, Pagination, Controller, Grid } from 'swiper/modules';
 function remToPx(remValue) {
 	// Получаем текущий базовый размер шрифта (font-size) из элемента <html>
 	var htmlFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
@@ -217,6 +217,52 @@ $(document).ready(() => {
 				768: {
 					slidesPerView: 4,
 					spaceBetween: `${remToPx(2)}rem`,
+				},
+			},
+		});
+	}
+	if ($('.style-detail__slider').length) {
+		let styleDetailSlider = new Swiper('.style-detail__slider', {
+			modules: [Navigation, EffectFade, Autoplay],
+			slidesPerView: 1,
+			effect: 'fade',
+			loop: true,
+			speed: 1000,
+			autoHeight: true,
+			fadeEffect: {
+				crossFade: true,
+			},
+			autoplay: {
+				//задаем автоплей по умолчанию с нулевой задержкой
+				delay: 5000,
+				disableOnInteraction: false, // отключаем возможность отлючить анимацию при касании
+			},
+			navigation: {
+				nextEl: '.style-detail__slider-navigation-btn--next',
+				prevEl: '.style-detail__slider-navigation-btn--prev',
+			},
+		});
+	}
+	if ($('.product-slider__slider').length) {
+		let mainCategorySlider = new Swiper('.product-slider__slider', {
+			modules: [Navigation, Grid],
+			spaceBetween: `${remToPx(2.4)}rem`,
+			direction: 'horizontal',
+			slidesPerView: 1,
+			speed: 1200,
+			grid: {
+				rows: 4,
+				fill: 'row',
+			},
+			navigation: {
+				nextEl: '.product-slider__slider-navigation-btn--next',
+				prevEl: '.product-slider__slider-navigation-btn--prev',
+			},
+			breakpoints: {
+				769: {
+					slidesPerView: 'auto',
+					spaceBetween: `${remToPx(2)}rem`,
+					grid: false,
 				},
 			},
 		});
