@@ -14,3 +14,4 @@ import './js/utils/animation';
 import './js/pages/main-page';
 import './js/pages/catalog';
 import './js/pages/card';
+import './js/pages/style';
