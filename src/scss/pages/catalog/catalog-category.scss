@@ -1,126 +1,128 @@
 @mixin media-screen {
-  @media (max-width: 48em) { @content; }
+	@media (max-width: 48em) {
+		@content;
+	}
 }
 
 .catalog-category {
-  &__container {
-    @include media-screen {
-      padding: 0;
-    }
-  }
-  &__title {
-    text-transform: uppercase;
-  }
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5.6rem;
-    @include media-screen {
-      padding: 0 3.2rem;
-      margin-bottom: 6.6rem;
-    }
-  }
-  &__slider {
-    overflow: hidden;
-    @include media-screen {
-      padding: 0 0 0 3.2rem;
-    }
-    &-navigation {
-      @include media-screen {
-        display: none;
-      }
-    }
-  }
-  &__slide {
-    &.swiper-slide-active {
-      .catalog-category__item {
-        background: radial-gradient(69% 69% at 50% 50%, #FFB94C 0%, rgba(255, 185, 76, 0) 100%), #DD921E;
-      }
-    }
-  }
-  &__item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-    padding: 3.2rem;
-    width: 42.5rem;
-    height: 50rem;
-    transition: background 0.4s linear;
-    
-    @include media-screen {
-      width: 52.4rem;
-      height: 61.6rem;
-    }
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url(../assets/images/main-page/category/grain-mask.png) center/ cover no-repeat, radial-gradient(156.56% 156.56% at 50% 50%, #5f6466 0.59%, rgba(55, 56, 60, 0) 100%, rgba(55, 56, 60, 0) 100%);
-      z-index: -1;
-      opacity: 0.8;
-      transition: opacity 0.4s linear;
-    }
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      background: radial-gradient(165.9% 165.9% at 50% 50%, #282D2E 0%, rgba(55, 56, 60, 0.00) 100%), #000;
-    }
-    &:hover {
-      &::before {
-        opacity: 0;
-      }
-    }
-    // &:active {
-    //   background: radial-gradient(69% 69% at 50% 50%, #FFB94C 0%, rgba(255, 185, 76, 0) 100%), #DD921E;
-    // }
-    &-count {
-      position: absolute;
-      left: -8rem;
-      top: 50%;
-      transform: translateY(-58%);
-      color: rgba(0, 0, 0, 0.2);
-      font-family: Oswald;
-      font-size: 28rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 2.24rem;
-      text-transform: uppercase;
-      @include media-screen {
-        font-size: 39rem;
-        left: -11.5rem;
-        top: 49%;
-      }
-    }
-    &-img {
-      width: 35.2rem;
-      height: 42.8rem;
-      position: absolute;
-      top: 1.3rem;
-      left: 3rem;
-      @include media-screen {
-        width: 40.4rem;
-        height: 48rem;
-        left: 6rem;
-        top: 2.4rem;
-      }
-    }
-    &-title {
-      letter-spacing: 0.16rem;
-      text-transform: uppercase;
-    }
-  }
+	&__container {
+		@include media-screen {
+			padding: 0;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 5.6rem;
+		@include media-screen {
+			padding: 0 3.2rem;
+			margin-bottom: 6.6rem;
+		}
+	}
+	&__slider {
+		overflow: hidden;
+		@include media-screen {
+			padding: 0 0 0 3.2rem;
+		}
+		&-navigation {
+			@include media-screen {
+				display: none;
+			}
+		}
+	}
+	&__slide {
+		&.swiper-slide-active {
+			.catalog-category__item {
+				background: radial-gradient(69% 69% at 50% 50%, #ffb94c 0%, rgba(255, 185, 76, 0) 100%), #dd921e;
+			}
+		}
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		overflow: hidden;
+		padding: 3.2rem;
+		width: 42.5rem;
+		height: 50rem;
+		transition: background 0.4s linear;
+
+		@include media-screen {
+			width: 52.4rem;
+			height: 61.6rem;
+		}
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url(../assets/images/main-page/category/grain-mask.png) center/ cover no-repeat, radial-gradient(156.56% 156.56% at 50% 50%, #5f6466 0.59%, rgba(55, 56, 60, 0) 100%, rgba(55, 56, 60, 0) 100%);
+			z-index: -1;
+			opacity: 0.8;
+			transition: opacity 0.4s linear;
+		}
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -2;
+			background: radial-gradient(165.9% 165.9% at 50% 50%, #282d2e 0%, rgba(55, 56, 60, 0) 100%), #000;
+		}
+		&:hover {
+			&::before {
+				opacity: 0;
+			}
+		}
+		// &:active {
+		//   background: radial-gradient(69% 69% at 50% 50%, #FFB94C 0%, rgba(255, 185, 76, 0) 100%), #DD921E;
+		// }
+		&-count {
+			position: absolute;
+			left: -8rem;
+			top: 50%;
+			transform: translateY(-58%);
+			color: rgba(0, 0, 0, 0.2);
+			font-family: Oswald;
+			font-size: 28rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 2.24rem;
+			text-transform: uppercase;
+			@include media-screen {
+				font-size: 39rem;
+				left: -11.5rem;
+				top: 49%;
+			}
+		}
+		&-img {
+			width: 35.2rem;
+			height: 42.8rem;
+			position: absolute;
+			top: 1.3rem;
+			left: 3rem;
+			@include media-screen {
+				width: 40.4rem;
+				height: 48rem;
+				left: 6rem;
+				top: 2.4rem;
+			}
+		}
+		&-title {
+			letter-spacing: 0.16rem;
+			text-transform: uppercase;
+		}
+	}
 }

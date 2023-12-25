@@ -127,96 +127,96 @@ $(document).ready(() => {
 			},
 		});
 	}
-  if ($('.catalog-banner__img-slider').length > 0) {
+	if ($('.catalog-banner__img-slider').length > 0) {
 		let imgSlider = new Swiper('.catalog-banner__img-slider', {
 			modules: [Navigation, Controller, Pagination, EffectCreative],
 			direction: 'horizontal',
 			slidesPerView: 1,
 			speed: 1200,
-      // loop: true,
+			// loop: true,
 			navigation: {
 				nextEl: '.catalog-banner__slider-navigation-btn--next',
 				prevEl: '.catalog-banner__slider-navigation-btn--prev',
 			},
-      pagination: {
-        type: 'fraction',
-        el: '.catalog-banner__slider-pagination-frac'
-      },
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          translate: ["-100%", 0, 0],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
-      },
-      breakpoints: {
+			pagination: {
+				type: 'fraction',
+				el: '.catalog-banner__slider-pagination-frac',
+			},
+			effect: 'creative',
+			creativeEffect: {
+				prev: {
+					translate: ['-100%', 0, 0],
+				},
+				next: {
+					translate: ['100%', 0, 0],
+				},
+			},
+			breakpoints: {
 				768: {
-          creativeEffect: {
-            prev: {
-              shadow: true,
-              translate: ["-60%", 0, -100],
-              opacity: 0,
-              scale: 0.2,
-            },
-            next: {
-              translate: ["100%", 0, 0],
-            },
-          },
+					creativeEffect: {
+						prev: {
+							shadow: true,
+							translate: ['-60%', 0, -100],
+							opacity: 0,
+							scale: 0.2,
+						},
+						next: {
+							translate: ['100%', 0, 0],
+						},
+					},
 				},
 			},
 		});
-    let textSlider = new Swiper('.catalog-banner__text-slider', {
+		let textSlider = new Swiper('.catalog-banner__text-slider', {
 			modules: [Navigation, Controller, EffectCreative],
 			direction: 'horizontal',
 			slidesPerView: 1,
 			speed: 1200,
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          translate: ["-100%", 0, 0],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
-      },
-      breakpoints: {
+			effect: 'creative',
+			creativeEffect: {
+				prev: {
+					translate: ['-100%', 0, 0],
+				},
+				next: {
+					translate: ['100%', 0, 0],
+				},
+			},
+			breakpoints: {
 				768: {
-          creativeEffect: {
-            prev: {
-              shadow: true,
-              translate: ["-200%", 0, -100],
-              scale: 0.2,
-              opacity: 0,
-            },
-            next: {
-              translate: ["100%", 0, 0],
-              opacity: 0,
-            },
-          },
+					creativeEffect: {
+						prev: {
+							shadow: true,
+							translate: ['-200%', 0, -100],
+							scale: 0.2,
+							opacity: 0,
+						},
+						next: {
+							translate: ['100%', 0, 0],
+							opacity: 0,
+						},
+					},
 				},
 			},
 		});
-    // Assign each other controls
-    textSlider.controller.control = imgSlider;
-    imgSlider.controller.control = textSlider;
+		// Assign each other controls
+		textSlider.controller.control = imgSlider;
+		imgSlider.controller.control = textSlider;
 	}
-  if ($('.catalog-category__slider').length > 0) {
+	if ($('.catalog-category__slider').length > 0) {
 		let slider = new Swiper('.catalog-category__slider', {
 			modules: [Navigation],
 			direction: 'horizontal',
 			slidesPerView: 1.3,
 			speed: 1200,
-      loop: true,
+			loop: true,
 			navigation: {
 				nextEl: '.catalog-category__slider-navigation-btn--next',
 				prevEl: '.catalog-category__slider-navigation-btn--prev',
 			},
-      breakpoints: {
+			breakpoints: {
 				768: {
-          slidesPerView: 4,
-          spaceBetween: `${remToPx(2)}rem`,
+					slidesPerView: 4,
+					spaceBetween: `${remToPx(2)}rem`,
 				},
 			},
 		});
