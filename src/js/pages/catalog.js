@@ -48,6 +48,28 @@ $(document).ready(() => {
       }
     });
 
+    $(window).resize(function () {
+      changeFilterDisplay();
+    });
+
+    if (!$(".catalog-cosmetic__filter-text").data("platform")) {
+      screen.width < 769
+        ? $(".catalog-cosmetic__filter-text").data("platform", "mobile")
+        : $(".catalog-cosmetic__filter-text").data("platform", "desktop");
+    }
+
+    function changeFilterDisplay() {
+      if (screen.width > 769) {
+        if ($('.catalog-cosmetic__filter-text').data('platform') != 'mobile') return;
+        $(".catalog-cosmetic__filter-text").data("platform", "desktop");
+        $('.catalog-cosmetic__filter-text').removeClass('active');
+      } else {
+        if ($('.catalog-cosmetic__filter-text').data('platform') != 'desktop') return;
+        $(".catalog-cosmetic__filter-text").data("platform", "mobile");
+        $('.catalog-cosmetic__filter-text').removeClass('active');
+      }
+    }
+
     let filterCount = 0;
     $('.catalog-cosmetic__filter-input').click(function() {
       if ($(this).prop('checked')) {
@@ -57,8 +79,10 @@ $(document).ready(() => {
       }
       if (filterCount === 0) {
         $('.catalog-cosmetic__filter-text span').html('');
+        $('.catalog-cosmetic__filter-top .catalog-cosmetic__filter-title span').html('');
       } else {
         $('.catalog-cosmetic__filter-text span').html(`(${filterCount})`);
+        $('.catalog-cosmetic__filter-top .catalog-cosmetic__filter-title span').html(`(${filterCount})`);
       }
     });
 
