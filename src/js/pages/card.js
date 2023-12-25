@@ -2,7 +2,7 @@ const tabs = document.querySelectorAll('.card__tabs-item')
 const cardSec = document.querySelector('.card__container')
 const infoText = window.innerWidth > 769 ? document.querySelectorAll('.card__text-info') : document.querySelectorAll('.card__text-info--mob')
 const cardPhoto = document.querySelector('.card__photo')
-tabs.forEach((tab, id) => {
+tabs.length > 0  && tabs.forEach((tab, id) => {
     tab.addEventListener('click', () => {
         tabs.forEach((tab) => {
             tab.classList.remove('active')
@@ -16,7 +16,7 @@ tabs.forEach((tab, id) => {
 })
 // Функция для проверки положения блока "cardSec"
 function checkPosition() {
-    if(window.innerWidth > 769){
+    if(window.innerWidth > 769 && cardPhoto){
        cardPhoto.style.position = 'sticky';
     }
   }
