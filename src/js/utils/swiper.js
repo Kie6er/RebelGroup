@@ -61,17 +61,22 @@ $(document).ready(() => {
 			},
 		});
 	}
-	if ($('.main-category__slider').length) {
+  if ($('.main-category__slider').length) {
 		let mainCategorySlider = new Swiper('.main-category__slider', {
 			modules: [Navigation],
 			spaceBetween: `${remToPx(4)}rem`,
-			direction: 'horizontal',
-			slidesPerView: 2,
+			slidesPerView: 1.25,
 			loop: true,
 			speed: 1200,
 			navigation: {
 				nextEl: '.main-category__slider-navigation-btn--next',
 				prevEl: '.main-category__slider-navigation-btn--prev',
+			},
+      breakpoints: {
+				768: {
+          spaceBetween: `${remToPx(4)}rem`,
+          slidesPerView: 4,
+				},
 			},
 		});
 	}
