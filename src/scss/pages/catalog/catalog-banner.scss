@@ -1,181 +1,183 @@
 @mixin media-screen {
-  @media (max-width: 48em) { @content; }
+	@media (max-width: 48em) {
+		@content;
+	}
 }
 
 .catalog-banner {
-  padding: 20rem 0 0;
-  overflow: hidden;
-  @include media-screen {
-    padding: 20rem 0 43rem;
-  }
-  &__container {
-    position: relative;
-    @include media-screen {
-      padding: 0;
-    }
-  }
-  &__title {
-    color: $orange;
-    position: absolute;
-    font-family: 'Oswald';
-    font-size: 20.8rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
-    text-transform: uppercase;
-    letter-spacing: 2.2rem;
-    z-index: -1;
-    top: 2rem;
-    white-space: nowrap;
-    @include media-screen {
-      font-size: 14rem;
-      letter-spacing: normal;
-      margin-left: -11rem;
-      top: 6rem;
-    }
-  }
-  &__navigation {
-    position: absolute;
-    top: 34.5rem;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 2;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
-    font-size: 3rem;
-    color: $orange;
-    @include media-screen {
-      top: 88rem;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 3.2rem;
-      font-size: 6rem;
-    }
-  }
-  &__slider-pagination-frac {
-    margin-bottom: 6rem;
-    @include media-screen {
-      margin: 0;
-    }
-    .swiper-pagination-total {
-      color: $lightGray;
-      font-size: 2rem;
-      margin-bottom: 0.3rem;
-      @include media-screen {
-        font-size: 4rem;
-        margin-left: 0rem;
-      }
-    }
-    .swiper-pagination-current {
-      @include media-screen {
-        margin-right: 0rem;
-      }
-    }
-  }
-  &__text-slider {
-    position: absolute;
-    width: 107rem;
-    padding: 33rem 0 0 45rem;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    @include media-screen {
-      padding: 0;
-      top: 57rem;
-      width: 100%;
-    }
-  }
-  &__img-slider {
-    padding: 0rem 0 0 89rem;
-    margin: -1rem 0 0 10rem;
-    @include media-screen {
-      padding: 0;
-      margin: 5rem 0 0 0;
-    }
-  }
-  &__img-slide {
-    &-item {
-      width: 66.6rem;
-      height: 67.3rem;
-      @include media-screen {
-        width: 100%;
-        height: 52.4rem;
-      }
-    }
-    &-img {
-      @include media-screen {
-        width: 51rem;
-        margin: 0 auto;
-      }
-    }
-  }
-  &__text-slide {
-    &-item {
-      width: 40rem;
-      @include media-screen {
-        width: 64rem;
-        margin: 0 auto;
-        text-align: center;
-      }
-    }
-    &-title {
-      text-transform: uppercase;
-      @include media-screen {
-        font-size: 5.6rem;
-      }
-    }
-  }
-  &__text-slide {
-    width: 39.3rem;
-    &-title {
-      margin-bottom: 3.2rem;
-      @include media-screen {
-        margin-bottom: 3rem;
-        line-height: 125%;
-      }
-    }
-    &-text {
-      color: $darkGray;
-      letter-spacing: 0.16rem;
-      text-transform: uppercase;
-      @include media-screen {
-        text-transform: inherit;
-        letter-spacing: normal;
-      }
-    }
-  }
+	padding: 20rem 0 0;
+	overflow: hidden;
+	@include media-screen {
+		padding: 20rem 0 43rem;
+	}
+	&__container {
+		position: relative;
+		@include media-screen {
+			padding: 0;
+		}
+	}
+	&__title {
+		color: $orange;
+		position: absolute;
+		font-family: 'Oswald';
+		font-size: 20.8rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		text-transform: uppercase;
+		letter-spacing: 2.2rem;
+		z-index: -1;
+		top: 2rem;
+		white-space: nowrap;
+		@include media-screen {
+			font-size: 14rem;
+			letter-spacing: normal;
+			margin-left: -11rem;
+			top: 6rem;
+		}
+	}
+	&__navigation {
+		position: absolute;
+		top: 34.5rem;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		z-index: 2;
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 200;
+		line-height: normal;
+		font-size: 3rem;
+		color: $orange;
+		@include media-screen {
+			top: 88rem;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			padding: 0 3.2rem;
+			font-size: 6rem;
+		}
+	}
+	&__slider-pagination-frac {
+		margin-bottom: 6rem;
+		@include media-screen {
+			margin: 0;
+		}
+		.swiper-pagination-total {
+			color: $lightGray;
+			font-size: 2rem;
+			margin-bottom: 0.3rem;
+			@include media-screen {
+				font-size: 4rem;
+				margin-left: 0rem;
+			}
+		}
+		.swiper-pagination-current {
+			@include media-screen {
+				margin-right: 0rem;
+			}
+		}
+	}
+	&__text-slider {
+		position: absolute;
+		width: 107rem;
+		padding: 33rem 0 0 45rem;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		@include media-screen {
+			padding: 0;
+			top: 57rem;
+			width: 100%;
+		}
+	}
+	&__img-slider {
+		padding: 0rem 0 0 89rem;
+		margin: -1rem 0 0 10rem;
+		@include media-screen {
+			padding: 0;
+			margin: 5rem 0 0 0;
+		}
+	}
+	&__img-slide {
+		&-item {
+			width: 66.6rem;
+			height: 67.3rem;
+			@include media-screen {
+				width: 100%;
+				height: 52.4rem;
+			}
+		}
+		&-img {
+			@include media-screen {
+				width: 51rem;
+				margin: 0 auto;
+			}
+		}
+	}
+	&__text-slide {
+		&-item {
+			width: 40rem;
+			@include media-screen {
+				width: 64rem;
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+		&-title {
+			text-transform: uppercase;
+			@include media-screen {
+				font-size: 5.6rem;
+			}
+		}
+	}
+	&__text-slide {
+		width: 39.3rem;
+		&-title {
+			margin-bottom: 3.2rem;
+			@include media-screen {
+				margin-bottom: 3rem;
+				line-height: 125%;
+			}
+		}
+		&-text {
+			color: $darkGray;
+			letter-spacing: 0.16rem;
+			text-transform: uppercase;
+			@include media-screen {
+				text-transform: inherit;
+				letter-spacing: normal;
+			}
+		}
+	}
 }
 
 .pagination-frac {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 200;
-  line-height: normal;
-  font-size: 3rem;
-  color: $orange;
-  display: flex;
-  align-items: flex-end;
-  @include media-screen {
-    font-size: 6rem;
-  }
-  .swiper-pagination-total {
-    color: $lightGray;
-    font-size: 2rem;
-    margin-bottom: 0.3rem;
-    @include media-screen {
-      font-size: 4rem;
-      margin-left: 0rem;
-    }
-  }
-  .swiper-pagination-current {
-    @include media-screen {
-      margin-right: 0rem;
-    }
-  }
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 200;
+	line-height: normal;
+	font-size: 3rem;
+	color: $orange;
+	display: flex;
+	align-items: flex-end;
+	@include media-screen {
+		font-size: 6rem;
+	}
+	.swiper-pagination-total {
+		color: $lightGray;
+		font-size: 2rem;
+		margin-bottom: 0.3rem;
+		@include media-screen {
+			font-size: 4rem;
+			margin-left: 0rem;
+		}
+	}
+	.swiper-pagination-current {
+		@include media-screen {
+			margin-right: 0rem;
+		}
+	}
 }
