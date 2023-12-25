@@ -1,8 +1,10 @@
 .card{
     padding-top: 16.2rem;
     &__container{
+        position: relative;
         display: flex;
         justify-content: space-between;
+
     }
     &__photo{
         top: 0;
@@ -246,6 +248,13 @@
     }
 }
 .with_product{
+    position: relative;
+    .main-bestsellers__ticker{
+        position: relative;
+        margin-top: -15rem;
+        bottom: 0;
+        z-index: -1;
+    }
     &__top{
         position: relative;
         height: 16.8rem;
@@ -563,6 +572,9 @@
         }
     }
     .with_product{
+        .main-bestsellers__ticker{
+            display: none;
+        }
         &__top{
             height: auto;
             display: flex;
