@@ -35,7 +35,7 @@
 		}
 	}
 	&__slide {
-		&.swiper-slide-active {
+		&._active {
 			.catalog-category__item {
 				background: radial-gradient(69% 69% at 50% 50%, #ffb94c 0%, rgba(255, 185, 76, 0) 100%), #dd921e;
 			}
