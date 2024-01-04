@@ -1789,7 +1789,7 @@ input[type='number'] {
 .header.active .header__inner {
 	padding: 3.2rem 0 4.8rem;
 	transition: max-height 0.5s linear;
-	max-height: 76.3rem;
+	max-height: 80vh;
 }
 .header.active .burger-btn span:nth-child(1) {
 	transition: transform 0.3s linear;
@@ -1850,7 +1850,7 @@ input[type='number'] {
 	z-index: 999;
 	width: 100%;
 	height: 100vh;
-	background: #d3d3d3 50% / cover no-repeat, #000;
+	background: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(50px);
 }
 .header__menu {
@@ -1885,7 +1885,7 @@ input[type='number'] {
 	color: #dd921e;
 }
 .header__menu-bottom {
-	max-height: 23.2rem;
+	max-height: 50vh;
 	overflow: auto;
 	margin-bottom: 2.4rem;
 }
@@ -1912,16 +1912,23 @@ input[type='number'] {
 .header__menu-bottom--nav li {
 	display: flex;
 	align-items: center;
-	gap: 2.4rem;
+	gap: 0;
 	height: 4rem;
 	cursor: pointer;
+	transition: gap 0.2s linear;
 }
 .header__menu-bottom--nav li span {
-	display: none;
-	width: 4rem;
+	display: block;
+	transition: width 0.2s linear;
+	width: 0;
+}
+.header__menu-bottom--nav li:hover {
+	transition: gap 0.2s linear;
+	gap: 2.4rem;
 }
 .header__menu-bottom--nav li:hover span {
-	display: block;
+	transition: width 0.2s linear;
+	width: 4rem;
 }
 .header__menu-bottom--nav li:hover a {
 	transition: color 0.2s linear;
@@ -2001,13 +2008,16 @@ input[type='number'] {
 		max-height: 12.8rem;
 		gap: 11.2rem;
 	}
+	.header__overlay {
+		height: 110vh;
+	}
 	.header__burger-btn {
 		width: 6rem;
 		height: auto;
 		gap: 1.2rem;
 	}
 	.header__background {
-		height: 100vh;
+		height: 110vh;
 	}
 	.header__menu {
 		gap: 12.8rem;
