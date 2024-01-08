@@ -1716,8 +1716,13 @@ input[type='number'] {
 		display: flex;
 		flex-direction: column;
 		width: 50%;
+		gap: 0;
+		margin-bottom: 0;
+		transition: gap 0.3s linear 0.5s;
+	}
+	.footer__main-item.active {
 		gap: 3.2rem;
-		margin-bottom: 1.2rem;
+		transition: gap 0.5s linear;
 	}
 	.footer__main-item.active .footer__main-title span svg {
 		transform: rotate(-180deg);
@@ -1738,7 +1743,6 @@ input[type='number'] {
 		transition: transform 0.3s linear;
 	}
 	.footer__main-list {
-		display: none;
 		flex-direction: column;
 		gap: 3.2rem;
 		max-height: 0;
@@ -1887,7 +1891,6 @@ input[type='number'] {
 .header__menu-bottom {
 	max-height: 50vh;
 	overflow: auto;
-	margin-bottom: 2.4rem;
 }
 .header__menu-bottom::-webkit-scrollbar {
 	width: 0.5rem;
@@ -6673,6 +6676,7 @@ html {
 	right: 0;
 	width: 156rem;
 	height: 31.4rem;
+	z-index: -1;
 	flex-shrink: 0;
 }
 .contacts__back img {

@@ -16,6 +16,8 @@ function openBurgerMenu() {
 		} else {
 			$('.header').removeClass('active');
 			$('body').removeClass('lock');
+			$('.header__menu-top li').removeClass('active');
+			$('.header__menu-bottom--container').removeClass('active');
 		}
 	});
 
@@ -23,24 +25,27 @@ function openBurgerMenu() {
 		if (evt.keyCode === 27) {
 			$('.header').removeClass('active');
 			$('body').removeClass('lock');
+			$('.header__menu-top li').removeClass('active');
+			$('.header__menu-bottom--container').removeClass('active');
 		}
 	});
 
 	$('.header__overlay').on('click', () => {
 		$('.header').removeClass('active');
 		$('body').removeClass('lock');
+		$('.header__menu-top li').removeClass('active');
+		$('.header__menu-bottom--container').removeClass('active');
 	});
 }
 
 function headerNav() {
 	let navButtons = $('.header__menu-top li');
 	let navMenus = $('.header__menu-bottom--container');
-	console.log();
 
 	navButtons.each(function (index, item) {
 		let itemMenu = item.dataset.menu;
 		$(item).find('button').length &&
-			$(item).on('click', function (e) {
+			$(item).on('mouseover', function (e) {
 				e.preventDefault();
 				$(navButtons).removeClass('active');
 				$(navMenus).removeClass('active');
