@@ -1,170 +1,171 @@
 .contacts {
-    position: relative;
-    padding-top: 17.2rem;
-    &__back {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 156rem;
-        height: 31.4rem;
-        flex-shrink: 0;
-        img {
-            height: 100%;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            top: -8rem;
-            right: 16.5rem;
-            width: 26rem;
-            height: 26.5rem;
-            background: url('./assets/images/contacts_back_icon.svg');
-            background-size: 100% 100%;
-        }
-    }
-    &__title {
-        margin-bottom: 6rem;
-        text-transform: uppercase;
-    }
-    &__main {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        &-map {
-            width: 122.3rem;
-            height: 57.5rem;
-        }
-    }
-    &__lists {
-        width: 45.8rem;
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
-        &-item {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            font-size: 2rem;
-            font-weight: 400;
-            line-height: 1.2;
-        }
-        &-name {
-            color: #4b4b4b;
-            letter-spacing: 0.16rem;
-            text-transform: uppercase;
-        }
-    }
-    &__mails {
-        margin-top: 6rem;
-        padding-bottom: 6rem;
-        &-title {
-            margin-bottom: 2rem;
-            color: #4b4b4b;
-            font-size: 2rem;
-            font-weight: 400;
-            line-height: 1.2;
-            letter-spacing: 0.16rem;
-            text-transform: uppercase;
-        }
-        &-list {
-            display: flex;
-            gap: 4rem;
-            color: #4b4b4b;
-            font-size: 1.6rem;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: 0.064rem;
-        }
-        &-item {
-            width: 26.6rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-            &:nth-of-type(1) {
-                width: 26.6rem;
-            }
-            &:nth-of-type(2) {
-                width: 31.8rem;
-            }
-            &:nth-of-type(3) {
-                width: 26.1rem;
-            }
-        }
-        &-name {
-            color: #fff;
-            font-size: 1.6rem;
-            font-weight: 400;
-            line-height: 1.25;
-            letter-spacing: 0.128rem;
-            text-transform: uppercase;
-        }
-        &-desc {
-        }
-    }
+	position: relative;
+	padding-top: 17.2rem;
+	&__back {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 156rem;
+		height: 31.4rem;
+		z-index: -1;
+		flex-shrink: 0;
+		img {
+			height: 100%;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: -8rem;
+			right: 16.5rem;
+			width: 26rem;
+			height: 26.5rem;
+			background: url('./assets/images/contacts_back_icon.svg');
+			background-size: 100% 100%;
+		}
+	}
+	&__title {
+		margin-bottom: 6rem;
+		text-transform: uppercase;
+	}
+	&__main {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&-map {
+			width: 122.3rem;
+			height: 57.5rem;
+		}
+	}
+	&__lists {
+		width: 45.8rem;
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		&-item {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			font-size: 2rem;
+			font-weight: 400;
+			line-height: 1.2;
+		}
+		&-name {
+			color: #4b4b4b;
+			letter-spacing: 0.16rem;
+			text-transform: uppercase;
+		}
+	}
+	&__mails {
+		margin-top: 6rem;
+		padding-bottom: 6rem;
+		&-title {
+			margin-bottom: 2rem;
+			color: #4b4b4b;
+			font-size: 2rem;
+			font-weight: 400;
+			line-height: 1.2;
+			letter-spacing: 0.16rem;
+			text-transform: uppercase;
+		}
+		&-list {
+			display: flex;
+			gap: 4rem;
+			color: #4b4b4b;
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 0.064rem;
+		}
+		&-item {
+			width: 26.6rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+			&:nth-of-type(1) {
+				width: 26.6rem;
+			}
+			&:nth-of-type(2) {
+				width: 31.8rem;
+			}
+			&:nth-of-type(3) {
+				width: 26.1rem;
+			}
+		}
+		&-name {
+			color: #fff;
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: 1.25;
+			letter-spacing: 0.128rem;
+			text-transform: uppercase;
+		}
+		&-desc {
+		}
+	}
 }
 @media (max-width: 48em) {
-    .contacts {
-        &__back {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 47.4rem;
-            img {
-                height: 100%;
-            }
-            &::after {
-                top: auto;
-                bottom: -8rem;
-                right: 3rem;
-                width: 23rem;
-                height: 23.5rem;
-            }
-        }
-        &__main {
-            gap: 6.4rem;
-            &-map {
-                width: 100%;
-                height: 109.6rem;
-            }
-        }
-        &__lists {
-            width: 100%;
-            gap: 4.8rem;
-            &-item {
-                gap: 1.6rem;
-                font-size: 3rem;
-            }
-        }
-        &__mails {
-            width: 100%;
-            margin-top: 0;
-            padding-bottom: 12rem;
-            &-list {
-                flex-direction: column;
-            }
-            &-title {
-                margin-bottom: 3.2rem;
-                font-size: 3rem;
-            }
-            &-name {
-                font-size: 3rem;
-                letter-spacing: 0.24rem;
-                line-height: 1.2;
-            }
-            &-item {
-                gap: 1.6rem;
-                font-size: 3rem;
-                &:nth-of-type(1) {
-                    width: 53.2rem;
-                }
-                &:nth-of-type(2) {
-                    width: 55.8rem;
-                }
-                &:nth-of-type(3) {
-                    width: 52.2rem;
-                }
-            }
-        }
-    }
+	.contacts {
+		&__back {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 47.4rem;
+			img {
+				height: 100%;
+			}
+			&::after {
+				top: auto;
+				bottom: -8rem;
+				right: 3rem;
+				width: 23rem;
+				height: 23.5rem;
+			}
+		}
+		&__main {
+			gap: 6.4rem;
+			&-map {
+				width: 100%;
+				height: 109.6rem;
+			}
+		}
+		&__lists {
+			width: 100%;
+			gap: 4.8rem;
+			&-item {
+				gap: 1.6rem;
+				font-size: 3rem;
+			}
+		}
+		&__mails {
+			width: 100%;
+			margin-top: 0;
+			padding-bottom: 12rem;
+			&-list {
+				flex-direction: column;
+			}
+			&-title {
+				margin-bottom: 3.2rem;
+				font-size: 3rem;
+			}
+			&-name {
+				font-size: 3rem;
+				letter-spacing: 0.24rem;
+				line-height: 1.2;
+			}
+			&-item {
+				gap: 1.6rem;
+				font-size: 3rem;
+				&:nth-of-type(1) {
+					width: 53.2rem;
+				}
+				&:nth-of-type(2) {
+					width: 55.8rem;
+				}
+				&:nth-of-type(3) {
+					width: 52.2rem;
+				}
+			}
+		}
+	}
 }
