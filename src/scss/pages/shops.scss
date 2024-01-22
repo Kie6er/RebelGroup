@@ -1,0 +1,145 @@
+.shops-advantages {
+	// .shops-advantages__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
+	}
+	// .shops-advantages__title
+	&__title {
+		color: $white;
+		font-family: 'Oswald';
+		font-size: 5rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+	// .shops-advantages__slider
+	&__slider {
+		overflow: hidden;
+	}
+	// .shops-advantages__slider-wrapper
+	&__slider-wrapper.swiper-wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2rem;
+	}
+	// .shops-advantages__slider-slide
+	&__slider-slide.swiper-slide {
+		min-height: 35.7rem;
+	}
+	// .shops-advantages__slider-navigation
+	&__slider-navigation {
+	}
+}
+.shops-card {
+	overflow: hidden;
+	// .shops-card__inner
+	&__inner {
+		width: 100%;
+		height: 100%;
+		padding: 2.8rem;
+		border: 0.1rem solid #4b4b4b;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	// .shops-card__title
+	&__title {
+		color: $orange;
+		font-family: 'Oswald';
+		font-size: 2rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+	// .shops-card__text
+	&__text {
+		color: $white;
+		font-family: 'Roboto';
+		font-size: 1.6rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 2rem; /* 125% */
+		letter-spacing: 0.128rem;
+		text-transform: uppercase;
+	}
+	// .shops-card__img
+	&__img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media (max-width: 48em) {
+	.shops-advantages {
+		// .shops-advantages__inner
+		&__inner {
+			display: flex;
+			flex-direction: column;
+			gap: 6.4rem;
+		}
+		// .shops-advantages__title
+		&__title {
+			color: $white;
+			font-family: 'Oswald';
+			font-size: 5.6rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+			text-transform: uppercase;
+		}
+		// .shops-advantages__slider
+		&__slider {
+			overflow: hidden;
+		}
+		// .shops-advantages__slider-wrapper
+		&__slider-wrapper.swiper-wrapper {
+			display: flex;
+			gap: 0;
+			margin-bottom: 4.8rem;
+		}
+		// .shops-advantages__slider-slide
+		&__slider-slide.swiper-slide {
+			width: 100%;
+			height: 73.2rem;
+		}
+		// .shops-advantages__slider-navigation
+		&__slider-navigation {
+			justify-content: flex-end;
+		}
+	}
+	.shops-card {
+		overflow: hidden;
+		// .shops-card__inner
+		&__inner {
+			width: 100%;
+			height: 100%;
+			padding: 3.2rem;
+			border: 0.2rem solid #4b4b4b;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		// .shops-card__title
+		&__title {
+			font-size: 3.2rem;
+			font-weight: 500;
+		}
+		// .shops-card__text
+		&__text {
+			font-size: 3rem;
+			line-height: 120%; /* 125% */
+			letter-spacing: 0.24rem;
+		}
+		// .shops-card__img
+		&__img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

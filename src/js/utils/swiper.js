@@ -61,7 +61,7 @@ $(document).ready(() => {
 			},
 		});
 	}
-  if ($('.main-category__slider').length) {
+	if ($('.main-category__slider').length) {
 		let mainCategorySlider = new Swiper('.main-category__slider', {
 			modules: [Navigation],
 			spaceBetween: `${remToPx(4)}rem`,
@@ -72,10 +72,10 @@ $(document).ready(() => {
 				nextEl: '.main-category__slider-navigation-btn--next',
 				prevEl: '.main-category__slider-navigation-btn--prev',
 			},
-      breakpoints: {
+			breakpoints: {
 				768: {
-          spaceBetween: `${remToPx(4)}rem`,
-          slidesPerView: 4,
+					spaceBetween: `${remToPx(4)}rem`,
+					slidesPerView: 4,
 				},
 			},
 		});
@@ -98,7 +98,7 @@ $(document).ready(() => {
 			},
 		});
 	}
-  if ($('.barbershop-advantages__slider').length) {
+	if ($('.barbershop-advantages__slider').length) {
 		let barbershopAdvantagesSlider = new Swiper('.barbershop-advantages__slider', {
 			modules: [Navigation, Pagination, EffectCreative],
 			slidesPerView: 'auto',
@@ -106,7 +106,7 @@ $(document).ready(() => {
 			direction: 'horizontal',
 			autoHeight: true,
 			speed: 1200,
-      allowTouchMove: true,
+			allowTouchMove: true,
 			navigation: {
 				prevEl: '.barbershop-advantages__slider-navigation-btn--prev',
 				nextEl: '.barbershop-advantages__slider-navigation-btn--next',
@@ -127,7 +127,7 @@ $(document).ready(() => {
 			},
 			breakpoints: {
 				768: {
-          allowTouchMove: false,
+					allowTouchMove: false,
 					slidesPerView: 2,
 					spaceBetween: `${remToPx(2.4)}rem`,
 				},
@@ -275,8 +275,25 @@ $(document).ready(() => {
 					},
 				},
 			});
-		})
-
+		});
+	}
+	if ($('.shops-advantages__slider').length) {
+		let shopsAdvantagesSlider = new Swiper('.shops-advantages__slider', {
+			modules: [Navigation],
+			slidesPerView: 'auto',
+			spaceBetween: `${remToPx(4)}rem`,
+			speed: 500,
+			enabled: true,
+			navigation: {
+				nextEl: '.shops-advantages__slider-navigation-btn--next',
+				prevEl: '.shops-advantages__slider-navigation-btn--prev',
+			},
+			breakpoints: {
+				768: {
+					enabled: false,
+				},
+			},
+		});
 	}
 	if ($(window).outerWidth() <= 768) {
 		if ($('.main-brand__slider').length) {
