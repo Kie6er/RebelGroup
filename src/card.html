@@ -1,738 +1,699 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карточка товара</title>
-</head>
-<body>
-    <include src="./components/header.html"></include>
-    <main>
-        <section class="card">
-            <div class="card__container container">
-                <div class="card__photo">
-                    <div class="card__photo-main">
-                        <img src="./assets/images/card/card.png" alt="">
-                    </div>
-                </div>
-                <div class="card__main">
-                    <div class="card__main-container">
-                        <div class="card__main-wrapper">
-                            <div class="card__main-text">
-                                <h2 class="card__main-title h2">Премиальная глина для волос REBEL BARBER TEXTURIZER 100 мл</h2>
-                                <span class="card__main-subtitle">Первая текстурирующая глина, которая работает и на сухие
-                                    и на влажные волосы.</span>
-                                <span class="card__main-subscription">Целевое использование — Для ежедневного использования на коротких густых волосах.
-                                    Держит фиксацию весь день и никакого блеска. Использовать можно и на влажные и на сухие волосы.</span>
-                            </div>
-                            <div class="card__main-price">
-                                <span class="card__main-price--value">3 500₽</span>
-                                <span class="card__main-price--info">/Рекомендованная цена</span>
-                            </div>
-                        </div>
-    
-                        <div class="card__info">
-                            <ul class="card__info-list">
-                                <li class="card__info-item">
-                                    <span class="card__info-name">цель:</span>
-                                    <span class="card__info-line"></span>
-                                    <span class="card__info-text">текстура</span>
-                                </li>
-                                <li class="card__info-item">
-                                    <span class="card__info-name">фиксация:</span>
-                                    <span class="card__info-line"></span>
-                                    <span class="card__info-text">сильная</span>
-                                </li>
-                                <li class="card__info-item">
-                                    <span class="card__info-name">укладка:</span>
-                                    <span class="card__info-line"></span>
-                                    <span class="card__info-text">неподвижная</span>
-                                </li>
-                                <li class="card__info-item">
-                                    <span class="card__info-name">финиш:</span>
-                                    <span class="card__info-line"></span>
-                                    <span class="card__info-text">матовый</span>
-                                </li>
-                                <li class="card__info-item">
-                                    <span class="card__info-name">застывание:</span>
-                                    <span class="card__info-line"></span>
-                                    <span class="card__info-text">не менее 90 секунд</span>
-                                </li>
-                                <li class="card__info-item">
-                                    <span class="card__info-name">Фиксация:</span>
-                                    <span class="card__info-line"></span>
-                                    <span class="card__info-text">сильная</span>
-                                </li>
-                                <li class="card__info-item">
-                                    <span class="card__info-name">аромат:</span>
-                                    <span class="card__info-line"></span>
-                                    <span class="card__info-text">ADVENTURER</span>
-                                </li>
-                            </ul>
-    
-                            <ul class="card__markets">
-                                <li class="card__markets-card">
-                                    <div class="card__markets-wrapper">
-                                        <div class="card__markets-name">
-                                            <div class="card__markets-star">
-                                                <img src="./assets/images/card/star.svg" alt="">
-                                            </div>
-                                            4,8 на WILDBERRIES
-        
-                                        </div>
-                                        <a href="" class="card__markets-reviews">87 отзывов</a>
-                                    </div>
-                   
-                                    <a href="" class="card__markets-link">Купить на WB <img src="./assets/images/card/arrow.svg" alt=""></a>
-                                </li>
-                                <li class="card__markets-card">
-                                    <div class="card__markets-wrapper">
-                                        <div class="card__markets-name">
-                                            <div class="card__markets-star">
-                                                <img src="./assets/images/card/star.svg" alt="">
-                                            </div>
-                                            4,9 на OZON
-        
-                                        </div>
-                                        <a href="" class="card__markets-reviews">115 отзывов</a>
-                                    </div>
-                                    <a href="" class="card__markets-link">Купить на OZON <img src="./assets/images/card/arrow.svg" alt=""></a>
-                                </li>
-                                <li class="card__markets-card">
-                      
-                                    <a href="" class="card__markets-link">Купить на
-                                        REBELSTORE <img src="./assets/images/card/arrow.svg" alt=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Карточка товара</title>
+	</head>
+	<body>
+		<include src="./components/header.html"></include>
+		<main>
+			<section class="card">
+				<div class="card__container container">
+					<div class="card__photo">
+						<div class="card__photo-main">
+							<img src="./assets/images/card/card.png" alt="" />
+						</div>
+					</div>
+					<div class="card__main">
+						<div class="card__main-container">
+							<div class="card__main-wrapper">
+								<div class="card__main-text">
+									<h2 class="card__main-title h2">Премиальная глина для волос REBEL BARBER TEXTURIZER 100 мл</h2>
+									<span class="card__main-subtitle">Первая текстурирующая глина, которая работает и на сухие и на влажные волосы.</span>
+									<span class="card__main-subscription">Целевое использование — Для ежедневного использования на коротких густых волосах. Держит фиксацию весь день и никакого блеска. Использовать можно и на влажные и на сухие волосы.</span>
+								</div>
+								<div class="card__main-price">
+									<span class="card__main-price--value">3 500₽</span>
+									<span class="card__main-price--info">/Рекомендованная цена</span>
+								</div>
+							</div>
 
+							<div class="card__info">
+								<ul class="card__info-list">
+									<li class="card__info-item">
+										<span class="card__info-name">цель:</span>
+										<span class="card__info-line"></span>
+										<span class="card__info-text">текстура</span>
+									</li>
+									<li class="card__info-item">
+										<span class="card__info-name">фиксация:</span>
+										<span class="card__info-line"></span>
+										<span class="card__info-text">сильная</span>
+									</li>
+									<li class="card__info-item">
+										<span class="card__info-name">укладка:</span>
+										<span class="card__info-line"></span>
+										<span class="card__info-text">неподвижная</span>
+									</li>
+									<li class="card__info-item">
+										<span class="card__info-name">финиш:</span>
+										<span class="card__info-line"></span>
+										<span class="card__info-text">матовый</span>
+									</li>
+									<li class="card__info-item">
+										<span class="card__info-name">застывание:</span>
+										<span class="card__info-line"></span>
+										<span class="card__info-text">не менее 90 секунд</span>
+									</li>
+									<li class="card__info-item">
+										<span class="card__info-name">Фиксация:</span>
+										<span class="card__info-line"></span>
+										<span class="card__info-text">сильная</span>
+									</li>
+									<li class="card__info-item">
+										<span class="card__info-name">аромат:</span>
+										<span class="card__info-line"></span>
+										<span class="card__info-text">ADVENTURER</span>
+									</li>
+								</ul>
 
-                    <div class="card__text">
-                        <div class="card__text-wrapper">
-                            <ul class="card__tabs">
-                                <li class="card__tabs-item active">О продукте</li>
-                                <li class="card__tabs-item ">Применение</li>
-                                <li class="card__tabs-item ">Полезные ингредиенты</li>
-                            </ul>
-                        </div>
-              
-                        <div class="card__text-info active">
-                            <span>
-                                TEXTURIZER справится даже с самыми непослушными волосами. 
-                                Придает волосам текстуру и помогает сохранить укладку в течение всего дня, 
-                                оставаясь при этом незаметным. 
-                                Стайлинг TEXTURIZER не только задает укладку, но и ухаживает за волосами и кожей головы.
-                            </span>
-                            <ul>
-                                <li>Особенности и польза:</li>
-                                <li>— Смягчает волосы и улучшает их текстуру благодаря пчелиному воску в составе;</li>
-                                <li>— Уменьшает раздражение кожи головы с помощью каолина (белой глины);</li>
-                                <li>— Благодаря водной основе не утяжеляет волосы и легко смывается водой.</li>
-                            </ul>
-                        </div>
-                        <div class="card__text-info">
-                            <span>
-                                TEXTURIZER справится даже с самыми непослушными волосами. 
-                                Придает волосам текстуру и помогает сохранить укладку в течение всего дня, 
-                                оставаясь при этом незаметным. 
-                                Стайлинг TEXTURIZER не только задает укладку, но и ухаживает за волосами и кожей головы.
-                            </span>
-                            <ul>
-                                <li>Особенности и польза:</li>
-                                <li>— Смягчает волосы и улучшает их текстуру благодаря пчелиному воску в составе;</li>
-                                <li>— Уменьшает раздражение кожи головы с помощью каолина (белой глины);</li>
-                                <li>— Благодаря водной основе не утяжеляет волосы и легко смывается водой.</li>
-                            </ul>
-                        </div>
-                        <div class="card__text-info">
-                            <span>
-                                TEXTURIZER справится даже с самыми непослушными волосами. 
-                                Придает волосам текстуру и помогает сохранить укладку в течение всего дня, 
-                                оставаясь при этом незаметным. 
-                                Стайлинг TEXTURIZER не только задает укладку, но и ухаживает за волосами и кожей головы.
-                            </span>
-                            <ul>
-                                <li>Особенности и польза:</li>
-                                <li>— Смягчает волосы и улучшает их текстуру благодаря пчелиному воску в составе;</li>
-                                <li>— Уменьшает раздражение кожи головы с помощью каолина (белой глины);</li>
-                                <li>— Благодаря водной основе не утяжеляет волосы и легко смывается водой.</li>
-                            </ul>
-                        </div>
-                        <div class="card__text-info--mob active">
-                            <span>
-                                Матовая глина создана для максимально сильной фиксации ваших волос. 
-                                Средство отличается однородной и кремообразной структурой, что превращает процесс нанесения в отличную релакс-процедуру. 
-                                Глина имеет водную основу, поэтому ее легко смыть. Выпускается в удобной стеклянной баночке. 
-                                Такое средство будет отлично смотреться на полочке в ванной комнате. 
-                                Другие особенности глины: экономичный расход, матовый эффект, продолжительный срок годности, 
-                                фирменный аромат Morgans (пачули, бергамот, жасмин и сандал). 
-                                В составе натуральный пчелиный воск для укрепления, омоложения и очищения волос, 
-                                а также кератин в гидролизованном виде для стимулирования их роста.
-                            </span>
-                        </div>
-                        <div class="card__text-info--mob">
-                            <span>
-                                Матовая глина создана для максимально сильной фиксации ваших волос. 
-                                Средство отличается однородной и кремообразной структурой, что превращает процесс нанесения в отличную релакс-процедуру. 
-                                Глина имеет водную основу, поэтому ее легко смыть. Выпускается в удобной стеклянной баночке. 
-                                Такое средство будет отлично смотреться на полочке в ванной комнате. 
-                                Другие особенности глины: экономичный расход, матовый эффект, продолжительный срок годности, 
-                                фирменный аромат Morgans (пачули, бергамот, жасмин и сандал). 
-                                В составе натуральный пчелиный воск для укрепления, омоложения и очищения волос, 
-                                а также кератин в гидролизованном виде для стимулирования их роста.
-                            </span>
-                        </div>
-                        <div class="card__text-info--mob">
-                            <span>
-                                Матовая глина создана для максимально сильной фиксации ваших волос. 
-                                Средство отличается однородной и кремообразной структурой, что превращает процесс нанесения в отличную релакс-процедуру. 
-                                Глина имеет водную основу, поэтому ее легко смыть. Выпускается в удобной стеклянной баночке. 
-                                Такое средство будет отлично смотреться на полочке в ванной комнате. 
-                                Другие особенности глины: экономичный расход, матовый эффект, продолжительный срок годности, 
-                                фирменный аромат Morgans (пачули, бергамот, жасмин и сандал). 
-                                В составе натуральный пчелиный воск для укрепления, омоложения и очищения волос, 
-                                а также кератин в гидролизованном виде для стимулирования их роста.
-                            </span>
-                        </div>
-                    </div>
-             
-                </div>
-            </div>
-        </section>
+								<ul class="card__markets">
+									<li class="card__markets-card">
+										<div class="card__markets-wrapper">
+											<div class="card__markets-name">
+												<div class="card__markets-star">
+													<img src="./assets/images/card/star.svg" alt="" />
+												</div>
+												4,8 на WILDBERRIES
+											</div>
+											<a href="" class="card__markets-reviews">87 отзывов</a>
+										</div>
 
-        <section class="with_product">
-            <div class="with_product__container container">
-                <div class="with_product__top">
-                    <span class="with_product__top-desc">наведите <br>
-                        на фото, чтобы
-                        увидеть после</span>
-                    <h2 class="with_product__top-title h1">стрижка <br>
-                        с использованием продукта</h2>
-                    <a href="" class="with_product__top-link">Больше работ <img src="./assets/images/card/arrow.svg" alt=""></a>
-                </div>
-                <div class="with_product__wrapper">
-                    <div class="with_product__main">
-                        <div class="with_product__main-name">
-                            <div class="with_product__main-wrapper">
-                                <span>до</span>
-                                <span>после</span>
-                            </div>
-                        </div>
-                        <div class="with_product__main-photos">
-                            <div class="with_product__main-photo first">
-                                <img src="./assets/images/card/photo.png" alt="">
-                                <div class="with_product__main-text">до</div>
-                            </div>
-                            <div class="with_product__main-photo second">
-                                <img src="./assets/images/card/photo2.png" alt="">
-                                <div class="with_product__main-text">после</div>
+										<a href="" class="card__markets-link">Купить на WB <img src="./assets/images/card/arrow.svg" alt="" /></a>
+									</li>
+									<li class="card__markets-card">
+										<div class="card__markets-wrapper">
+											<div class="card__markets-name">
+												<div class="card__markets-star">
+													<img src="./assets/images/card/star.svg" alt="" />
+												</div>
+												4,9 на OZON
+											</div>
+											<a href="" class="card__markets-reviews">115 отзывов</a>
+										</div>
+										<a href="" class="card__markets-link">Купить на OZON <img src="./assets/images/card/arrow.svg" alt="" /></a>
+									</li>
+									<li class="card__markets-card">
+										<a href="" class="card__markets-link">Купить на REBELSTORE <img src="./assets/images/card/arrow.svg" alt="" /></a>
+									</li>
+								</ul>
+							</div>
+						</div>
 
-                            </div>
-                        </div>
-                        <div class="with_product__info">
-                            <div class="with_product__info-title">в работе использовали:</div>
-                            <ul class="with_product__info-list">
-                                <li class="with_product__info-item">Спрей REBEL BARBER TEXTURIZER</li>
-                                <li class="with_product__info-item">Глина для волос REBEL BARBER TEXTURIZER</li>
-                            </ul>
-                            <div class="with_product__info-master">мастер: иван иванов</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-bestsellers__ticker">
-                    <ul class="main-bestsellers__ticker-wrapper swiper-wrapper">
-                        <li class="main-bestsellers__ticker-slide swiper-slide">
-                            <span>после/до</span>
-                        </li>
-                        <li class="main-bestsellers__ticker-slide swiper-slide">
-                            <span>после/до</span>
-                        </li>
-                        <li class="main-bestsellers__ticker-slide swiper-slide">
-                            <span>после/до</span>
-                        </li>
-                        <li class="main-bestsellers__ticker-slide swiper-slide">
-                            <span>после/до</span>
-                        </li>
-                        <li class="main-bestsellers__ticker-slide swiper-slide">
-                            <span>после/до</span>
-                        </li>
-                        <li class="main-bestsellers__ticker-slide swiper-slide">
-                            <span>после/до</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+						<div class="card__text">
+							<div class="card__text-wrapper">
+								<ul class="card__tabs">
+									<li class="card__tabs-item active">О продукте</li>
+									<li class="card__tabs-item">Применение</li>
+									<li class="card__tabs-item">Полезные ингредиенты</li>
+								</ul>
+							</div>
 
-        <section class="product-slider" id="product">
-            <div class="product-slider__container container">
-                <div class="product-slider__inner">
-                    <div class="product-slider__title h2">Другие товары этого раздела</div>
-                    <div class="product-slider__wrapper">
-                        <div class="product-slider__slider">
-                            <div class="product-slider__slider-wrapper swiper-wrapper">
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-slider__slider-navigation slider-navigation">
-                        <button class="slider-navigation__btn product-slider__slider-navigation-btn--prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                <path d="M35 20.4C35.2209 20.4 35.4 20.2209 35.4 20C35.4 19.7791 35.2209 19.6 35 19.6L35 20.4ZM4.71716 19.7172C4.56095 19.8734 4.56095 20.1266 4.71716 20.2828L7.26274 22.8284C7.41895 22.9846 7.67222 22.9846 7.82843 22.8284C7.98464 22.6722 7.98464 22.4189 7.82843 22.2627L5.56569 20L7.82843 17.7373C7.98464 17.581 7.98464 17.3278 7.82843 17.1716C7.67222 17.0154 7.41895 17.0154 7.26274 17.1716L4.71716 19.7172ZM35 19.6L5 19.6L5 20.4L35 20.4L35 19.6Z" fill="white"></path>
-                            </svg>
-                        </button>
-                        <button class="slider-navigation__btn product-slider__slider-navigation-btn--next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                <path d="M5 19.6C4.77909 19.6 4.6 19.7791 4.6 20C4.6 20.2209 4.77909 20.4 5 20.4V19.6ZM35.2828 20.2828C35.4391 20.1266 35.4391 19.8734 35.2828 19.7172L32.7373 17.1716C32.581 17.0154 32.3278 17.0154 32.1716 17.1716C32.0154 17.3278 32.0154 17.581 32.1716 17.7373L34.4343 20L32.1716 22.2627C32.0154 22.419 32.0154 22.6722 32.1716 22.8284C32.3278 22.9846 32.581 22.9846 32.7373 22.8284L35.2828 20.2828ZM5 20.4H35V19.6H5V20.4Z" fill="white"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
+							<div class="card__text-info active">
+								<span> TEXTURIZER справится даже с самыми непослушными волосами. Придает волосам текстуру и помогает сохранить укладку в течение всего дня, оставаясь при этом незаметным. Стайлинг TEXTURIZER не только задает укладку, но и ухаживает за волосами и кожей головы. </span>
+								<ul>
+									<li>Особенности и польза:</li>
+									<li>— Смягчает волосы и улучшает их текстуру благодаря пчелиному воску в составе;</li>
+									<li>— Уменьшает раздражение кожи головы с помощью каолина (белой глины);</li>
+									<li>— Благодаря водной основе не утяжеляет волосы и легко смывается водой.</li>
+								</ul>
+							</div>
+							<div class="card__text-info">
+								<span> TEXTURIZER справится даже с самыми непослушными волосами. Придает волосам текстуру и помогает сохранить укладку в течение всего дня, оставаясь при этом незаметным. Стайлинг TEXTURIZER не только задает укладку, но и ухаживает за волосами и кожей головы. </span>
+								<ul>
+									<li>Особенности и польза:</li>
+									<li>— Смягчает волосы и улучшает их текстуру благодаря пчелиному воску в составе;</li>
+									<li>— Уменьшает раздражение кожи головы с помощью каолина (белой глины);</li>
+									<li>— Благодаря водной основе не утяжеляет волосы и легко смывается водой.</li>
+								</ul>
+							</div>
+							<div class="card__text-info">
+								<span> TEXTURIZER справится даже с самыми непослушными волосами. Придает волосам текстуру и помогает сохранить укладку в течение всего дня, оставаясь при этом незаметным. Стайлинг TEXTURIZER не только задает укладку, но и ухаживает за волосами и кожей головы. </span>
+								<ul>
+									<li>Особенности и польза:</li>
+									<li>— Смягчает волосы и улучшает их текстуру благодаря пчелиному воску в составе;</li>
+									<li>— Уменьшает раздражение кожи головы с помощью каолина (белой глины);</li>
+									<li>— Благодаря водной основе не утяжеляет волосы и легко смывается водой.</li>
+								</ul>
+							</div>
+							<div class="card__text-info--mob active">
+								<span>
+									Матовая глина создана для максимально сильной фиксации ваших волос. Средство отличается однородной и кремообразной структурой, что превращает процесс нанесения в отличную релакс-процедуру. Глина имеет водную основу, поэтому ее легко смыть. Выпускается в удобной стеклянной баночке. Такое средство будет отлично смотреться на полочке в ванной комнате. Другие особенности глины: экономичный расход, матовый эффект, продолжительный срок годности, фирменный аромат Morgans (пачули, бергамот, жасмин и сандал). В составе натуральный пчелиный воск для укрепления,
+									омоложения и очищения волос, а также кератин в гидролизованном виде для стимулирования их роста.
+								</span>
+							</div>
+							<div class="card__text-info--mob">
+								<span>
+									Матовая глина создана для максимально сильной фиксации ваших волос. Средство отличается однородной и кремообразной структурой, что превращает процесс нанесения в отличную релакс-процедуру. Глина имеет водную основу, поэтому ее легко смыть. Выпускается в удобной стеклянной баночке. Такое средство будет отлично смотреться на полочке в ванной комнате. Другие особенности глины: экономичный расход, матовый эффект, продолжительный срок годности, фирменный аромат Morgans (пачули, бергамот, жасмин и сандал). В составе натуральный пчелиный воск для укрепления,
+									омоложения и очищения волос, а также кератин в гидролизованном виде для стимулирования их роста.
+								</span>
+							</div>
+							<div class="card__text-info--mob">
+								<span>
+									Матовая глина создана для максимально сильной фиксации ваших волос. Средство отличается однородной и кремообразной структурой, что превращает процесс нанесения в отличную релакс-процедуру. Глина имеет водную основу, поэтому ее легко смыть. Выпускается в удобной стеклянной баночке. Такое средство будет отлично смотреться на полочке в ванной комнате. Другие особенности глины: экономичный расход, матовый эффект, продолжительный срок годности, фирменный аромат Morgans (пачули, бергамот, жасмин и сандал). В составе натуральный пчелиный воск для укрепления,
+									омоложения и очищения волос, а также кератин в гидролизованном виде для стимулирования их роста.
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <section class="product-slider" id="product">
-            <div class="product-slider__container container">
-                <div class="product-slider__inner">
-                    <div class="product-slider__title h2">Другие товары этого раздела</div>
-                    <div class="product-slider__wrapper">
-                        <div class="product-slider__slider">
-                            <div class="product-slider__slider-wrapper swiper-wrapper">
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="product-slider__slider-slide swiper-slide product-slide">
-                                    <a class="product-slide__wrapper" href="#">
-                                        <div class="product-slide__item-top">
-                                            <div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
-                                            <div class="product-slide__item-arrow">
-                                                <img src="./assets/images/style/arrow__right.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="product-slide__item-img">
-                                            <img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
-                                        </div>
-                                        <div class="product-slide__item-bottom">
-                                            <div class="product-slide__item-rating text-16">
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,8 на wb</div>
-                                                    <div href="#" class="product-slide__item-rating-link">87 отзывов</div>
-                                                </div>
-                                                <div class="product-slide__item-rating-block">
-                                                    <div class="product-slide__item-rating-title">4,9 на oz</div>
-                                                    <div href="#" class="product-slide__item-rating-link">115 отзывов</div>
-                                                </div>
-                                            </div>
-                                            <div class="product-slide__item-price text-16"><span>3 500₽</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-slider__slider-navigation slider-navigation">
-                        <button class="slider-navigation__btn product-slider__slider-navigation-btn--prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                <path d="M35 20.4C35.2209 20.4 35.4 20.2209 35.4 20C35.4 19.7791 35.2209 19.6 35 19.6L35 20.4ZM4.71716 19.7172C4.56095 19.8734 4.56095 20.1266 4.71716 20.2828L7.26274 22.8284C7.41895 22.9846 7.67222 22.9846 7.82843 22.8284C7.98464 22.6722 7.98464 22.4189 7.82843 22.2627L5.56569 20L7.82843 17.7373C7.98464 17.581 7.98464 17.3278 7.82843 17.1716C7.67222 17.0154 7.41895 17.0154 7.26274 17.1716L4.71716 19.7172ZM35 19.6L5 19.6L5 20.4L35 20.4L35 19.6Z" fill="white"></path>
-                            </svg>
-                        </button>
-                        <button class="slider-navigation__btn product-slider__slider-navigation-btn--next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                <path d="M5 19.6C4.77909 19.6 4.6 19.7791 4.6 20C4.6 20.2209 4.77909 20.4 5 20.4V19.6ZM35.2828 20.2828C35.4391 20.1266 35.4391 19.8734 35.2828 19.7172L32.7373 17.1716C32.581 17.0154 32.3278 17.0154 32.1716 17.1716C32.0154 17.3278 32.0154 17.581 32.1716 17.7373L34.4343 20L32.1716 22.2627C32.0154 22.419 32.0154 22.6722 32.1716 22.8284C32.3278 22.9846 32.581 22.9846 32.7373 22.8284L35.2828 20.2828ZM5 20.4H35V19.6H5V20.4Z" fill="white"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <include src="./components/footer.html"></include>
-</body>
+			<section class="with_product">
+				<div class="with_product__container container">
+					<div class="with_product__top">
+						<span class="with_product__top-desc"
+							>наведите <br />
+							на фото, чтобы увидеть после</span
+						>
+						<h2 class="with_product__top-title h1">
+							стрижка <br />
+							с использованием продукта
+						</h2>
+						<a href="" class="with_product__top-link">Больше работ <img src="./assets/images/card/arrow.svg" alt="" /></a>
+					</div>
+					<div class="with_product__wrapper">
+						<div class="with_product__main">
+							<div class="with_product__main-name">
+								<div class="with_product__main-wrapper">
+									<span>до</span>
+									<span>после</span>
+								</div>
+							</div>
+							<div class="with_product__main-photos">
+								<div class="with_product__main-photo first">
+									<img src="./assets/images/card/photo.png" alt="" />
+									<div class="with_product__main-text">до</div>
+								</div>
+								<div class="with_product__main-photo second">
+									<img src="./assets/images/card/photo2.png" alt="" />
+									<div class="with_product__main-text">после</div>
+								</div>
+							</div>
+							<div class="with_product__info">
+								<div class="with_product__info-title">в работе использовали:</div>
+								<ul class="with_product__info-list">
+									<li class="with_product__info-item">Спрей REBEL BARBER TEXTURIZER</li>
+									<li class="with_product__info-item">Глина для волос REBEL BARBER TEXTURIZER</li>
+								</ul>
+								<div class="with_product__info-master">мастер: иван иванов</div>
+							</div>
+						</div>
+					</div>
+					<div class="main-bestsellers__ticker">
+						<ul class="main-bestsellers__ticker-wrapper swiper-wrapper">
+							<li class="main-bestsellers__ticker-slide swiper-slide">
+								<span>после/до</span>
+							</li>
+							<li class="main-bestsellers__ticker-slide swiper-slide">
+								<span>после/до</span>
+							</li>
+							<li class="main-bestsellers__ticker-slide swiper-slide">
+								<span>после/до</span>
+							</li>
+							<li class="main-bestsellers__ticker-slide swiper-slide">
+								<span>после/до</span>
+							</li>
+							<li class="main-bestsellers__ticker-slide swiper-slide">
+								<span>после/до</span>
+							</li>
+							<li class="main-bestsellers__ticker-slide swiper-slide">
+								<span>после/до</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="product-slider" id="product">
+				<div class="product-slider__container container">
+					<div class="product-slider__inner">
+						<div class="product-slider__title h2">Другие товары этого раздела</div>
+						<div class="product-slider__wrapper">
+							<div class="product-slider__slider">
+								<div class="product-slider__slider-wrapper swiper-wrapper">
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-slider__slider-navigation slider-navigation">
+							<button class="slider-navigation__btn product-slider__slider-navigation-btn--prev">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+									<path d="M35 20.4C35.2209 20.4 35.4 20.2209 35.4 20C35.4 19.7791 35.2209 19.6 35 19.6L35 20.4ZM4.71716 19.7172C4.56095 19.8734 4.56095 20.1266 4.71716 20.2828L7.26274 22.8284C7.41895 22.9846 7.67222 22.9846 7.82843 22.8284C7.98464 22.6722 7.98464 22.4189 7.82843 22.2627L5.56569 20L7.82843 17.7373C7.98464 17.581 7.98464 17.3278 7.82843 17.1716C7.67222 17.0154 7.41895 17.0154 7.26274 17.1716L4.71716 19.7172ZM35 19.6L5 19.6L5 20.4L35 20.4L35 19.6Z" fill="white"></path>
+								</svg>
+							</button>
+							<button class="slider-navigation__btn product-slider__slider-navigation-btn--next">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+									<path d="M5 19.6C4.77909 19.6 4.6 19.7791 4.6 20C4.6 20.2209 4.77909 20.4 5 20.4V19.6ZM35.2828 20.2828C35.4391 20.1266 35.4391 19.8734 35.2828 19.7172L32.7373 17.1716C32.581 17.0154 32.3278 17.0154 32.1716 17.1716C32.0154 17.3278 32.0154 17.581 32.1716 17.7373L34.4343 20L32.1716 22.2627C32.0154 22.419 32.0154 22.6722 32.1716 22.8284C32.3278 22.9846 32.581 22.9846 32.7373 22.8284L35.2828 20.2828ZM5 20.4H35V19.6H5V20.4Z" fill="white"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="product-slider" id="product">
+				<div class="product-slider__container container">
+					<div class="product-slider__inner">
+						<div class="product-slider__title h2">Другие товары этого раздела</div>
+						<div class="product-slider__wrapper">
+							<div class="product-slider__slider">
+								<div class="product-slider__slider-wrapper swiper-wrapper">
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="product-slider__slider-slide swiper-slide product-slide">
+										<a class="product-slide__wrapper" href="#">
+											<div class="product-slide__item-top">
+												<div class="product-slide__item-title text-20-r">Крем для бороды<br />и усов Morgans 75 мл</div>
+												<div class="product-slide__item-arrow">
+													<img src="./assets/images/style/arrow__right.svg" alt="" />
+												</div>
+											</div>
+											<div class="product-slide__item-img">
+												<img src="./assets/images/catalog/cosmetic/catalog-cosmetics_1.webp" alt="" />
+											</div>
+											<div class="product-slide__item-bottom">
+												<div class="product-slide__item-rating text-16">
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,8 на wb</div>
+														<div href="#" class="product-slide__item-rating-link">87 отзывов</div>
+													</div>
+													<div class="product-slide__item-rating-block">
+														<div class="product-slide__item-rating-title">4,9 на oz</div>
+														<div href="#" class="product-slide__item-rating-link">115 отзывов</div>
+													</div>
+												</div>
+												<div class="product-slide__item-price text-16"><span>3 500₽</span></div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-slider__slider-navigation slider-navigation">
+							<button class="slider-navigation__btn product-slider__slider-navigation-btn--prev">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+									<path d="M35 20.4C35.2209 20.4 35.4 20.2209 35.4 20C35.4 19.7791 35.2209 19.6 35 19.6L35 20.4ZM4.71716 19.7172C4.56095 19.8734 4.56095 20.1266 4.71716 20.2828L7.26274 22.8284C7.41895 22.9846 7.67222 22.9846 7.82843 22.8284C7.98464 22.6722 7.98464 22.4189 7.82843 22.2627L5.56569 20L7.82843 17.7373C7.98464 17.581 7.98464 17.3278 7.82843 17.1716C7.67222 17.0154 7.41895 17.0154 7.26274 17.1716L4.71716 19.7172ZM35 19.6L5 19.6L5 20.4L35 20.4L35 19.6Z" fill="white"></path>
+								</svg>
+							</button>
+							<button class="slider-navigation__btn product-slider__slider-navigation-btn--next">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+									<path d="M5 19.6C4.77909 19.6 4.6 19.7791 4.6 20C4.6 20.2209 4.77909 20.4 5 20.4V19.6ZM35.2828 20.2828C35.4391 20.1266 35.4391 19.8734 35.2828 19.7172L32.7373 17.1716C32.581 17.0154 32.3278 17.0154 32.1716 17.1716C32.0154 17.3278 32.0154 17.581 32.1716 17.7373L34.4343 20L32.1716 22.2627C32.0154 22.419 32.0154 22.6722 32.1716 22.8284C32.3278 22.9846 32.581 22.9846 32.7373 22.8284L35.2828 20.2828ZM5 20.4H35V19.6H5V20.4Z" fill="white"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<include src="./components/footer.html"></include>
+	</body>
 </html>

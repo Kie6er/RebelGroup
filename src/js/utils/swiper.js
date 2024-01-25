@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
-import { Navigation, Autoplay, EffectFade, EffectCreative, Pagination, Controller, Grid } from 'swiper/modules';
+import { Navigation, Autoplay, EffectFade, EffectCreative, Pagination, Controller, Grid, Thumbs } from 'swiper/modules';
 function remToPx(remValue) {
 	// Получаем текущий базовый размер шрифта (font-size) из элемента <html>
 	var htmlFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
@@ -214,19 +214,59 @@ $(document).ready(() => {
 			modules: [Navigation],
 			direction: 'horizontal',
 			slidesPerView: 1.3,
-			speed: 1200,
-			loop: true,
+			speed: 800,
 			navigation: {
 				nextEl: '.catalog-category__slider-navigation-btn--next',
 				prevEl: '.catalog-category__slider-navigation-btn--prev',
 			},
 			breakpoints: {
 				768: {
-					slidesPerView: 4,
+					slidesPerView: 3,
 					spaceBetween: `${remToPx(2)}rem`,
 				},
 			},
+
+			on: {
+				init: slider => {
+					if (window.outerWidth < 769) {
+						slider.slides[0].classList.add('_active');
+					} else {
+						slider.slides[0].classList.remove('_active');
+					}
+				},
+				click: slider => {
+					slider.update();
+
+					if (window.outerWidth < 769) {
+						slider.slideTo(slider.clickedIndex);
+					}
+				},
+				slideChange: slider => {
+					slider.update();
+				},
+			},
 		});
+
+		let thumbSlider = new Swiper('.catalog-category__slider-left', {
+			modules: [Thumbs, EffectFade],
+			slidesPerView: 'auto',
+			effect: 'fade',
+			speed: 500,
+			fadeEffect: {
+				crossFade: true,
+			},
+			spaceBetween: `${remToPx(2)}`,
+			thumbs: {
+				swiper: slider,
+			},
+		});
+
+		if (window.outerWidth < 769) {
+			$('.catalog-category__slide').on('click', function () {
+				$('.catalog-category__slide').removeClass('_active');
+				$(this).addClass('_active');
+			});
+		}
 	}
 	if ($('.style-detail__slider').length) {
 		let styleDetailSlider = new Swiper('.style-detail__slider', {

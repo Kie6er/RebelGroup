@@ -4583,85 +4583,6 @@ html {
 .barbershop-slide__description {
 	color: #c2c2c2;
 }
-.barbershop-cooperation {
-	overflow: hidden;
-}
-.barbershop-cooperation__inner {
-	position: relative;
-	min-height: 84rem;
-	display: flex;
-	flex-direction: column;
-	gap: 6rem;
-	padding-bottom: 6.8rem;
-}
-.barbershop-cooperation__header {
-	display: flex;
-	align-items: flex-end;
-	margin-top: 6.8rem;
-	gap: 12rem;
-}
-.barbershop-cooperation__title {
-	max-width: 75rem;
-	color: #fff;
-	font-family: 'Oswald';
-	font-size: 3.2rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: 0.384rem;
-	text-transform: uppercase;
-}
-.barbershop-cooperation__title span {
-	color: #dd921e;
-}
-.barbershop-cooperation__description {
-	color: #fff;
-	font-family: 'Roboto';
-	font-size: 2rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 2.4rem;
-	max-width: 64rem;
-}
-.barbershop-cooperation__content {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 6rem 16rem;
-}
-.barbershop-cooperation__content strong {
-	display: block;
-	color: #dd921e;
-	font-family: 'Roboto';
-	font-size: 2rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 2.4rem;
-	letter-spacing: 0.16rem;
-	text-transform: uppercase;
-	max-width: 48.2rem;
-}
-.barbershop-cooperation__content p {
-	color: #fff;
-	font-family: 'Roboto';
-	font-size: 2rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 2.4rem;
-}
-.barbershop-cooperation__item {
-	width: 40%;
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-.barbershop-cooperation__bg {
-	position: absolute;
-	top: 0;
-	right: -7.15rem;
-	z-index: -1;
-	width: 104.4rem;
-	height: 100%;
-}
 @media (max-width: 48em) {
 	.barbershop-banner {
 		position: relative;
@@ -4866,66 +4787,6 @@ html {
 		color: #c2c2c2;
 		width: 100%;
 		overflow: auto;
-	}
-	.barbershop-cooperation {
-		overflow: hidden;
-	}
-	.barbershop-cooperation__inner {
-		position: relative;
-		min-height: 84rem;
-		display: flex;
-		flex-direction: column;
-		gap: 6.4rem;
-		padding-bottom: 2.4rem;
-	}
-	.barbershop-cooperation__header {
-		display: flex;
-		align-items: flex-start;
-		flex-direction: column;
-		margin-top: 0;
-		gap: 6.4rem;
-	}
-	.barbershop-cooperation__title {
-		max-width: 100%;
-		font-size: 5.6rem;
-		line-height: 120%;
-	}
-	.barbershop-cooperation__title span {
-		color: #dd921e;
-	}
-	.barbershop-cooperation__description {
-		font-size: 3rem;
-		line-height: 130%;
-		max-width: 100%;
-	}
-	.barbershop-cooperation__content {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 4.8rem;
-	}
-	.barbershop-cooperation__content strong {
-		font-size: 3rem;
-		line-height: 120%;
-		letter-spacing: 0.24rem;
-		max-width: 100%;
-	}
-	.barbershop-cooperation__content p {
-		font-size: 3rem;
-		line-height: 130%;
-	}
-	.barbershop-cooperation__item {
-		width: 100%;
-		gap: 3.2rem;
-	}
-	.barbershop-cooperation__bg {
-		position: absolute;
-		top: unset;
-		bottom: 0;
-		right: unset;
-		left: -3.2rem;
-		z-index: -1;
-		width: 75rem;
-		height: 79.8rem;
 	}
 }
 .card {
@@ -8207,16 +8068,31 @@ html {
 }
 .catalog-category__slider {
 	overflow: hidden;
+	width: 131.5rem;
+}
+.catalog-category__slider .catalog-category__slide.swiper-slide-thumb-active {
+	display: none;
 }
 @media (max-width: 48em) {
 	.catalog-category__slider {
 		padding: 0 0 0 3.2rem;
+	}
+	.catalog-category__slider .catalog-category__slide.swiper-slide-thumb-active {
+		display: block;
 	}
 }
 @media (max-width: 48em) {
 	.catalog-category__slider-navigation {
 		display: none;
 	}
+}
+.catalog-category__wrapper {
+	display: flex;
+	gap: 2rem;
+}
+.catalog-category__slider-left {
+	overflow: hidden;
+	width: 42.5rem;
 }
 .catalog-category__slide._active .catalog-category__item {
 	background: radial-gradient(69% 69% at 50% 50%, #ffb94c 0%, rgba(255, 185, 76, 0) 100%), #dd921e;

@@ -40,6 +40,7 @@ function openBurgerMenu() {
 
 function headerNav() {
 	let navButtons = $('.header__menu-top li');
+	let navLinks = $('.header__menu-top li a');
 	let navMenus = $('.header__menu-bottom--container');
 
 	navButtons.each(function (index, item) {
@@ -78,5 +79,9 @@ function headerNav() {
 		});
 	} else {
 		$('.header__menu-social').css('display', 'flex');
+		navLinks.on('mouseover', () => {
+			$('.header__menu-bottom--container').removeClass('active');
+			navButtons.removeClass('active');
+		});
 	}
 }

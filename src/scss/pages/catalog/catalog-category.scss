@@ -25,14 +25,31 @@
 	}
 	&__slider {
 		overflow: hidden;
+		width: 131.5rem;
+		.catalog-category__slide.swiper-slide-thumb-active {
+			display: none;
+		}
 		@include media-screen {
 			padding: 0 0 0 3.2rem;
+
+			.catalog-category__slide.swiper-slide-thumb-active {
+				display: block;
+			}
 		}
 		&-navigation {
 			@include media-screen {
 				display: none;
 			}
 		}
+	}
+	&__wrapper {
+		display: flex;
+		gap: 2rem;
+	}
+
+	&__slider-left {
+		overflow: hidden;
+		width: 42.5rem;
 	}
 	&__slide {
 		&._active {
