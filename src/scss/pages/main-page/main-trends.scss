@@ -15,6 +15,10 @@
 	&__title {
 		text-transform: uppercase;
 	}
+	&__btn {
+		position: relative;
+		z-index: 50;
+	}
 	// .main-trends__wrapper
 	&__wrapper {
 		position: relative;

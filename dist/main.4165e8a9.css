@@ -3228,6 +3228,10 @@ input[type='number'] {
 .main-trends__title {
 	text-transform: uppercase;
 }
+.main-trends__btn {
+	position: relative;
+	z-index: 50;
+}
 .main-trends__wrapper {
 	position: relative;
 }
@@ -6294,7 +6298,7 @@ html {
 }
 .work_with__slider {
 	width: 100%;
-	height: 87rem;
+	height: 90rem;
 	overflow: hidden;
 }
 .work_with__slider .swiper-slide-active {

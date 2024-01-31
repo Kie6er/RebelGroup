@@ -9,9 +9,9 @@ $(document).ready(function () {
 	const matchMedia = gsap.matchMedia();
 	matchMedia.add('(min-width: 769px)', () => {
 		// desktop
-		$('.main-trends').length && !ScrollTrigger.isTouch && trendAnimation();
-		$('.main-inspired').length && !ScrollTrigger.isTouch && inspiredAnimation();
-		$('.philosophy-content').length && !ScrollTrigger.isTouch && philosophyAnimation();
+		$('.main-trends').length && trendAnimation();
+		$('.main-inspired').length && inspiredAnimation();
+		$('.philosophy-content').length && philosophyAnimation();
 	});
 	matchMedia.add('(max-width: 768px)', () => {
 		// mobile
