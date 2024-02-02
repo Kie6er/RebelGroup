@@ -40,7 +40,7 @@ $(document).ready(() => {
 			spaceBetween: `${remToPx(14.8)}rem`,
 			breakpoints: {
 				768: {
-					enabled: false,
+					// enabled: false,
 					slidesPerView: 3,
 				},
 			},
