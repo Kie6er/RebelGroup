@@ -27,6 +27,7 @@ $(document).ready(() => {
 		});
 	}
 	if ($('.main-bestsellers__slider').length) {
+		const sldiesBestSellers = document.querySelectorAll('.main-bestsellers__slider-slide');
 		let mainBestsellersSlider = new Swiper('.main-bestsellers__slider', {
 			modules: [Pagination],
 			speed: 800,
@@ -40,7 +41,7 @@ $(document).ready(() => {
 			spaceBetween: `${remToPx(14.8)}rem`,
 			breakpoints: {
 				768: {
-					// enabled: false,
+					enabled: sldiesBestSellers.length < 3 ? false : true,
 					slidesPerView: 3,
 				},
 			},
