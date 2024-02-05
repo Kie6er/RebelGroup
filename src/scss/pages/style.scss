@@ -121,63 +121,62 @@
 		line-height: 1.2;
 		letter-spacing: 0.16rem;
 		text-transform: uppercase;
-        &::after{
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 0.1rem;
-            background-color: rgba(194, 194, 194, 0.70);
-            z-index: -1;
-        }
-        &-item{
-            position: relative;
-            padding-bottom: 1.6rem;
-            cursor: pointer;
-            &::before{
-                display: none;
-                content: '';
-                position: absolute;
-                bottom: -0.1rem;
-                left: 0;
-                width: 100%;
-                // transform: translateY(0.1rem);
-                // border: 0.2rem solid #DD921E;
-                border-radius: 1rem;
-                background-color: #DD921E;
-                height: 0.3rem;
-                z-index: 2;
-
-            }
-            &::after{
-                display: none;
-                content: '';
-                position: absolute;
-                bottom: -0.5rem;
-                width: 0.8rem;
-                height: 0.8rem;
-                left: 50%;
-                transform: translateX(-50%) translateY(-0.1rem);
-                border-radius: 2rem
-                ;z-index: 2;
-                background:  #DD921E;
-            }
-            &.active{
-                color: #DD921E;
-                &::before,&::after{
-                    display: block;
-                }
-                
-            }
-        }
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 0.1rem;
+			background-color: rgba(194, 194, 194, 0.7);
+			z-index: -1;
+		}
+		&-item {
+			position: relative;
+			padding-bottom: 1.6rem;
+			cursor: pointer;
+			&::before {
+				display: none;
+				content: '';
+				position: absolute;
+				bottom: -0.1rem;
+				left: 0;
+				width: 100%;
+				// transform: translateY(0.1rem);
+				// border: 0.2rem solid #DD921E;
+				border-radius: 1rem;
+				background-color: #dd921e;
+				height: 0.3rem;
+				z-index: 2;
+			}
+			&::after {
+				display: none;
+				content: '';
+				position: absolute;
+				bottom: -0.5rem;
+				width: 0.8rem;
+				height: 0.8rem;
+				left: 50%;
+				transform: translateX(-50%) translateY(-0.1rem);
+				border-radius: 2rem;
+				z-index: 2;
+				background: #dd921e;
+			}
+			&.active {
+				color: #dd921e;
+				&::before,
+				&::after {
+					display: block;
+				}
+			}
+		}
 	}
 	&__main {
 		display: none;
 		flex-direction: column;
 		gap: 2rem;
 		margin-top: 4rem;
-		&.active{
+		&.active {
 			display: flex;
 		}
 	}
@@ -429,6 +428,9 @@
 	&__slider-slide.swiper-slide {
 		width: 42.5rem;
 		height: 50.6rem;
+	}
+	&__btn {
+		display: none;
 	}
 	// .product-slider__slider-navigation
 	&__slider-navigation {
@@ -768,6 +770,16 @@
 		}
 	}
 	.product-slider {
+		&__btn {
+			display: block;
+			margin: 0 auto;
+			margin-top: 4rem;
+		}
+		&__slider-wrapper {
+			width: 100% !important;
+			flex-direction: column;
+			gap: 2.4rem;
+		}
 		// .product-slider__inner
 		&__inner {
 			gap: 6.4rem;
@@ -782,8 +794,12 @@
 		}
 		// .product-slider__slider-slide
 		&__slider-slide.swiper-slide {
+			display: none;
 			width: 100%;
 			height: 81.6rem;
+			&.visible {
+				display: block;
+			}
 		}
 		// .product-slider__slider-navigation
 		&__slider-navigation {
