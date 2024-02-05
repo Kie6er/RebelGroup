@@ -29,7 +29,7 @@ $(document).ready(() => {
 	if ($('.main-bestsellers__slider').length) {
 		const sldiesBestSellers = document.querySelectorAll('.main-bestsellers__slider-slide');
 		let mainBestsellersSlider = new Swiper('.main-bestsellers__slider', {
-			modules: [Pagination],
+			modules: [Pagination, Navigation],
 			speed: 800,
 			pagination: {
 				type: 'fraction',
@@ -39,6 +39,10 @@ $(document).ready(() => {
 			enabled: true,
 			slidesPerView: 1,
 			spaceBetween: `${remToPx(14.8)}rem`,
+			navigation: {
+				nextEl: '.main-bestsellers__slider-navigation-btn--next',
+				prevEl: '.main-bestsellers__slider-navigation-btn--prev',
+			},
 			breakpoints: {
 				768: {
 					enabled: sldiesBestSellers.length < 3 ? false : true,

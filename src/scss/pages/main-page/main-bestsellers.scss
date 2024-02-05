@@ -23,6 +23,7 @@
 	&__title {
 		text-transform: uppercase;
 	}
+
 	// .main-bestsellers__wrapper
 	&__wrapper {
 		display: flex;
@@ -31,8 +32,30 @@
 	}
 	// .main-bestsellers__slider
 	&__slider {
+		position: relative;
 		overflow: hidden;
 		max-width: 100%;
+	}
+	// .main-bestsellers__slider-navigation
+	&__slider-navigation {
+		&-btn--prev {
+			position: absolute;
+			width: 4rem;
+			display: flex;
+			justify-content: space-between;
+			top: 25%;
+			left: 0;
+			z-index: 2;
+		}
+		&-btn--next {
+			position: absolute;
+			width: 4rem;
+			display: flex;
+			justify-content: space-between;
+			top: 25%;
+			right: 0;
+			z-index: 2;
+		}
 	}
 	// .main-bestsellers__ticker
 	&__ticker {
@@ -162,6 +185,12 @@
 		&__slider {
 			overflow: hidden;
 			max-width: 100%;
+			&-navigation {
+				&-btn--prev,
+				&-btn--next {
+					display: none;
+				}
+			}
 		}
 		// .main-bestsellers__ticker
 		&__ticker {
