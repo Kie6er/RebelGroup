@@ -300,10 +300,11 @@ $(document).ready(() => {
 				direction: 'horizontal',
 				slidesPerView: 1,
 				speed: 1200,
-				grid: {
-					rows: 4,
-					fill: 'row',
-				},
+				enabled: false,
+				// grid: {
+				// 	rows: 4,
+				// 	fill: 'row',
+				// },
 				navigation: {
 					nextEl: slider.parentNode.parentNode.querySelector('.product-slider__slider-navigation-btn--next'),
 					prevEl: slider.parentNode.parentNode.querySelector('.product-slider__slider-navigation-btn--prev'),
@@ -313,10 +314,33 @@ $(document).ready(() => {
 						slidesPerView: 'auto',
 						spaceBetween: `${remToPx(2)}rem`,
 						grid: false,
+						enabled: true,
 					},
 				},
 			});
 		});
+		if (window.innerWidth < 769) {
+			const btnsProduct = document.querySelectorAll('.product-slider__btn');
+			btnsProduct.forEach(btnProduct => {
+				let wrapper = btnProduct.closest('.product-slider__slider-wrapper ');
+				let allSlides = wrapper.querySelectorAll('.product-slider__slider-slide');
+				let visibleCount = 4;
+				btnProduct.addEventListener('click', () => {
+					console.log('tut');
+					for (let i = visibleCount; i < visibleCount + 4; i++) {
+						if (allSlides[i]) {
+							allSlides[i].classList.add('visible');
+						}
+					}
+					// Увеличиваем счетчик на 4
+					visibleCount += 4;
+					if (visibleCount >= allSlides.length) {
+						btnProduct.style.display = 'none';
+					}
+				});
+			});
+			// allSlides.forEach(())
+		}
 	}
 	if ($('.shops-advantages__slider').length) {
 		let shopsAdvantagesSlider = new Swiper('.shops-advantages__slider', {

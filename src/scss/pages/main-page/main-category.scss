@@ -11,42 +11,42 @@
 
 @keyframes redAnim {
 	0% {
-		transform: translate(calc(-50% + 1rem), -50%);
+		transform: translate(calc(-50% + 0.5rem), -50%);
 	}
 	20% {
-		transform: translate(calc(-50% + 0.5rem), calc(-50% + 0.5rem));
+		transform: translate(calc(-50% + 0.25rem), calc(-50% + 0.25rem));
 	}
 	40% {
-		transform: translate(-50%, calc(-50% + 1rem));
+		transform: translate(-50%, calc(-50% + 0.5rem));
 	}
 	60% {
-		transform: translate(calc(-50% - 1rem), calc(-50% - 0.5rem));
+		transform: translate(calc(-50% - 0.5rem), calc(-50% - 0.25rem));
 	}
 	80% {
-		transform: translate(calc(-50% - 0.5rem), -50%);
+		transform: translate(calc(-50% - 0.25rem), -50%);
 	}
 	100% {
-		transform: translate(calc(-50% + 1rem), -50%);
+		transform: translate(calc(-50% + 0.5rem), -50%);
 	}
 }
 @keyframes blueAnim {
 	0% {
-		transform: translate(calc(-50% - 1rem), -50%);
+		transform: translate(calc(-50% - 0.5rem), -50%);
 	}
 	20% {
-		transform: translate(calc(-50% - 1rem), calc(-50% + 1rem));
+		transform: translate(calc(-50% - 0.5rem), calc(-50% + 0.5rem));
 	}
 	40% {
-		transform: translate(-50%, calc(-50% - 1rem));
+		transform: translate(-50%, calc(-50% - 0.5rem));
 	}
 	60% {
-		transform: translate(calc(-50% + 0.5rem), calc(-50% + 0.5rem));
+		transform: translate(calc(-50% + 0.25rem), calc(-50% + 0.25rem));
 	}
 	80% {
-		transform: translate(calc(-50% + 0.5rem), -50%);
+		transform: translate(calc(-50% + 0.25rem), -50%);
 	}
 	100% {
-		transform: translate(calc(-50% - 1rem), -50%);
+		transform: translate(calc(-50% - 0.5rem), -50%);
 	}
 }
 
@@ -126,11 +126,11 @@
 			&:hover {
 				.category-slide__img.red {
 					display: block;
-					animation: redAnim infinite 4s linear;
+					animation: redAnim infinite 1s step-end;
 				}
 				.category-slide__img.blue {
 					display: block;
-					animation: blueAnim infinite 4s linear;
+					animation: blueAnim infinite 1s step-end;
 				}
 			}
 			.category-slide__img {
