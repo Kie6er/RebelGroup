@@ -248,39 +248,17 @@ html {
 			position: absolute;
 			will-change: transform;
 			opacity: 0;
+			object-position: center center;
+
 			&:nth-child(1) {
-				bottom: 19.7rem;
-				right: 114.1rem;
+				left: 0;
+				top: 3.5rem;
 
-				width: 20rem;
-				height: 28.8rem;
-				transform: translateX(calc(var(--transformImage) * -1));
-			}
-			&:nth-child(2) {
-				bottom: 34.1rem;
-				right: 61.7rem;
-
-				width: 19.9rem;
-				height: 15.8rem;
-				transform: translateX(var(--transformImage));
-			}
-			&:nth-child(3) {
-				top: 11.1rem;
-				right: 29.7rem;
-
-				width: 31.8rem;
-				height: 29.8rem;
+				width: 41.5rem;
+				height: 53.3rem;
 				transform: translateY(calc(var(--transformImage) * -1));
 			}
-			&:nth-child(4) {
-				bottom: 13.7rem;
-				left: 9.5rem;
-
-				width: 22.1rem;
-				height: 28rem;
-				transform: translateY(var(--transformImage));
-			}
-			&:nth-child(5) {
+			&:nth-child(2) {
 				left: 41.8rem;
 				top: 23.1rem;
 
@@ -288,15 +266,23 @@ html {
 				height: 15.8rem;
 				transform: translateY(calc(var(--transformImage) * -1));
 			}
-			&:nth-child(6) {
-				right: 0;
-				top: 5.3rem;
+			&:nth-child(3) {
+				bottom: 13.7rem;
+				left: 9.5rem;
 
-				width: 29.4rem;
-				height: 15.8rem;
-				transform: translateX(var(--transformImage));
+				width: 22.1rem;
+				height: 28rem;
+				transform: translateY(var(--transformImage));
 			}
-			&:nth-child(7) {
+			&:nth-child(4) {
+				bottom: 19.7rem;
+				right: 114.1rem;
+
+				width: 20rem;
+				height: 28.8rem;
+				transform: translateX(calc(var(--transformImage) * -1));
+			}
+			&:nth-child(5) {
 				bottom: 2.5rem;
 				left: 62rem;
 
@@ -304,21 +290,37 @@ html {
 				height: 28.5rem;
 				transform: translateY(var(--transformImage));
 			}
+			&:nth-child(6) {
+				bottom: 34.1rem;
+				right: 61.7rem;
+
+				width: 19.9rem;
+				height: 15.8rem;
+				transform: translateX(var(--transformImage));
+			}
+			&:nth-child(7) {
+				top: 11.1rem;
+				right: 29.7rem;
+
+				width: 31.8rem;
+				height: 29.8rem;
+				transform: translateY(calc(var(--transformImage) * -1));
+			}
 			&:nth-child(8) {
+				right: 0;
+				top: 5.3rem;
+
+				width: 29.4rem;
+				height: 15.8rem;
+				transform: translateX(var(--transformImage));
+			}
+			&:nth-child(9) {
 				right: 0;
 				bottom: 4.2rem;
 
 				width: 61.5rem;
 				height: 53.3rem;
 				transform: translateX(var(--transformImage));
-			}
-			&:nth-child(9) {
-				left: 0;
-				top: 3.5rem;
-
-				width: 41.5rem;
-				height: 53.3rem;
-				transform: translateY(calc(var(--transformImage) * -1));
 			}
 		}
 	}
