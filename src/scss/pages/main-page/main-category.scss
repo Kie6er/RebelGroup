@@ -194,8 +194,6 @@
 				}
 			}
 		}
-		&-fraction {
-		}
 		&-navigation {
 			position: absolute;
 			right: 0rem;
@@ -204,8 +202,6 @@
 			@include media-screen {
 				right: 5rem;
 			}
-		}
-		&-footer {
 		}
 	}
 }
@@ -256,6 +252,4 @@
 			font-size: 18rem;
 		}
 	}
-}
-.slider-fraction {
 }

@@ -131,7 +131,7 @@ function inspiredAnimation() {
 		.add(
 			(function () {
 				inspiredPhotos.forEach((el, i) => {
-					if (i <= 5) {
+					if (i !== 0 && i !== 4 && i !== 8) {
 						gsap.to(
 							el,
 							{
@@ -180,7 +180,7 @@ function inspiredAnimation() {
 			scrollTrigger: {
 				trigger: $('.main-inspired').parent('.pin-spacer'),
 				start: '80% center',
-				end: '110% center',
+				end: '150% center',
 				scrub: 3,
 			},
 		});

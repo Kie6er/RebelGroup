@@ -102,6 +102,16 @@
 	}
 }
 .bestsellers-slide {
+	&:hover {
+		.bestsellers-slide__img.red {
+			display: block;
+			animation: redAnim infinite 1s step-end;
+		}
+		.bestsellers-slide__img.blue {
+			display: block;
+			animation: blueAnim infinite 1s step-end;
+		}
+	}
 	// .bestsellers-slide__wrapper
 	&__wrapper {
 		display: flex;
@@ -109,11 +119,33 @@
 		align-items: center;
 		margin-bottom: 8rem;
 	}
-	// .bestsellers-slide__img
-	&__img {
+	&__image-wrapper {
+		position: relative;
 		width: 48.8rem;
 		height: 49.6rem;
 		margin-bottom: 3.6rem;
+	}
+	// .bestsellers-slide__img
+	&__img {
+		width: 100%;
+		height: 100%;
+
+		&.blue,
+		&.red {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+		&.red {
+			display: none;
+			filter: invert(31%) sepia(40%) saturate(767%) hue-rotate(313deg) contrast(228%);
+		}
+		&.blue {
+			display: none;
+			filter: invert(31%) sepia(40%) saturate(767%) hue-rotate(129deg) contrast(114%);
+		}
 	}
 	// .bestsellers-slide__content
 	&__content {
@@ -151,8 +183,46 @@
 		line-height: normal;
 		letter-spacing: 0.064rem;
 	}
-	// .bestsellers-slide__btn
-	&__btn {
+}
+
+@keyframes redAnim {
+	0% {
+		transform: translate(calc(-50% + 0.5rem), -50%);
+	}
+	20% {
+		transform: translate(calc(-50% + 0.25rem), calc(-50% + 0.25rem));
+	}
+	40% {
+		transform: translate(-50%, calc(-50% + 0.5rem));
+	}
+	60% {
+		transform: translate(calc(-50% - 0.5rem), calc(-50% - 0.25rem));
+	}
+	80% {
+		transform: translate(calc(-50% - 0.25rem), -50%);
+	}
+	100% {
+		transform: translate(calc(-50% + 0.5rem), -50%);
+	}
+}
+@keyframes blueAnim {
+	0% {
+		transform: translate(calc(-50% - 0.5rem), -50%);
+	}
+	20% {
+		transform: translate(calc(-50% - 0.5rem), calc(-50% + 0.5rem));
+	}
+	40% {
+		transform: translate(-50%, calc(-50% - 0.5rem));
+	}
+	60% {
+		transform: translate(calc(-50% + 0.25rem), calc(-50% + 0.25rem));
+	}
+	80% {
+		transform: translate(calc(-50% + 0.25rem), -50%);
+	}
+	100% {
+		transform: translate(calc(-50% - 0.5rem), -50%);
 	}
 }
 @media (max-width: 48em) {
@@ -215,6 +285,12 @@
 		}
 	}
 	.bestsellers-slide {
+		&:hover {
+			.bestsellers-slide__img.blue,
+			.bestsellers-slide__img.red {
+				display: none;
+			}
+		}
 		// .bestsellers-slide__wrapper
 		&__wrapper {
 			display: flex;
@@ -222,8 +298,9 @@
 			align-items: center;
 			margin-bottom: 8rem;
 		}
-		// .bestsellers-slide__img
-		&__img {
+
+		&__image-wrapper {
+			position: relative;
 			width: 46.2rem;
 			height: 47rem;
 			margin-bottom: 6.4rem;
