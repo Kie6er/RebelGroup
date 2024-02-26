@@ -957,6 +957,17 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 10rem;
 }
+blockquote,
+q {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: rgba(0, 0, 0, 0);
+	quotes: none;
+}
 body {
 	font-optical-sizing: none;
 	font-style: normal;
@@ -1309,6 +1320,37 @@ input[type='number'] {
 .wrapper {
 	padding-top: 11.2rem;
 }
+.breadcrumbs {
+	padding-top: 18.5rem;
+	margin-bottom: 4rem;
+}
+.breadcrumbs ul {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+.breadcrumbs ul li {
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 150%;
+	color: #fff;
+}
+.breadcrumbs ul li:not(:first-child)::before {
+	content: '/';
+	padding-right: 2rem;
+	color: rgba(194, 194, 194, 0.7);
+}
+.breadcrumbs ul li:last-child::before {
+	color: #fff;
+}
+.breadcrumbs ul li a {
+	transition: color 0.2s linear;
+	color: rgba(194, 194, 194, 0.7);
+}
+.breadcrumbs ul li a:hover {
+	transition: color 0.2s linear;
+	color: #fff;
+}
 @media (max-width: 48em) {
 	.h1 {
 		font-size: 6.4rem;
@@ -1433,6 +1475,34 @@ input[type='number'] {
 	.slider-fraction > .swiper-pagination-total {
 		font-size: 4rem;
 		margin-bottom: 0.6rem;
+	}
+	.breadcrumbs {
+		padding-top: 17.6rem;
+		margin-bottom: 4.8rem;
+	}
+	.breadcrumbs ul {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1rem 2.4rem;
+	}
+	.breadcrumbs ul li {
+		font-size: 3rem;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.breadcrumbs ul li:not(:last-child)::before {
+		padding-right: 2.4rem;
+	}
+	.breadcrumbs ul li a {
+		transition: color 0.2s linear;
+		color: rgba(194, 194, 194, 0.7);
+	}
+	.breadcrumbs ul li a:hover {
+		transition: color 0.2s linear;
+		color: #fff;
 	}
 }
 .barbershop-slide.swiper-slide-next ~ .swiper-slide {
@@ -4031,6 +4101,7 @@ html {
 }
 .philosophy-banner__inner {
 	padding-top: 8rem;
+	margin-top: -8rem;
 	position: relative;
 	min-height: 96.8rem;
 }
@@ -4302,6 +4373,7 @@ html {
 	}
 	.philosophy-banner__inner {
 		padding-top: 12rem;
+		margin-top: -12rem;
 		min-height: 120.4rem;
 	}
 	.philosophy-banner__title {
@@ -4562,7 +4634,6 @@ html {
 	position: relative;
 }
 .barbershop-banner__inner {
-	padding-top: 6rem;
 	position: relative;
 	min-height: 90.8rem;
 }
@@ -4768,6 +4839,7 @@ html {
 	}
 	.barbershop-banner__inner {
 		padding-top: 12rem;
+		margin-top: -12rem;
 		position: relative;
 		min-height: auto;
 		display: flex;
@@ -4967,9 +5039,6 @@ html {
 		width: 100%;
 		overflow: auto;
 	}
-}
-.card {
-	padding-top: 16.2rem;
 }
 .card__container {
 	position: relative;
@@ -5924,7 +5993,6 @@ html {
 	height: 4rem;
 }
 .style-detail__inner {
-	padding-top: 6rem;
 	display: flex;
 	flex-direction: column;
 	gap: 6rem;
@@ -6303,7 +6371,6 @@ html {
 		height: 8rem;
 	}
 	.style-detail__inner {
-		padding-top: 12rem;
 		gap: 6.4rem;
 	}
 	.style-detail__wrapper {
@@ -7005,7 +7072,6 @@ html {
 }
 .contacts {
 	position: relative;
-	padding-top: 17.2rem;
 }
 .contacts__back {
 	position: absolute;
@@ -7170,11 +7236,46 @@ html {
 		width: 52.2rem;
 	}
 }
+.news.massmedia .news-item__img {
+	width: 39.8rem;
+}
+.news.massmedia .news-item__wrapper {
+	padding: 2rem 2.5rem 2.8rem 2.8rem;
+}
+.news.massmedia .news-item__content {
+	gap: 2rem;
+}
+.news.massmedia .news-item__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.news.massmedia .news-item__footer p {
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 125%;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	text-align: right;
+	color: #dd921e;
+	transition: color 0.2s linear;
+}
+.news.massmedia .news-item__description {
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 120%;
+	color: rgba(194, 194, 194, 0.7);
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
+	transition: color 0.2s linear;
+}
 .news__inner {
 	display: flex;
 	flex-direction: column;
 	gap: 6rem;
-	padding-top: 6rem;
 }
 .news__title {
 	text-transform: uppercase;
@@ -7212,6 +7313,26 @@ html {
 	width: 32.5%;
 	height: 63.2rem;
 }
+.news-item:not(.news-item--last) .news-item__wrapper:hover {
+	background-color: #2a2a2a;
+	transition: background 0.2s linear;
+}
+.news-item:not(.news-item--last) .news-item__wrapper:active {
+	background-color: #dd921e;
+	transition: background 0.2s linear;
+}
+.news-item:not(.news-item--last) .news-item__wrapper:active .news-item__date {
+	color: #fff;
+	transition: color 0.2s linear;
+}
+.news-item:not(.news-item--last) .news-item__wrapper:active .news-item__footer p {
+	color: #fff;
+	transition: color 0.2s linear;
+}
+.news-item:not(.news-item--last) .news-item__wrapper:active .news-item__description {
+	color: #fff;
+	transition: color 0.2s linear;
+}
 .news-item--last .news-item__wrapper {
 	display: flex;
 	align-items: center;
@@ -7223,6 +7344,7 @@ html {
 	height: 100%;
 	padding: 2.8rem;
 	background: #171717;
+	transition: background 0.2s linear;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -7249,12 +7371,18 @@ html {
 	line-height: normal;
 	letter-spacing: 0.384rem;
 	text-transform: uppercase;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
 .news-item__date {
 	color: #4b4b4b;
 	font-size: 1.6rem;
 	line-height: normal;
 	letter-spacing: 0.064rem;
+	transition: color 0.2s linear;
 }
 .news-item__img {
 	width: 30rem;
@@ -7267,7 +7395,6 @@ html {
 	display: flex;
 	justify-content: center;
 	position: relative;
-	padding-top: 6rem;
 }
 .news-detail__wrapper {
 	display: flex;
@@ -7300,9 +7427,84 @@ html {
 }
 .news-detail .main-bestsellers__ticker {
 	z-index: -1;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 25rem;
 	bottom: unset;
+}
+.blockquote:not(:last-child) {
+	margin-bottom: 1.5rem;
+}
+.blockquote blockquote {
+	display: flow-root;
+	padding-left: 1rem;
+	font-weight: 400;
+	font-size: 1.6rem;
+	position: relative;
+	line-height: 130%;
+}
+.blockquote blockquote i {
+	font-style: italic;
+	color: #c2c2c2;
+}
+.blockquote blockquote span {
+	color: rgba(194, 194, 194, 0.7);
+}
+.blockquote blockquote::after {
+	content: '';
+	width: 0.1rem;
+	height: 100%;
+	background-color: #dd921e;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.news-info.massmedia .news-info__inner {
+	padding: 0 14.8rem;
+}
+.news-info.massmedia .news-info__left {
+	max-width: 47.4rem;
+}
+.news-info.massmedia .news-info__left .blockquote {
+	max-width: 32rem;
+	text-transform: uppercase;
+}
+.news-info.massmedia .news-info__right {
+	max-width: 72.2rem;
+}
+.news-info.massmedia .news-info__text p {
+	font-size: 2rem;
+	line-height: 120%;
+	color: #fff;
+}
+.news-info.massmedia .news-info__text p a {
+	color: #dd921e;
+	text-decoration: underline;
+}
+.news-info.massmedia .news-info__block .news-info__info-title {
+	margin-bottom: 1.2rem;
+}
+.news-info.massmedia .news-info__block .float {
+	max-width: 107rem;
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+}
+.news-info.massmedia .news-info__block .float .img {
+	max-width: 50.6rem;
+	height: auto;
+	padding-right: 2.4rem;
+	flex-shrink: 0;
+}
+.news-info.massmedia .news-info__block .float .float-content {
+	width: 53.7rem;
+	flex-shrink: 0;
+}
+.news-info.massmedia .news-info__block p {
+	font-size: 1.6rem;
+	color: rgba(194, 194, 194, 0.7);
+}
+.news-info.massmedia .news-info__block p:not(:last-child) {
+	margin-bottom: 1.5rem;
 }
 .news-info__inner {
 	display: flex;
@@ -7417,9 +7619,32 @@ html {
 	letter-spacing: 0.064rem;
 }
 @media (max-width: 48em) {
+	.news.massmedia .news-item--last .news-item__wrapper {
+		padding: 4rem;
+	}
+	.news.massmedia .news-item__img {
+		width: 42.8rem;
+		height: 28rem;
+	}
+	.news.massmedia .news-item__wrapper {
+		padding: 3.2rem;
+	}
+	.news.massmedia .news-item__content {
+		gap: 2.4rem;
+	}
+	.news.massmedia .news-item__footer p {
+		font-size: 3rem;
+		line-height: 120%;
+		letter-spacing: 0.08em;
+	}
+	.news.massmedia .news-item__description {
+		font-size: 3rem;
+		line-height: 160%;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+	}
 	.news__inner {
 		gap: 6.4rem;
-		padding-top: 12rem;
 	}
 	.news__title {
 		text-align: center;
@@ -7481,9 +7706,6 @@ html {
 		width: 28rem;
 		height: 28rem;
 	}
-	.news-detail__inner {
-		padding-top: 12rem;
-	}
 	.news-detail__wrapper {
 		gap: 0;
 	}
@@ -7502,9 +7724,50 @@ html {
 	}
 	.news-detail .main-bestsellers__ticker {
 		z-index: -1;
-		top: 66%;
-		transform: translateY(-50%);
+		top: 32rem;
 		bottom: unset;
+	}
+	.news-info.massmedia .news-info__inner {
+		padding: 0;
+	}
+	.news-info.massmedia .news-info__left {
+		max-width: 100%;
+	}
+	.news-info.massmedia .news-info__right {
+		max-width: 100%;
+	}
+	.news-info.massmedia .news-info__text p {
+		font-size: 3rem;
+	}
+	.news-info.massmedia .news-info__block .news-info__info-title {
+		margin-bottom: 2.4rem;
+	}
+	.news-info.massmedia .news-info__block .float {
+		max-width: 100%;
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 2.4rem;
+	}
+	.news-info.massmedia .news-info__block .float .img {
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		padding-right: 0;
+		flex-shrink: 0;
+		order: 2;
+	}
+	.news-info.massmedia .news-info__block .float .float-content {
+		width: 100%;
+		flex-shrink: 0;
+	}
+	.news-info.massmedia .news-info__block p {
+		font-size: 3rem;
+	}
+	.news-info.massmedia .news-info__block p:not(:last-child) {
+		margin-bottom: 2rem;
 	}
 	.news-info__inner {
 		flex-direction: column;
@@ -7588,6 +7851,26 @@ html {
 	.news-info-card__date {
 		font-size: 3rem;
 		line-height: 130%;
+	}
+	.blockquote:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+	.blockquote blockquote {
+		display: flow-root;
+		padding-left: 2rem;
+		font-size: 3rem;
+		position: relative;
+		line-height: 130%;
+	}
+	.blockquote blockquote i {
+		font-style: italic;
+		color: #c2c2c2;
+	}
+	.blockquote blockquote span {
+		color: rgba(194, 194, 194, 0.7);
+	}
+	.blockquote blockquote::after {
+		width: 0.2rem;
 	}
 }
 .distributors-terms {
@@ -7872,7 +8155,6 @@ html {
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
-	padding-top: 8rem;
 }
 .fragrances-banner__left {
 	display: flex;
@@ -7978,7 +8260,6 @@ html {
 		align-items: flex-start;
 		flex-direction: column;
 		justify-content: flex-start;
-		padding-top: 12rem;
 		gap: 6.4rem;
 	}
 	.fragrances-banner__left {
@@ -8138,12 +8419,13 @@ html {
 	}
 }
 .catalog-banner {
-	padding: 20rem 0 0;
+	margin-top: -2rem;
 	overflow: hidden;
 }
 @media (max-width: 48em) {
 	.catalog-banner {
-		padding: 20rem 0 43rem;
+		padding: 0 0 43rem;
+		margin-top: 0;
 	}
 }
 .catalog-banner__container {
