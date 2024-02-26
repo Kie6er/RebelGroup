@@ -88,7 +88,7 @@
 	// .philosophy-content__inner
 	&__inner {
 		position: relative;
-		min-height: 163.1rem;
+		min-height: 128.8rem;
 	}
 	// .philosophy-content__item
 	&__item {
@@ -133,12 +133,13 @@
 .philosophy-item--first {
 	width: 100%;
 	justify-content: space-between;
+	flex-direction: row-reverse;
 	top: 0;
 	left: 0;
 	&.philosophy-item {
 		.philosophy-item__wrapper {
-			flex-direction: row-reverse;
-			gap: 16.8rem;
+			flex-direction: row;
+			gap: 8.6rem;
 		}
 		.philosophy-item__title {
 			color: $orange;
@@ -158,24 +159,24 @@
 	}
 }
 .philosophy-item--second {
-	width: 100.1rem;
+	width: 131.5rem;
 	justify-content: space-between;
-	flex-direction: column;
-	gap: 6rem;
-	top: 34.3rem;
-	right: 1.7rem;
+	flex-direction: row;
+	align-items: flex-end;
+	gap: 2.1rem;
+	top: 23rem;
+	left: 0;
 	&.philosophy-item {
 		.philosophy-item__wrapper {
-			flex-direction: row-reverse;
 			align-items: flex-end;
-			gap: 15.8rem;
+			gap: 3.7rem;
 		}
 		.philosophy-item__title {
 			color: $orange;
 		}
 		.philosophy-item__image {
-			width: 27.6rem;
-			height: 27.6rem;
+			width: 42.4rem;
+			height: 36.6rem;
 		}
 		.philosophy-item__text {
 			width: 42.5rem;
@@ -186,27 +187,31 @@
 	}
 }
 .philosophy-item--third {
-	width: 72.1rem;
+	width: 86.9rem;
 	justify-content: space-between;
 	flex-direction: column;
-	gap: 9.6rem;
-	top: 85.2rem;
-	left: 0;
+	gap: 2.7rem;
+	top: 65.6rem;
+	right: 0;
 	&.philosophy-item {
 		.philosophy-item__wrapper {
-			justify-content: space-between;
-			min-height: 45.2rem;
+			flex-direction: row-reverse;
+			min-height: 36.6rem;
+			justify-content: flex-end;
+			align-items: flex-start;
+			gap: 1.6rem;
 		}
 		.philosophy-item__title {
 			color: $white;
 		}
 		.philosophy-item__image {
-			width: 27.6rem;
-			height: 27.6rem;
-			align-self: flex-end;
+			width: 42.8rem;
+			height: 36.6rem;
+			margin-top: 2.2rem;
 		}
 		.philosophy-item__text {
-			width: 35.7rem;
+			width: 42.5rem;
+			align-self: flex-end;
 		}
 		.philosophy-item__subtitle {
 			max-width: 24.4rem;
@@ -214,13 +219,26 @@
 	}
 }
 .philosophy-item--fourth {
-	width: 87.5rem;
-	top: 103.4rem;
-	right: 0;
+	width: 87rem;
+	top: 68.5rem;
+	left: 0;
+	&::after {
+		content: '';
+		width: 40.6rem;
+		height: 40.6rem;
+		position: absolute;
+		top: -1.3rem;
+		z-index: -1;
+		left: 27.9rem;
+		transform: rotate(80.41deg);
+		background: url('../../assets/images/icons/black-blade.svg') center / contain no-repeat;
+	}
 	&.philosophy-item {
 		.philosophy-item__wrapper {
 			width: 100%;
 			justify-content: space-between;
+			flex-direction: row-reverse;
+			align-items: flex-end;
 			min-height: 45.2rem;
 		}
 		.philosophy-item__image {
@@ -230,9 +248,7 @@
 		.philosophy-item__title {
 			color: $white;
 		}
-		.philosophy-item__title {
-			margin-top: 17.4rem;
-		}
+
 		.philosophy-item__text {
 			width: 35.7rem;
 		}
@@ -428,7 +444,6 @@
 		flex-direction: column;
 		&.philosophy-item {
 			.philosophy-item__wrapper {
-				flex-direction: row;
 				align-items: center;
 				gap: 14.2rem;
 			}
@@ -461,6 +476,7 @@
 				align-items: center;
 				justify-content: space-between;
 				gap: 0;
+				width: 100%;
 			}
 			.philosophy-item__image {
 				width: 16.8rem;
@@ -486,6 +502,7 @@
 				justify-content: flex-start;
 				gap: 18.6rem;
 				min-height: auto;
+				flex-direction: row;
 			}
 			.philosophy-item__title {
 				order: 2;
@@ -496,6 +513,7 @@
 				width: 16.8rem;
 				height: 16.8rem;
 				align-self: flex-start;
+				margin-top: 0;
 			}
 			.philosophy-item__text {
 				width: 100%;
@@ -507,12 +525,16 @@
 	}
 	.philosophy-item--fourth {
 		width: 100%;
+		&::after {
+			display: none;
+		}
 		&.philosophy-item {
 			.philosophy-item__wrapper {
 				width: 100%;
 				align-items: center;
 				justify-content: space-between;
 				min-height: auto;
+				flex-direction: row;
 			}
 			.philosophy-item__image {
 				width: 21.2rem;
