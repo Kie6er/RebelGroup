@@ -253,6 +253,39 @@
 	padding-top: 11.2rem;
 }
 
+.breadcrumbs {
+	padding-top: 18.5rem;
+	margin-bottom: 4rem;
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		li {
+			font-weight: 400;
+			font-size: 2rem;
+			line-height: 150%;
+			color: $white;
+			&:not(:first-child)::before {
+				content: '/';
+				padding-right: 2rem;
+				color: rgba(194, 194, 194, 0.7);
+			}
+			&:last-child::before {
+				color: $white;
+			}
+
+			a {
+				transition: color 0.2s linear;
+				color: rgba(194, 194, 194, 0.7);
+				&:hover {
+					transition: color 0.2s linear;
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 48em) {
 	.h1 {
 		font-size: 6.4rem;
@@ -396,6 +429,35 @@
 		> .swiper-pagination-total {
 			font-size: 4rem;
 			margin-bottom: 0.6rem;
+		}
+	}
+	.breadcrumbs {
+		padding-top: 17.6rem;
+		margin-bottom: 4.8rem;
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 1rem 2.4rem;
+			li {
+				font-size: 3rem;
+				max-width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+
+				&:not(:last-child)::before {
+					padding-right: 2.4rem;
+				}
+				a {
+					transition: color 0.2s linear;
+					color: rgba(194, 194, 194, 0.7);
+					&:hover {
+						transition: color 0.2s linear;
+						color: $white;
+					}
+				}
+			}
 		}
 	}
 }

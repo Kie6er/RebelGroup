@@ -4,7 +4,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 6rem;
-		padding-top: 6rem;
 	}
 	// .news__title
 	&__title {
@@ -118,7 +117,6 @@
 		display: flex;
 		justify-content: center;
 		position: relative;
-		padding-top: 6rem;
 	}
 	// .news-detail__wrapper
 	&__wrapper {
@@ -303,7 +301,6 @@
 		// .news__inner
 		&__inner {
 			gap: 6.4rem;
-			padding-top: 12rem;
 		}
 		// .news__title
 		&__title {
@@ -383,10 +380,6 @@
 		}
 	}
 	.news-detail {
-		// .news-detail__inner
-		&__inner {
-			padding-top: 12rem;
-		}
 		// .news-detail__wrapper
 		&__wrapper {
 			gap: 0;

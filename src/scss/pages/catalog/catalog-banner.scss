@@ -46,10 +46,11 @@
 }
 
 .catalog-banner {
-	padding: 20rem 0 0;
+	margin-top: -2rem;
 	overflow: hidden;
 	@include media-screen {
-		padding: 20rem 0 43rem;
+		padding: 0 0 43rem;
+		margin-top: 0;
 	}
 	&__container {
 		position: relative;
