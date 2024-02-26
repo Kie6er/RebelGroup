@@ -16,6 +16,18 @@ html {
 	scroll-padding-top: 10rem;
 }
 
+blockquote,
+q {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	quotes: none;
+}
+
 body {
 	font-optical-sizing: none;
 	font-style: normal;
