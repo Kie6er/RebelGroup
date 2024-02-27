@@ -198,22 +198,38 @@
 					</div>
 					<div class="with_product__wrapper">
 						<div class="with_product__main">
-							<div class="with_product__main-name">
-								<div class="with_product__main-wrapper">
-									<span>до</span>
-									<span>после</span>
-								</div>
-							</div>
+							<button class="with_product__main-btn before">До</button>
 							<div class="with_product__main-photos">
-								<div class="with_product__main-photo first">
+								<div class="image_slider__container" style="--position: 94%">
+									<div class="image-container">
+										<img class="image-before image_slider-image" src="./assets/images/card/photo.png" alt="color photo" />
+										<img class="image-after image_slider-image" src="./assets/images/card/photo2.png" alt="black and white" />
+									</div>
+									<!-- step="10" -->
+									<input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="image_slider" />
+									<div class="image_slider-line" aria-hidden="true"></div>
+									<div class="image_slider-button" aria-hidden="true">
+										<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+											<rect width="256" height="256" fill="none"></rect>
+											<line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+											<line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+											<polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+											<line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+											<polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+										</svg>
+									</div>
+								</div>
+								<!-- <div class="with_product__main-photo first">
 									<img src="./assets/images/card/photo.png" alt="" />
 									<div class="with_product__main-text">до</div>
 								</div>
 								<div class="with_product__main-photo second">
 									<img src="./assets/images/card/photo2.png" alt="" />
 									<div class="with_product__main-text">после</div>
-								</div>
+								</div> -->
 							</div>
+							<button class="with_product__main-btn after">После</button>
+
 							<div class="with_product__info">
 								<div class="with_product__info-main">
 									<div class="with_product__info-title">в работе использовали:</div>
