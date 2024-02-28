@@ -75,6 +75,17 @@
 			text-transform: uppercase;
 			color: #fff;
 		}
+		.work_info__main {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.work_info__title {
+			margin-bottom: 0;
+		}
+		.work_info__main {
+			margin-bottom: 6rem;
+		}
 	}
 	&__title {
 		margin-bottom: 6rem;
@@ -457,6 +468,12 @@
 		}
 	}
 	.work_info {
+		&.career {
+			.work_info__main,
+			.work_info__slider {
+				margin-bottom: 6.4rem;
+			}
+		}
 		&__list {
 			flex-wrap: inherit;
 			gap: 0;
