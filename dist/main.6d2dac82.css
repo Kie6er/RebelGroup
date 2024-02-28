@@ -8396,15 +8396,60 @@ html {
 }
 .fragrances-section__inner {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 	gap: 2rem;
 }
 .fragrances-section__left {
 	display: flex;
 	flex-direction: column;
+	width: 57.2rem;
+	justify-content: space-between;
+}
+.fragrances-section__description {
+	display: flex;
+	flex-direction: column;
 	gap: 2rem;
-	max-width: 54rem;
+	max-width: 55rem;
+}
+.fragrances-section__triangle {
+	position: relative;
+	width: 100%;
+}
+.fragrances-section__triangle-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	clip-path: polygon(85% 0%, 100% 100%, 0% 100%, 0% 0%);
+	overflow: hidden;
+}
+.fragrances-section__triangle-list li {
+	display: block;
+	position: relative;
+	font-size: 2rem;
+	line-height: 120%;
+	color: #c2c2c2;
+	padding-bottom: 1rem;
+}
+.fragrances-section__triangle-list li::before {
+	content: '';
+	width: 100%;
+	height: 1rem;
+	border-top: 0.4rem solid #000;
+	border-bottom: 0.4rem solid #000;
+	background-color: #c2c2c2;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+.fragrances-section__triangle-item {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	width: 19.8rem;
+	height: 17.2rem;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .fragrances-section__text p:not(:last-child) {
 	margin-bottom: 2rem;
@@ -8515,6 +8560,54 @@ html {
 	.fragrances-section__left {
 		gap: 6.4rem;
 		max-width: 100%;
+	}
+	.fragrances-section__left {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.fragrances-section__description {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		max-width: 100%;
+	}
+	.fragrances-section__triangle {
+		order: 3;
+		padding-top: 2rem;
+		position: relative;
+		width: 100%;
+	}
+	.fragrances-section__triangle-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2.8rem;
+		clip-path: polygon(84.5% 0%, 100% 100%, 0% 100%, 0% 0%);
+		overflow: hidden;
+		width: 100%;
+	}
+	.fragrances-section__triangle-list li {
+		display: block;
+		position: relative;
+		font-size: 3rem;
+		line-height: 130%;
+		color: #c2c2c2;
+		padding-bottom: 0.5rem;
+	}
+	.fragrances-section__triangle-list li::before {
+		height: 0.6rem;
+		border-top: 0.2rem solid #000;
+		border-bottom: 0.2rem solid #000;
+	}
+	.fragrances-section__triangle-item {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		width: 22.8rem;
+		height: 20.4rem;
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 	}
 	.fragrances-section__title {
 		font-size: 5.6rem;
