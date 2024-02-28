@@ -1,0 +1,244 @@
+.services {
+	position: relative;
+	&__map {
+		width: 100%;
+		height: 98rem;
+	}
+
+	&__modal {
+		position: absolute;
+		top: 0;
+		right: 8rem;
+		padding: 4rem;
+		width: 72.2rem;
+		height: 98rem;
+		display: flex;
+		background-image: url('./assets/images/bg_modal.webp');
+		background-size: cover;
+		background-color: #171717;
+		text-transform: uppercase;
+		overflow: hidden;
+		&-subtitle {
+			font-weight: 400;
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			color: #dd921e;
+			cursor: pointer;
+		}
+	}
+	&__cities {
+		width: 64.2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 4.8rem;
+		&::-webkit-scrollbar {
+			width: 0.2rem;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			background: rgba(194, 194, 194, 0.25);
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: #dd921e;
+		}
+
+		/* Handle on hover */
+		&::-webkit-scrollbar-thumb:hover {
+			background: #555;
+		}
+	}
+	&__main {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		font-size: 3.2rem;
+		letter-spacing: 0.12rem;
+		color: #fff;
+		&-item {
+			list-style-type: none;
+			cursor: pointer;
+		}
+	}
+	&__content {
+		max-height: 65.8rem;
+		display: flex;
+		gap: 8rem;
+		flex-wrap: wrap;
+		overflow-y: auto;
+		padding-right: 2rem;
+		&-letter {
+			font-weight: 400;
+			line-height: 1;
+			font-size: 3.2rem;
+			letter-spacing: 0.12rem;
+			color: #dd921e;
+		}
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 125%;
+		letter-spacing: 0.08rem;
+		text-transform: uppercase;
+		color: rgba(194, 194, 194, 0.7);
+		&-item {
+			list-style-type: none;
+			cursor: pointer;
+		}
+	}
+	&__wrapper {
+		display: flex;
+		transition: 0.4s ease-in-out;
+		&.active {
+			transform: translate(-50%, 0);
+			.services__salons {
+				transform: translate(0, 0);
+			}
+		}
+	}
+	&__salons {
+		// position: absolute;
+		// top: 0;
+		// right: 8rem;
+		// padding: 4rem;
+		// width: 72.2rem;
+		// height: 98rem;
+		width: 64.2rem;
+		display: flex;
+		flex-direction: column;
+		transform: translate(4.2rem, 0);
+		transition: transform 0.4s ease-in-out;
+		&.no-tran {
+			transition: none;
+		}
+		// background-image: url('./assets/images/bg_modal.webp');
+		// background-size: cover;
+		// background-color: #171717;
+
+		&-back {
+			width: fit-content;
+			margin-bottom: 0.4rem;
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			font-family: 'Roboto';
+			font-weight: 400;
+			font-size: 2rem;
+			line-height: 1.2;
+			color: #dd921e;
+			svg {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+		&-city {
+			font-family: 'Oswald';
+			font-weight: 400;
+			font-size: 5rem;
+			text-transform: uppercase;
+			color: #fff;
+		}
+		&-list {
+			margin-top: 6.4rem;
+			width: 100%;
+			padding-right: 2.1rem;
+			display: flex;
+			flex-direction: column;
+			max-height: 67.8rem;
+			overflow-y: auto;
+			&::-webkit-scrollbar {
+				width: 0.2rem;
+			}
+
+			/* Track */
+			&::-webkit-scrollbar-track {
+				background: rgba(194, 194, 194, 0.25);
+			}
+
+			/* Handle */
+			&::-webkit-scrollbar-thumb {
+				background: #dd921e;
+			}
+
+			/* Handle on hover */
+			&::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
+		}
+		&-item {
+			padding: 1.8rem 1.2rem;
+			display: flex;
+			gap: 2.8rem;
+			transition: background-color 0.25s ease-in-out;
+			border-bottom: 1px solid #c2c2c2c7;
+			&:last-child {
+				border-bottom: none;
+			}
+			cursor: pointer;
+			&:hover {
+				background-color: #101010;
+			}
+		}
+		&-img {
+			width: 12rem;
+			height: 12rem;
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		// transform: translate(100%,0);
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		&-name {
+			font-family: 'Roboto';
+			font-weight: 400;
+			font-size: 2rem;
+			line-height: 1.2;
+			letter-spacing: 0.08rem;
+			text-transform: uppercase;
+			color: #dd921e;
+		}
+		&-main {
+			display: flex;
+			flex-direction: column;
+			gap: 0.8rem;
+		}
+		&-address {
+			font-family: 'Roboto';
+			font-weight: 400;
+			font-size: 2rem;
+			text-transform: none;
+			line-height: 1.2;
+			color: #fff;
+		}
+		&-time {
+			font-family: 'Roboto';
+			font-weight: 400;
+			font-size: 2rem;
+			line-height: 1.2;
+			color: rgba(194, 194, 194, 0.7);
+		}
+		&-contacts {
+			display: flex;
+			gap: 0.8rem;
+			font-family: 'Roboto';
+			font-weight: 400;
+			font-size: 1.6rem;
+			line-height: 1.25;
+			letter-spacing: 0.08rem;
+			text-transform: uppercase;
+			color: rgba(194, 194, 194, 0.7);
+		}
+	}
+}
