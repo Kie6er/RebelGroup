@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Контакты</title>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=ffac2b37-9f44-43d8-8e3e-92f15073c2d1"></script>
+	</head>
+	<body>
+		<include src="./components/header.html"></include>
+		<main>
+			<article class="breadcrumbs">
+				<div class="container">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li>Контакты</li>
+					</ul>
+				</div>
+			</article>
+			<section class="services">
+				<div id="map_service" class="services__map"></div>
+
+				<div class="services__modal">
+					<div class="services__wrapper">
+						<div class="services__cities">
+							<span class="services__modal-subtitle">Выберите ваш город</span>
+							<div class="services__main">
+								<li class="services__main-item">москва</li>
+								<li class="services__main-item">санкт-петербург</li>
+							</div>
+							<div class="services__content">
+								<div class="services__list">
+									<h3 class="services__content-letter">А</h3>
+									<li class="services__list-item" data-coords="55.7893423, 37.6569675">Апреловка</li>
+									<li class="services__list-item" data-coords="55.7902891, 37.5308876">Архангельск</li>
+									<li class="services__list-item" data-coords="59.9880254, 30.3533107">Альметьевск</li>
+									<li class="services__list-item" data-coords="59.9280254, 30.3533307">Арзсамас</li>
+								</div>
+								<!-- <div class="services__list">
+                                    <h3 class="services__content-letter">Б</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">В</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div> -->
+								<!-- <div class="services__list">
+                                    <h3 class="services__content-letter">Г</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">Д</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">Е</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">Ж</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">З</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">И</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">И</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">И</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">И</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">И</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div>
+                                <div class="services__list">
+                                    <h3 class="services__content-letter">И</h3>
+                                    <li class="services__list-item">апреловка</li>
+                                    <li class="services__list-item">архангельск</li>
+                                    <li class="services__list-item">альметьевск</li>
+                                    <li class="services__list-item">арзсамас</li>
+                                </div> -->
+							</div>
+						</div>
+						<div class="services__salons no-tran">
+							<button class="services__salons-back">
+								<svg width="32" height="8" viewBox="0 0 32 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M31 4.5C31.2761 4.5 31.5 4.27614 31.5 4C31.5 3.72386 31.2761 3.5 31 3.5L31 4.5ZM0.646446 3.64644C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82842L1.70711 4L4.53553 1.17157C4.7308 0.976308 4.7308 0.659726 4.53553 0.464464C4.34027 0.269202 4.02369 0.269202 3.82843 0.464464L0.646446 3.64644ZM31 3.5L1 3.5L1 4.5L31 4.5L31 3.5Z" fill="#DD921E" />
+								</svg>
+								к списку
+							</button>
+							<h3 class="services__salons-city">санкт-петербург</h3>
+							<ul class="services__salons-list">
+								<li class="services__salons-item" data-coords="55.7893423, 37.6569675">
+									<div class="services__salons-img">
+										<img src="./assets/images/logo.png" alt="" />
+									</div>
+									<div class="services__info">
+										<span class="services__info-name">барбершоп topgun Европолис</span>
+										<div class="services__info-main">
+											<span class="services__info-address">Полюстровский проспект, 84, ТРК "Европолис"</span>
+											<span class="services__info-time">Пн.-Вс.: 10:00-22:00</span>
+										</div>
+										<div class="services__info-contacts">
+											<span>+7 (911) 977-04-44,</span>
+											<span>topgun@gmail.com</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				const mapEl = document.getElementById('map_service');
+
+				const salonsModal = document.querySelector('.services__salons');
+				const servicesModal = document.querySelector('.services__modal');
+				const wrapper = document.querySelector('.services__wrapper');
+				const btnBack = document.querySelector('.services__salons-back');
+				const cityBlock = document.querySelector('.services__salons-city');
+
+				setTimeout(() => {
+					salonsModal.classList.remove('no-tran');
+				}, 100);
+
+				const cities = document.querySelectorAll('.services__list-item');
+				const mapItems = document.querySelectorAll('.services__salons-item');
+				const mapLoc = document.querySelectorAll('.services__list-item');
+
+				btnBack.addEventListener('click', () => {
+					wrapper.classList.remove('active');
+				});
+
+				if (mapEl) {
+					ymaps
+						.load()
+						.then(maps => {
+							const map = new maps.Map('map_service', {
+								center: [55.7893423, 37.6569675],
+								zoom: 12,
+								controls: [],
+							});
+							Array.prototype.forEach.call(mapItems, function (item, id) {
+								var coords = item.dataset.coords.split(',').map(function (coord) {
+									return parseFloat(coord.trim());
+								});
+								console.log(coords);
+								var placemark = new maps.Placemark(
+									coords,
+									{},
+									{
+										iconLayout: 'default#image', // Используем стандартный макет изображения
+										iconImageHref: './assets/images/placemark.svg', // Путь к вашей иконке
+										// iconImageSize: [remToPx(12.6), remToPx(5.7)], // Размеры вашей иконки
+									}
+								);
+								map.geoObjects.add(placemark);
+
+								// При клике на элемент списка центрируем карту на метке
+								item.addEventListener('click', function () {
+									map.setCenter(coords);
+									// mapItems.forEach(mapItem => {
+									// 	mapItem.classList.remove('active');
+									// });
+									// item.classList.add('active');
+									// mapLoc.forEach(loc => {
+									// 	loc.classList.remove('visible');
+									// });
+									// mapLoc[id].classList.add('visible');
+								});
+							});
+
+							cities.forEach(city => {
+								city.addEventListener('click', e => {
+									// if()
+									ymaps.geocode(city.textContent.trim()).then(function (res) {
+										var firstGeoObject = res.geoObjects.get(0);
+										wrapper.classList.add('active');
+										// Проверяем, что координаты доступны
+										if (firstGeoObject) {
+											// Получаем координаты города
+											var coords = firstGeoObject.geometry.getCoordinates();
+											console.log(coords);
+											// Устанавливаем центр карты по координатам города
+											map.setCenter(coords, map.getZoom());
+											cityBlock.textContent = city.textContent.trim();
+										} else {
+											console.error('Координаты не найдены');
+										}
+									});
+								});
+							});
+							// var placemark = new maps.Placemark(
+							// 	[55.7893423, 37.6569675],
+							// 	{},
+							// 	{
+							// 		iconLayout: 'default#image', // Используем стандартный макет изображения
+							// 		iconImageHref: './assets/images/placemark.svg', // Путь к вашей иконке
+							// 		// iconImageSize: [remToPx(12.6), remToPx(5.7)], // Размеры вашей иконки
+							// 	}
+							// );
+							// map.geoObjects.add(placemark);
+						})
+						.catch(error => console.log('Failed to load Yandex Maps', error));
+				}
+			</script>
+		</main>
+		<include src="./components/footer.html"></include>
+		<include src="./components/modal.html"></include>
+	</body>
+</html>
