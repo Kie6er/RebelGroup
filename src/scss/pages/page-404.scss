@@ -1,0 +1,70 @@
+.page-404 {
+	padding-top: 20.4rem;
+	// .page-404__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 5.3rem;
+	}
+	// .page-404__header
+	&__header {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		max-width: 45.1rem;
+
+		h3 {
+			text-transform: uppercase;
+		}
+
+		p {
+			color: #4b4b4b;
+		}
+	}
+	// .page-404__main
+	&__main {
+		width: 116.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 9.2rem;
+	}
+	// .page-404__text
+	&__text {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 38.9rem;
+
+		justify-content: center;
+
+		background: url('../../assets/images/404-bg.png') center / cover no-repeat;
+
+		span {
+			font-family: 'Oswald';
+			font-weight: 300;
+			font-size: 36rem;
+			line-height: 120%;
+			text-transform: uppercase;
+			text-align: center;
+			color: #fff;
+		}
+
+		span.img {
+			display: block;
+			position: relative;
+			height: 100%;
+			width: 33rem;
+
+			img {
+				position: absolute;
+				top: -1.4rem;
+				left: -4rem;
+				width: 43.4rem;
+				height: 45.9rem;
+			}
+		}
+	}
+}
