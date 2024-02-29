@@ -105,11 +105,10 @@
 					content: '';
 					width: 100%;
 					height: 1rem;
-
-					background: $bg url('../../assets/images/line.svg') center / contain no-repeat;
+					background: $bg url('../../assets/images/line.svg') center / 100% 0.2rem no-repeat;
 
 					position: absolute;
-					bottom: 0;
+					bottom: 0.1rem;
 					left: 0;
 					z-index: 1;
 				}
@@ -298,11 +297,14 @@
 					line-height: 130%;
 					color: #c2c2c2;
 					padding-bottom: 0.5rem;
+
+					&::before {
+						background: $bg url('../../assets/images/line.svg') center / 100% 0.4rem no-repeat;
+					}
 				}
 			}
 			&-item {
 				position: absolute;
-				bottom: 0.1rem;
 				right: 0;
 				z-index: -1;
 
