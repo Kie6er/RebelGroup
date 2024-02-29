@@ -100,10 +100,14 @@ $(document).ready(() => {
 			}
 		});
 
+		const urlParams = new URLSearchParams(window.location.search);
+		let minGetParameterValue = parseInt(urlParams.get('price_from'));
+		let maxGetParameterValue = parseInt(urlParams.get('price_up_to'));
 		const priceSlider = document.querySelector('.catalog-cosmetic__filter-slider');
 		const priceValues = document.querySelector('.catalog-cosmetic__filter-values');
+		console.log(minGetParameterValue, maxGetParameterValue);
 		noUiSlider.create(priceSlider, {
-			start: [1000, 6500],
+			start: [minGetParameterValue ? minGetParameterValue : 1000, maxGetParameterValue ? maxGetParameterValue : 6500],
 			connect: true,
 			range: {
 				min: 0,
