@@ -200,10 +200,14 @@
 						<div class="with_product__main">
 							<button class="with_product__main-btn before">До</button>
 							<div class="with_product__main-photos">
-								<div class="image_slider__container" style="--position: 94%">
+								<div class="image_slider__container">
 									<div class="image-container">
-										<img class="image-before image_slider-image" src="./assets/images/card/photo.png" alt="color photo" />
-										<img class="image-after image_slider-image" src="./assets/images/card/photo2.png" alt="black and white" />
+										<div class="image_slider-img img-before">
+											<img class="image-before image_slider-image" src="./assets/images/card/photo.png" alt="color photo" />
+										</div>
+										<div class="image_slider-img img-after">
+											<img class="image-after image_slider-image" src="./assets/images/card/photo2.png" alt="black and white" />
+										</div>
 									</div>
 									<!-- step="10" -->
 									<input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="image_slider" />

@@ -16,3 +16,4 @@ import './pages/main-page';
 import './pages/catalog';
 import './pages/card';
 import './pages/style';
+import './pages/services';
