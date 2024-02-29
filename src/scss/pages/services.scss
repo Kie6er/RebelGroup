@@ -3,18 +3,20 @@
 	&__map {
 		// width: 100%;
 		height: 98rem;
-		width: 115rem;
-		margin-left: 18rem;
+		// width: 115rem;
+		width: 104rem;
 		// margin-left: 5rem;
 		.ymaps-2-1-79-events-pane {
 			background: linear-gradient(0deg, rgb(0, 0, 0) -6%, rgba(0, 0, 0, 0.1607843137) 47%);
 		}
 	}
-
+	&__container {
+		position: relative;
+	}
 	&__modal {
 		position: absolute;
 		top: 0;
-		right: 8rem;
+		right: 0rem;
 		padding: 4rem;
 		width: 72.2rem;
 		height: 98rem;
