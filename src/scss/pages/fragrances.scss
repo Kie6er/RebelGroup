@@ -105,10 +105,8 @@
 					content: '';
 					width: 100%;
 					height: 1rem;
-					border-top: 4px solid $black;
-					border-bottom: 4px solid $black;
 
-					background-color: #c2c2c2;
+					background: $bg url('../../assets/images/line.svg') center / contain no-repeat;
 
 					position: absolute;
 					bottom: 0;
@@ -300,23 +298,17 @@
 					line-height: 130%;
 					color: #c2c2c2;
 					padding-bottom: 0.5rem;
-
-					&::before {
-						height: 0.6rem;
-						border-top: 2px solid $bg;
-						border-bottom: 2px solid $bg;
-					}
 				}
 			}
 			&-item {
 				position: absolute;
-				bottom: 0;
+				bottom: 0.1rem;
 				right: 0;
 				z-index: -1;
 
 				width: 22.8rem;
 				height: 20.4rem;
-				clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+				clip-path: polygon(49.5% 0%, 0% 100%, 100% 100%);
 			}
 		}
 		// .fragrances-section__title
