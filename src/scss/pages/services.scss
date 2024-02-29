@@ -1,8 +1,14 @@
 .services {
 	position: relative;
 	&__map {
-		width: 100%;
+		// width: 100%;
 		height: 98rem;
+		width: 115rem;
+		margin-left: 18rem;
+		// margin-left: 5rem;
+		.ymaps-2-1-79-events-pane {
+			background: linear-gradient(0deg, rgb(0, 0, 0) -6%, rgba(0, 0, 0, 0.1607843137) 47%);
+		}
 	}
 
 	&__modal {
@@ -57,6 +63,7 @@
 		font-size: 3.2rem;
 		letter-spacing: 0.12rem;
 		color: #fff;
+		font-family: 'Oswald';
 		&-item {
 			list-style-type: none;
 			cursor: pointer;
@@ -74,6 +81,7 @@
 			line-height: 1;
 			font-size: 3.2rem;
 			letter-spacing: 0.12rem;
+			font-family: 'Oswald';
 			color: #dd921e;
 		}
 	}
@@ -181,7 +189,7 @@
 				border-bottom: none;
 			}
 			cursor: pointer;
-			&:hover {
+			&.active {
 				background-color: #101010;
 			}
 		}
@@ -239,6 +247,183 @@
 			letter-spacing: 0.08rem;
 			text-transform: uppercase;
 			color: rgba(194, 194, 194, 0.7);
+		}
+	}
+}
+.modal_question {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	height: 100%;
+	background-image: url('./assets/images/modal_bg.png');
+	background-size: 100% 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1001;
+	&__main {
+		position: relative;
+		padding: 8rem;
+		background-color: #000000;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 4rem;
+		&-title {
+			font-family: 'Oswald';
+			font-weight: 400;
+			font-size: 5rem;
+			text-transform: uppercase;
+			color: #fff;
+			.mob-br {
+				display: none;
+			}
+		}
+		&-btns {
+			display: flex;
+			gap: 3.2rem;
+		}
+		&-close {
+			position: absolute;
+			top: 1.6rem;
+			right: 1.6rem;
+			width: 3rem;
+			height: 3rem;
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+@media (max-width: 48em) {
+	.services {
+		height: 149.4rem;
+		overflow: hidden;
+		&.visible {
+			height: auto;
+			.services__container {
+				transform: translateY(0);
+			}
+		}
+		&__modal {
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 68.6rem;
+			height: 149.4rem;
+			padding: 3.2rem;
+			margin: 0 auto;
+			&-subtitle {
+				font-size: 3rem;
+			}
+		}
+		&__main {
+			font-size: 4.8rem;
+			flex-direction: row;
+			gap: 3.2rem;
+		}
+		&__map {
+			width: 100%;
+			margin-left: 0;
+			height: 109.6rem;
+			.ymaps-2-1-79-events-pane {
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75.87%, #000 100%);
+			}
+		}
+		&__container {
+			transform: translateY(-109.7rem);
+			transition: transform 0.35s ease-in-out;
+			// &.visible {
+			// 	transform: translateY(0);
+			// }
+		}
+		&__cities,
+		&__salons {
+			width: 62.2rem;
+		}
+		&__cities {
+			gap: 4.8rem;
+		}
+		&__list {
+			gap: 3.2rem;
+			&-item {
+				font-size: 3.2rem;
+				line-height: normal;
+			}
+		}
+		&__content {
+			max-height: 122.8rem;
+			&-letter {
+				font-size: 4.8rem;
+			}
+		}
+		&__salons {
+			&-back {
+				font-size: 3rem;
+				gap: 1.8rem;
+				svg {
+					width: 7rem;
+					height: 7rem;
+				}
+			}
+			&-list {
+				max-height: 117.8rem;
+				margin-top: 6.4rem;
+			}
+			&-img {
+				width: 16rem;
+				height: 16rem;
+			}
+			&-item {
+				padding: 3.2rem 0 3.2rem 1.6rem;
+			}
+		}
+		&__info {
+			width: 39.8rem;
+			gap: 2.4rem;
+			&-name {
+				font-size: 3rem;
+			}
+			&-main {
+				gap: 0.8rem;
+			}
+			&-address {
+				font-size: 3rem;
+			}
+			&-time {
+				font-size: 3rem;
+			}
+			&-contacts {
+				font-size: 3rem;
+				gap: 1.6rem;
+				flex-direction: column;
+			}
+		}
+	}
+	.modal_question {
+		&__main {
+			width: 68.6rem;
+			padding: 9.6rem 3.2rem;
+			gap: 6.4rem;
+			&-title {
+				font-size: 5.6rem;
+				line-height: 1.2;
+				text-align: center;
+				letter-spacing: 0.2rem;
+				.mob-br {
+					display: block;
+				}
+			}
+			&-close {
+				top: 2.4rem;
+				right: 2.4rem;
+				width: 6rem;
+				height: 6rem;
+			}
 		}
 	}
 }
