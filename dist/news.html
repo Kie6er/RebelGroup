@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Новости</title>
+	<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+	<body>
+		<header class="header">
+	<div class="header__container container">
+		<div class="header__inner">
+			<div class="header__top">
+				<button class="header__burger-btn burger-btn active" type="button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<button class="header__back-btn mobile">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+						<path d="M26.25 15.5C26.5261 15.5 26.75 15.2761 26.75 15C26.75 14.7239 26.5261 14.5 26.25 14.5L26.25 15.5ZM3.39645 14.6464C3.20118 14.8417 3.20118 15.1583 3.39645 15.3536L6.57843 18.5355C6.77369 18.7308 7.09027 18.7308 7.28553 18.5355C7.48079 18.3403 7.48079 18.0237 7.28553 17.8284L4.45711 15L7.28553 12.1716C7.4808 11.9763 7.4808 11.6597 7.28553 11.4645C7.09027 11.2692 6.77369 11.2692 6.57843 11.4645L3.39645 14.6464ZM26.25 14.5L3.75 14.5L3.75 15.5L26.25 15.5L26.25 14.5Z" fill="white"></path>
+					</svg>
+				</button>
+				<div class="header__logo">
+					<a href="../main-page.html">
+						<img src="../assets/images/logo-white.svg" alt="">
+					</a>
+				</div>
+				<div class="header__phone">
+					<a class="desktop" href="tel:84956963132">+7 (495) 696-31-32</a>
+					<a class="mobile" href="tel:84956963132">
+						<svg fill="none" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+							<path d="m25.462 20.912c0 0.45-0.1 0.9125-0.3125 1.3625s-0.4875 0.875-0.85 1.275c-0.6125 0.675-1.2875 1.1625-2.05 1.475-0.75 0.3125-1.5625 0.475-2.4375 0.475-1.275 0-2.6375-0.3-4.075-0.9125s-2.875-1.4375-4.3-2.475c-1.4375-1.05-2.8-2.2125-4.1-3.5-1.2875-1.3-2.45-2.6625-3.4875-4.0875-1.025-1.425-1.85-2.85-2.45-4.2625-0.6-1.425-0.9-2.7875-0.9-4.0875 0-0.85 0.15-1.6625 0.45-2.4125 0.3-0.7625 0.775-1.4625 1.4375-2.0875 0.8-0.7875 1.675-1.175 2.6-1.175 0.35 0 0.7 0.075 1.0125 0.225 0.325 0.15 0.6125 0.375 0.8375 0.7l2.9 4.0875c0.225 0.3125 0.3875 0.6 0.5 0.875 0.1125 0.2625 0.175 0.525 0.175 0.7625 0 0.3-0.0875 0.6-0.2625 0.8875-0.1625 0.2875-0.4 0.5875-0.7 0.8875l-0.95 0.9875c-0.1375 0.1375-0.2 0.3-0.2 0.5 0 0.1 0.0125 0.1875 0.0375 0.2875 0.0375 0.1 0.075 0.175 0.1 0.25 0.225 0.4125 0.6125 0.95 1.1625 1.6 0.5625 0.65 1.1625 1.3125 1.8125 1.975 0.675 0.6625 1.325 1.275 1.9875 1.8375 0.65 0.55 1.1875 0.925 1.6125 1.15 0.0625 0.025 0.1375 0.0625 0.225 0.1 0.1 0.0375 0.2 0.05 0.3125 0.05 0.2125 0 0.375-0.075 0.5125-0.2125l0.95-0.9375c0.3125-0.3125 0.6125-0.55 0.9-0.7 0.2875-0.175 0.575-0.2625 0.8875-0.2625 0.2375 0 0.4875 0.05 0.7625 0.1625s0.5625 0.275 0.875 0.4875l4.1375 2.9375c0.325 0.225 0.55 0.4875 0.6875 0.8 0.125 0.3125 0.2 0.625 0.2 0.975z" stroke="#fff" stroke-miterlimit="10"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<nav class="header__menu">
+				<ul class="header__menu-top active">
+					<li data-menu="brand"><button type="button">О бренде</button></li>
+					<li data-menu="catalog"><button type="button">каталог</button></li>
+					<li data-menu="about"><button type="button">О компании</button></li>
+					<li><a href="../style.html">Стиль</a></li>
+					<li data-menu="business"><button type="button">Для бизнеса</button></li>
+					<li><a href="../news.html">Новости</a></li>
+					<li><a href="../contacts.html">Контакты</a></li>
+				</ul>
+				<div class="header__menu-bottom">
+					<div class="header__menu-bottom--container brand">
+						<ul class="header__menu-bottom--nav">
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">Философия бренда</a>
+							</li>
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">Ароматы и упаковка</a>
+							</li>
+						</ul>
+					</div>
+					<div class="header__menu-bottom--container catalog">
+						<ul class="header__menu-bottom--nav">
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">Разделы товара - пока неизвестны</a>
+							</li>
+						</ul>
+					</div>
+					<div class="header__menu-bottom--container about">
+						<ul class="header__menu-bottom--nav">
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">ПРЕДСТАВИТЕЛЬ В РОССИИ</a>
+							</li>
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">КАРЬЕРА В РОССИИ</a>
+							</li>
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">КАРЬЕРА ЗАРУБЕЖОМ</a>
+							</li>
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">СМИ О НАС</a>
+							</li>
+						</ul>
+					</div>
+					<div class="header__menu-bottom--container business">
+						<ul class="header__menu-bottom--nav">
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">Барбершопы</a>
+							</li>
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">Дистрибьюторам</a>
+							</li>
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">Академии и школы</a>
+							</li>
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">Розничные магазин</a>
+							</li>
+						</ul>
+						<ul class="header__menu-bottom--nav">
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">Интернет-магазины</a>
+							</li>
+							<li>
+								<span>
+									<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="m5 19.5c-0.27614 0-0.5 0.2239-0.5 0.5s0.22386 0.5 0.5 0.5v-1zm30.354 0.8536c0.1952-0.1953 0.1952-0.5119 0-0.7072l-3.182-3.1819c-0.1953-0.1953-0.5119-0.1953-0.7071 0-0.1953 0.1952-0.1953 0.5118 0 0.7071l2.8284 2.8284-2.8284 2.8284c-0.1953 0.1953-0.1953 0.5119 0 0.7071 0.1952 0.1953 0.5118 0.1953 0.7071 0l3.182-3.1819zm-30.354 0.1464h30v-1h-30v1z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<a href="#">Частные мастера</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__menu-social">
+					<div class="social">
+						<div class="social-item">
+							<a href=""><img src="../assets/images/icons/social/vk.svg" alt=""></a>
+						</div>
+						<div class="social-item">
+							<a href=""><img src="../assets/images/icons/social/instagram.svg" alt=""></a>
+						</div>
+						<div class="social-item">
+							<a href=""><img src="../assets/images/icons/social/youtube.svg" alt=""></a>
+						</div>
+						<div class="social-item">
+							<a href=""><img src="../assets/images/icons/social/telegram.svg" alt=""></a>
+						</div>
+						<div class="social-item">
+							<a href=""><img src="../assets/images/icons/social/dzen.svg" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="header__menu-btn mobile">
+					<button class="btn-primary" type="button" data-modal="feedback">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+								<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+							</svg>
+						</span>
+						<strong>заказать звонок</strong>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+								<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+							</svg>
+						</span>
+					</button>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="header__background"></div>
+	<div class="header__overlay"></div>
+</header>
+
+		<main>
+			<article class="breadcrumbs">
+				<div class="container">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li>Новости</li>
+					</ul>
+				</div>
+			</article>
+			<section class="news">
+				<div class="news__container container">
+					<div class="news__inner">
+						<div class="news__title h1">
+							<span>новости</span>
+						</div>
+						<div class="news__wrapper">
+							<div class="news__logo">
+								<div><img src="./assets/images/rebel-news-logo.svg" alt="" /></div>
+							</div>
+							<div class="news__item news-item">
+								<a class="news-item__wrapper" href="#">
+									<div class="news-item__header">
+										<div class="news-item__num">
+											<span>01</span>
+										</div>
+									</div>
+									<div class="news-item__content">
+										<div class="news-item__title">GIVEAWAY! ПРОГОЛОСУЙ ЗА СТАЙЛИНГ И ЗАБЕРИ ЕГО В ПОДАРОК</div>
+										<div class="news-item__date">
+											<span>22.10.2023</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="news__item news-item">
+								<a class="news-item__wrapper" href="#">
+									<div class="news-item__header">
+										<div class="news-item__num">
+											<span>02</span>
+										</div>
+										<div class="news-item__img">
+											<img src="./assets/images/main-page/evolution-1.webp" alt="" />
+										</div>
+									</div>
+									<div class="news-item__content">
+										<div class="news-item__title">GIVEAWAY! ПРОГОЛОСУЙ ЗА СТАЙЛИНГ И ЗАБЕРИ ЕГО В ПОДАРОК</div>
+										<div class="news-item__date">
+											<span>22.10.2023</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="news__item news-item">
+								<a class="news-item__wrapper" href="#">
+									<div class="news-item__header">
+										<div class="news-item__num">
+											<span>03</span>
+										</div>
+										<div class="news-item__img">
+											<img src="./assets/images/main-page/inspired/inspired-6.webp" alt="" />
+										</div>
+									</div>
+									<div class="news-item__content">
+										<div class="news-item__title">GIVEAWAY! ПРОГОЛОСУЙ ЗА СТАЙЛИНГ И ЗАБЕРИ ЕГО В ПОДАРОК</div>
+										<div class="news-item__date">
+											<span>22.10.2023</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="news__item news-item">
+								<a class="news-item__wrapper" href="#">
+									<div class="news-item__header">
+										<div class="news-item__num">
+											<span>04</span>
+										</div>
+									</div>
+									<div class="news-item__content">
+										<div class="news-item__title">GIVEAWAY! ПРОГОЛОСУЙ ЗА СТАЙЛИНГ И ЗАБЕРИ ЕГО В ПОДАРОК</div>
+										<div class="news-item__date">
+											<span>22.10.2023</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="news__item news-item news-item--last">
+								<div class="news-item__wrapper">
+									<div class="news-item__btn">
+										<button class="btn-primary" type="button">
+											<span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+													<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E" />
+												</svg>
+											</span>
+											<strong>показать еще</strong>
+											<span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+													<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E" />
+												</svg>
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__inner desktop">
+		<div class="footer__top">
+			<div class="footer__container container">
+				<div class="footer__top-wrapper">
+					<div class="footer__logo">
+						<a href="#"><img src="../assets/images/logo-white.svg" alt=""></a>
+					</div>
+					<div class="footer__main-social social">
+						<div class="social-item">
+							<a href="#"><img src="../assets/images/icons/social/vk.svg" alt=""></a>
+						</div>
+						<div class="social-item">
+							<a href="#"><img src="../assets/images/icons/social/instagram.svg" alt=""></a>
+						</div>
+						<div class="social-item">
+							<a href="#"><img src="../assets/images/icons/social/youtube.svg" alt=""></a>
+						</div>
+						<div class="social-item">
+							<a href="#"><img src="../assets/images/icons/social/telegram.svg" alt=""></a>
+						</div>
+						<div class="social-item">
+							<a href="#"><img src="../assets/images/icons/social/dzen.svg" alt=""></a>
+						</div>
+					</div>
+					<div class="footer__btn">
+						<button class="btn-primary" type="button" data-modal="feedback">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+									<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+								</svg>
+							</span>
+							<strong>заказать звонок</strong>
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+									<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__main">
+			<div class="footer__container container">
+				<div class="footer__main-wrapper">
+					<div class="footer__main-item">
+						<div class="footer__main-title text-20-r">О бренде</div>
+						<ul class="footer__main-list">
+							<li><a href="">Философия бренда</a></li>
+							<li><a href="">Концепция доступный люкс</a></li>
+							<li><a href="">Партнеры бренда</a></li>
+							<li><a href="">Ароматы и упаковка</a></li>
+						</ul>
+					</div>
+					<div class="footer__main-item">
+						<div class="footer__main-title text-20-r">О компании</div>
+						<ul class="footer__main-list">
+							<li><a href="">Представитель в России</a></li>
+							<li><a href="">Карьера в России</a></li>
+							<li><a href="">Карьера за рубежем</a></li>
+							<li><a href="">СМИ о нас</a></li>
+						</ul>
+					</div>
+					<div class="footer__main-item">
+						<div class="footer__main-title text-20-r">Для бизнеса</div>
+						<ul class="footer__main-list">
+							<li><a href="">Барбершопам и салонам</a></li>
+							<li><a href="">Дистрибьютерам</a></li>
+							<li><a href="">Профессиональным магазинам</a></li>
+							<li><a href="">Академиям и школам</a></li>
+							<li><a href="">Частым мастерам</a></li>
+						</ul>
+					</div>
+					<div class="footer__main-item">
+						<div class="footer__main-title text-20-r">Поддержка</div>
+						<ul class="footer__main-list">
+							<li><a href="">Сервисные центры</a></li>
+							<li><a href="">Контроль качества</a></li>
+							<li><a href="">Вопрос ответ</a></li>
+							<li><a href="">Правовая информация</a></li>
+							<li><a href="">Политика конфиденциальности</a></li>
+						</ul>
+					</div>
+					<div class="footer__main-item">
+						<div class="footer__main-info">
+							<div class="footer__main-title text-20-r">
+								<a href="mailto:ask@rebelgroup.ru">ask@rebelgroup.ru</a>
+							</div>
+							<p>оставить отзыв о работе менеджера или качестве товара</p>
+						</div>
+						<div class="footer__main-info">
+							<div class="footer__main-title text-20-r">
+								<a href="mailto:pr@rebelgroup.ru">pr@rebelgroup.ru</a>
+							</div>
+							<p>Предложить участие в выставке, коллаборацию или публикацию в СМИ</p>
+						</div>
+						<div class="footer__main-info">
+							<div class="footer__main-title text-20-r">
+								<a href="mailto:opt@rebelgroup.ru">opt@rebelgroup.ru</a>
+							</div>
+							<p>Связаться по вопросу оптовых закупок или дилерских условий</p>
+						</div>
+					</div>
+					<div class="footer__main-link desktop">
+						<a href="tel:84956963132">+7 (495) 696-31-32</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__container container">
+				<div class="footer__bottom-wrapper">
+					<div class="footer__bottom-copyrights text-16">
+						<span>Copyright © 2023 ООО «REBEL GROUP»</span>
+					</div>
+					<a class="footer__bottom-request request-dev" href="#">
+						<div class="request-dev__text">
+							<p>Разработано</p>
+							<strong>Request <span>Design</span></strong>
+						</div>
+						<div class="request-dev__logo">
+							<img src="../assets/images/logo-request.svg" alt="">
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__inner mobile">
+		<div class="footer__top">
+			<div class="footer__container container">
+				<div class="footer__top-wrapper">
+					<div class="footer__logo">
+						<a href="#"><img src="../assets/images/logo-white.svg" alt=""></a>
+					</div>
+					<div class="footer__main-wrapper">
+						<div class="footer__main-item">
+							<div class="footer__main-title text-20-r">
+								<span>О бренде</span>
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path d="M9 12L14.351 17.5118C14.983 18.1627 16.017 18.1627 16.649 17.5118L22 12" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</span>
+							</div>
+							<ul class="footer__main-list">
+								<li><a href="">Философия бренда</a></li>
+								<li><a href="">Концепция доступный люкс</a></li>
+								<li><a href="">Партнеры бренда</a></li>
+								<li><a href="">Ароматы и упаковка</a></li>
+							</ul>
+						</div>
+						<div class="footer__main-item">
+							<div class="footer__main-title text-20-r">
+								<span>О компании</span>
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path d="M9 12L14.351 17.5118C14.983 18.1627 16.017 18.1627 16.649 17.5118L22 12" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</span>
+							</div>
+							<ul class="footer__main-list">
+								<li><a href="">Барбершопам и салонам</a></li>
+								<li><a href="">Дистрибьютерам</a></li>
+								<li><a href="">Профессиональным магазинам</a></li>
+								<li><a href="">Академиям и школам</a></li>
+								<li><a href="">Частым мастерам</a></li>
+							</ul>
+						</div>
+						<div class="footer__main-item">
+							<div class="footer__main-title text-20-r">
+								<a href="#">Стиль</a>
+							</div>
+						</div>
+						<div class="footer__main-item">
+							<div class="footer__main-title text-20-r">
+								<span>Для бизнеса</span>
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path d="M9 12L14.351 17.5118C14.983 18.1627 16.017 18.1627 16.649 17.5118L22 12" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</span>
+							</div>
+							<ul class="footer__main-list">
+								<li><a href="">Представитель в России</a></li>
+								<li><a href="">Карьера в России</a></li>
+								<li><a href="">Карьера за рубежем</a></li>
+								<li><a href="">СМИ о нас</a></li>
+							</ul>
+						</div>
+						<div class="footer__main-item">
+							<div class="footer__main-title text-20-r">
+								<span>Поддержка</span>
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path d="M9 12L14.351 17.5118C14.983 18.1627 16.017 18.1627 16.649 17.5118L22 12" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</span>
+							</div>
+							<ul class="footer__main-list">
+								<li><a href="">Представитель в России</a></li>
+								<li><a href="">Карьера в России</a></li>
+								<li><a href="">Карьера за рубежем</a></li>
+								<li><a href="">СМИ о нас</a></li>
+							</ul>
+						</div>
+						<div class="footer__main-item">
+							<div class="footer__main-title text-20-r">
+								<a href="#">Контакты</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__main">
+			<div class="footer__container container">
+				<div class="footer__main-wrapper">
+					<div class="footer__main-info">
+						<div class="footer__main-title text-20-r">
+							<a href="mailto:ask@rebelgroup.ru">ask@rebelgroup.ru</a>
+						</div>
+						<p>оставить отзыв о работе менеджера или качестве товара</p>
+					</div>
+					<div class="footer__main-info">
+						<div class="footer__main-title text-20-r">
+							<a href="mailto:pr@rebelgroup.ru">pr@rebelgroup.ru</a>
+						</div>
+						<p>Предложить участие в выставке, коллаборацию или публикацию в СМИ</p>
+					</div>
+					<div class="footer__main-info">
+						<div class="footer__main-title text-20-r">
+							<a href="mailto:opt@rebelgroup.ru">opt@rebelgroup.ru</a>
+						</div>
+						<p>Связаться по вопросу оптовых закупок или дилерских условий</p>
+					</div>
+				</div>
+				<div class="footer__btn">
+					<button class="btn-primary" type="button" data-modal="feedback">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+								<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+							</svg>
+						</span>
+						<strong>заказать звонок</strong>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+								<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+							</svg>
+						</span>
+					</button>
+				</div>
+				<div class="footer__main-social social">
+					<div class="social-item">
+						<a href=""><img src="../assets/images/icons/social/vk.svg" alt=""></a>
+					</div>
+					<div class="social-item">
+						<a href=""><img src="../assets/images/icons/social/instagram.svg" alt=""></a>
+					</div>
+					<div class="social-item">
+						<a href=""><img src="../assets/images/icons/social/youtube.svg" alt=""></a>
+					</div>
+					<div class="social-item">
+						<a href=""><img src="../assets/images/icons/social/telegram.svg" alt=""></a>
+					</div>
+					<div class="social-item">
+						<a href=""><img src="../assets/images/icons/social/dzen.svg" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__container container">
+				<div class="footer__bottom-wrapper">
+					<div class="footer__bottom-copyrights text-16">
+						<span>Copyright © 2023 ООО «REBEL GROUP»</span>
+					</div>
+					<a class="footer__bottom-request request-dev" href="#">
+						<div class="request-dev__text">
+							<p>Разработано</p>
+							<strong>Request <span>Design</span></strong>
+						</div>
+						<div class="request-dev__logo">
+							<img src="../assets/images/logo-request.svg" alt="">
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+		<div class="feedback-modal modal">
+	<div class="modal-back"></div>
+	<div class="modal-wrapper">
+		<button class="modal-exit">
+			<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+				<path d="M1 1L12.9389 12.9389" stroke="white"></path>
+				<path d="M1.11328 25L24.9911 1.12214" stroke="white"></path>
+				<path d="M13.0586 13.0605L24.9975 24.9995" stroke="white"></path>
+			</svg>
+		</button>
+		<div class="feedback-modal__content modal-content modal-content--first active">
+			<div class="feedback-modal__wrapper">
+				<form class="feedback-modal__form form">
+					<h4 class="feedback__form-title form-title">Свяжитесь с нами</h4>
+					<div class="feedback__form-container form-container">
+						<label class="feedback__form-wrapper form-wrapper">
+							<input type="text" class="feedback__form-inp form-inp" data-required="true">
+							<div class="feedback__form-label form-label">ФИО <b>*</b></div>
+						</label>
+						<label class="feedback__form-wrapper form-wrapper">
+							<input type="tel" class="feedback__form-inp form-inp" data-required="true" data-min-length="11">
+							<div class="feedback__form-label form-label">номер телефона <b>*</b></div>
+						</label>
+						<label class="feedback__form-wrapper form-wrapper">
+							<input type="text" class="feedback__form-inp form-inp">
+							<div class="feedback__form-label form-label">Ваш комментарий</div>
+						</label>
+					</div>
+					<button class="feedback__form-btn form-btn btn-primary">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+								<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+							</svg>
+						</span>
+						<strong>отправить</strong>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+								<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+							</svg>
+						</span>
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="feedback-modal__content modal-content modal-content--second">
+			<div class="feedback-modal__wrapper">
+				<div class="feedback-modal__title">
+					<span>заявка успешно отправлена</span>
+				</div>
+				<div class="feedback-modal__description">
+					<span>Спасибо за заполнение формы! Мы свяжемся с вами в течение 3 рабочих дней</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</body>
+</html>
