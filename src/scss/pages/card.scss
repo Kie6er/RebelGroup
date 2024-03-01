@@ -320,20 +320,6 @@
 				transform: translate(0, -50%);
 			}
 		}
-		// &:hover {
-		// 	.with_product__main-photo.second {
-		// 		width: 100%;
-		// 	}
-		// 	.with_product__main-wrapper {
-		// 		transform: translateY(-50%);
-		// 	}
-		// 	.with_product__main-photos {
-		// 		&::after {
-		// 			width: 100%;
-		// 			background-color: #ffffff00;
-		// 		}
-		// 	}
-		// }
 		&-text {
 			display: none;
 		}
@@ -671,14 +657,13 @@
 			&-name {
 				display: none;
 			}
-			.image-container {
-				aspect-ratio: auto;
-			}
+
 			&-photos {
 				height: auto;
 				display: flex;
 				gap: 2rem;
 			}
+
 			&-text {
 				display: block;
 				position: absolute;

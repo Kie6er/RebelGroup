@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Контакты</title>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=ffac2b37-9f44-43d8-8e3e-92f15073c2d1"></script>
+	</head>
+	<body style="overflow: hidden">
+		<include src="./components/header.html"></include>
+		<main>
+			<article class="breadcrumbs">
+				<div class="container">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li>Контакты</li>
+					</ul>
+				</div>
+			</article>
+			<section class="services">
+				<div class="services__container container">
+					<div id="map_service" class="services__map"></div>
+
+					<div class="services__modal">
+						<div class="services__wrapper">
+							<div class="services__cities">
+								<span class="services__modal-subtitle">Выберите ваш город</span>
+								<div class="services__main">
+									<li class="services__main-item services__list-item">москва</li>
+									<li class="services__main-item services__list-item">санкт-петербург</li>
+								</div>
+								<div class="services__content">
+									<div class="services__list">
+										<h3 class="services__content-letter">А</h3>
+										<li class="services__list-item">Апреловка</li>
+										<li class="services__list-item">Архангельск</li>
+										<li class="services__list-item">Альметьевск</li>
+										<li class="services__list-item">Арзсамас</li>
+									</div>
+									<!-- <div class="services__list">
+										<h3 class="services__content-letter">Б</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">В</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div> -->
+									<!-- <div class="services__list">
+										<h3 class="services__content-letter">Г</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">Д</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">Е</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">Ж</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">З</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">И</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">И</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">И</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">И</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">И</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div>
+									<div class="services__list">
+										<h3 class="services__content-letter">И</h3>
+										<li class="services__list-item">апреловка</li>
+										<li class="services__list-item">архангельск</li>
+										<li class="services__list-item">альметьевск</li>
+										<li class="services__list-item">арзсамас</li>
+									</div> -->
+								</div>
+							</div>
+							<div class="services__salons no-tran">
+								<button class="services__salons-back">
+									<svg width="32" height="8" viewBox="0 0 32 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M31 4.5C31.2761 4.5 31.5 4.27614 31.5 4C31.5 3.72386 31.2761 3.5 31 3.5L31 4.5ZM0.646446 3.64644C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82842L1.70711 4L4.53553 1.17157C4.7308 0.976308 4.7308 0.659726 4.53553 0.464464C4.34027 0.269202 4.02369 0.269202 3.82843 0.464464L0.646446 3.64644ZM31 3.5L1 3.5L1 4.5L31 4.5L31 3.5Z" fill="#DD921E" />
+									</svg>
+									к списку
+								</button>
+								<h3 class="services__salons-city">санкт-петербург</h3>
+								<ul class="services__salons-list">
+									<li class="services__salons-item" data-city="санкт-петербург" data-coords="55.845991, 37.661785">
+										<div class="services__salons-img">
+											<img src="./assets/images/logo.png" alt="" />
+										</div>
+										<div class="services__info">
+											<span class="services__info-name">барбершоп topgun Европолис</span>
+											<div class="services__info-main">
+												<span class="services__info-address">Полюстровский проспект, 84, ТРК "Европолис"</span>
+												<span class="services__info-time">Пн.-Вс.: 10:00-22:00</span>
+											</div>
+											<div class="services__info-contacts">
+												<span>+7 (911) 977-04-44,</span>
+												<span>topgun@gmail.com</span>
+											</div>
+										</div>
+									</li>
+									<li class="services__salons-item" data-city="санкт-петербург" data-coords="55.7893423, 37.6569675">
+										<div class="services__salons-img">
+											<img src="./assets/images/logo.png" alt="" />
+										</div>
+										<div class="services__info">
+											<span class="services__info-name">барбершоп topgun Европолис</span>
+											<div class="services__info-main">
+												<span class="services__info-address">Полюстровский проспект, 84, ТРК "Европолис"</span>
+												<span class="services__info-time">Пн.-Вс.: 10:00-22:00</span>
+											</div>
+											<div class="services__info-contacts">
+												<span>+7 (911) 977-04-44,</span>
+												<span>topgun@gmail.com</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal_question">
+					<div class="modal_question__main">
+						<button class="modal_question__main-close">
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M3 3L14.9389 14.9389" stroke="white" />
+								<path d="M3.11328 27L26.9911 3.12214" stroke="white" />
+								<path d="M15.0586 15.0601L26.9975 26.999" stroke="white" />
+							</svg>
+						</button>
+						<div class="modal_question__main-title">
+							Ваш город <br class="mob-br" />
+							санкт-Петербург?
+						</div>
+						<div class="modal_question__main-btns">
+							<button class="btn-primary btn-yes" type="button">
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+										<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<strong>да</strong>
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+										<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+									</svg>
+								</span>
+							</button>
+							<button class="btn-primary btn-no" type="button">
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+										<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+									</svg>
+								</span>
+								<strong>нет</strong>
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+										<path d="M5 20C4.72386 20 4.5 20.2239 4.5 20.5C4.5 20.7761 4.72386 21 5 21V20ZM35.3536 20.8536C35.5488 20.6583 35.5488 20.3417 35.3536 20.1464L32.1716 16.9645C31.9763 16.7692 31.6597 16.7692 31.4645 16.9645C31.2692 17.1597 31.2692 17.4763 31.4645 17.6716L34.2929 20.5L31.4645 23.3284C31.2692 23.5237 31.2692 23.8403 31.4645 24.0355C31.6597 24.2308 31.9763 24.2308 32.1716 24.0355L35.3536 20.8536ZM5 21H35V20H5V21Z" fill="#DD921E"></path>
+									</svg>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				const mapEl = document.getElementById('map_service');
+				const containerServ = document.querySelector('.services');
+
+				const salonsModal = document.querySelector('.services__salons');
+				const servicesModal = document.querySelector('.services__modal');
+				const wrapper = document.querySelector('.services__wrapper');
+				const btnBack = document.querySelector('.services__salons-back');
+				const cityBlock = document.querySelector('.services__salons-city');
+				const dataLocations = ['55.7893423, 37.6569675', '55.7902891, 37.5308876', '59.9880254, 30.3533107', '55.845991, 37.661785'];
+
+				setTimeout(() => {
+					salonsModal.classList.remove('no-tran');
+				}, 100);
+
+				const cities = document.querySelectorAll('.services__list-item');
+				const mapItems = document.querySelectorAll('.services__salons-item');
+				const mapLoc = document.querySelectorAll('.services__list-item');
+
+				btnBack.addEventListener('click', () => {
+					wrapper.classList.remove('active');
+					if (window.innerWidth < 769) {
+						containerServ.classList.contains('visible') ? containerServ.classList.remove('visible') : null;
+					}
+				});
+
+				if (mapEl) {
+					ymaps
+						.load()
+						.then(maps => {
+							const map = new maps.Map('map_service', {
+								center: [55.7893423, 37.6569675],
+								zoom: 12,
+								controls: [],
+							});
+
+							var myCollection = new maps.GeoObjectCollection(
+								{},
+								{
+									preset: 'islands#blueIcon',
+								}
+							);
+
+							Array.prototype.forEach.call(dataLocations, function (item, id) {
+								var coords = item.split(',').map(function (coord) {
+									return parseFloat(coord.trim());
+								});
+								console.log(coords);
+
+								var placemark = new maps.Placemark(
+									coords,
+									{},
+									{
+										iconLayout: 'default#image', // Используем стандартный макет изображения
+										iconImageHref: './assets/images/mapMarker.svg', // Путь к вашей иконке
+										// iconImageSize: [remToPx(12.6), remToPx(5.7)], // Размеры вашей иконки
+									}
+								);
+								myCollection.add(placemark);
+								map.geoObjects.add(placemark);
+
+								// При клике на элемент списка центрируем карту на метке
+							});
+
+							// Обработка клика на барбершоп в определенном городе
+							mapItems.forEach(item => {
+								item.addEventListener('click', function () {
+									var coords = item.dataset.coords.split(',').map(function (coord) {
+										return parseFloat(coord.trim());
+									});
+									console.log('coords: ', coords);
+									mapItems.forEach(mapItem => {
+										mapItem.classList.remove('active');
+									});
+									item.classList.add('active');
+
+									map.geoObjects.each(function (geoObject) {
+										const coordsGeo = geoObject.geometry.getCoordinates();
+										if (item.dataset.coords.trim() === coordsGeo.join(', ')) {
+											console.log('geoOBJECT', geoObject, coordsGeo); // Выводим каждый маркер в консоль
+											// geoObject.options.set('iconLayout', 'changedIcon');
+											geoObject.options.set('iconImageHref', './assets/images/placemark.svg'); // Установка новой ссылки на изображение
+											console.log(geoObject.options.get('iconImageHref'));
+										} else {
+											geoObject.options.set('iconImageHref', './assets/images/mapMarker.svg');
+										}
+									});
+									map.setCenter(coords);
+
+									// item.classList.add('active');
+									// mapLoc.forEach(loc => {
+									// 	loc.classList.remove('visible');
+									// });
+									// mapLoc[id].classList.add('visible');
+								});
+							});
+
+							// Обработка клика на метку
+							map.geoObjects.each(function (geoObject) {
+								geoObject.events.add('click', function (e) {
+									const coordsGeo = geoObject.geometry.getCoordinates();
+									mapItems.forEach(item => {
+										if (item.dataset.coords.trim() === coordsGeo.join(', ')) {
+											console.log('est coords');
+											item.classList.add('active');
+											const city = item.dataset.city;
+											cityBlock.textContent = city;
+											map.geoObjects.each(function (geoObject) {
+												geoObject.options.set('iconImageHref', './assets/images/mapMarker.svg');
+											});
+											geoObject.options.set('iconImageHref', './assets/images/placemark.svg');
+											!wrapper.classList.contains('active') ? wrapper.classList.add('active') : null;
+										} else {
+											item.classList.remove('active');
+										}
+									});
+									// Обработчик события клика на маркере
+									console.log('Marker clicked!');
+									// Дополнительные действия при клике на маркер
+									map.setCenter(coordsGeo);
+								});
+							});
+
+							// Обработка кликов на название городов
+							cities.forEach(city => {
+								city.addEventListener('click', e => {
+									// if()
+									ymaps.geocode(city.textContent.trim()).then(function (res) {
+										var firstGeoObject = res.geoObjects.get(0);
+										wrapper.classList.add('active');
+										// Проверяем, что координаты доступны
+										if (firstGeoObject) {
+											// Получаем координаты города
+											var coords = firstGeoObject.geometry.getCoordinates();
+											console.log(coords);
+											// Устанавливаем центр карты по координатам города
+											map.setCenter(coords, map.getZoom());
+											cityBlock.textContent = city.textContent.trim();
+											if (window.innerWidth < 769) {
+												!containerServ.classList.contains('visible') ? containerServ.classList.add('visible') : null;
+											}
+										} else {
+											console.error('Координаты не найдены');
+										}
+									});
+
+									map.geoObjects.each(function (geoObject) {
+										geoObject.options.set('visible', true);
+									});
+								});
+							});
+
+							// Кнопка "нет" и крестик
+							const btnNo = document.querySelector('.btn-no');
+							const questionClose = document.querySelector('.modal_question__main-close');
+
+							questionClose.addEventListener('click', e => modalClose(e));
+							btnNo.addEventListener('click', e => modalClose(e));
+
+							function modalClose(e) {
+								document.body.style.overflow = '';
+								e.target.closest('.modal_question').style.display = 'none';
+								map.geoObjects.each(function (geoObject) {
+									geoObject.options.set('visible', false);
+								});
+							}
+						})
+						.catch(error => console.log('Failed to load Yandex Maps', error));
+				}
+			</script>
+		</main>
+		<include src="./components/footer.html"></include>
+		<include src="./components/modal.html"></include>
+	</body>
+</html>
