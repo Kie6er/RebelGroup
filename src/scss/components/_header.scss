@@ -256,6 +256,8 @@
 		}
 		&__overlay {
 			height: 110vh;
+			backdrop-filter: none;
+			background-color: #000;
 		}
 		// .header__burger-btn
 		&__burger-btn {
@@ -288,7 +290,11 @@
 					a {
 						font-size: 4.8rem;
 						font-weight: 400;
-						letter-spacing: auto;
+						letter-spacing: 1;
+
+						&:hover {
+							color: $white;
+						}
 					}
 				}
 			}
@@ -312,6 +318,12 @@
 					li {
 						gap: 3.2rem;
 						height: 6rem;
+
+						&:hover {
+							a {
+								color: $white;
+							}
+						}
 						span {
 							display: none;
 							width: 6rem;
