@@ -107,6 +107,11 @@
 		flex-direction: column;
 		justify-content: space-between;
 		gap: 2rem;
+		transition: background 0.2s linear;
+
+		&:hover {
+			background-color: #2a2a2a;
+		}
 	}
 	// .vacancy-item__num
 	&__num {
