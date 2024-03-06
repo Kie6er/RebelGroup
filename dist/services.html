@@ -510,6 +510,10 @@
 									});
 									map.setCenter(coords);
 
+									if (window.innerWidth < 769) {
+										containerServ.scrollIntoView({ behavior: 'smooth' });
+									}
+
 									// item.classList.add('active');
 									// mapLoc.forEach(loc => {
 									// 	loc.classList.remove('visible');
