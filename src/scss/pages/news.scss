@@ -297,22 +297,7 @@
 				.news-info__info-title {
 					margin-bottom: 1.2rem;
 				}
-				.float {
-					max-width: 107rem;
-					position: relative;
-					display: flex;
-					justify-content: flex-end;
-					.img {
-						max-width: 50.6rem;
-						height: auto;
-						padding-right: 2.4rem;
-						flex-shrink: 0;
-					}
-					.float-content {
-						width: 53.7rem;
-						flex-shrink: 0;
-					}
-				}
+
 				p {
 					font-size: 1.6rem;
 					color: rgba(194, 194, 194, 0.7);
@@ -633,7 +618,7 @@
 						.img {
 							max-width: 100%;
 							width: 100%;
-							height: auto;
+							height: 93rem;
 							padding-right: 0;
 							flex-shrink: 0;
 							order: 2;
@@ -758,7 +743,7 @@
 	}
 	.blockquote {
 		&:not(:last-child) {
-			margin-bottom: 2rem;
+			margin-bottom: 2.4rem;
 		}
 		blockquote {
 			display: flow-root;
