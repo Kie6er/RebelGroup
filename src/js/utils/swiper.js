@@ -346,24 +346,6 @@ $(document).ready(() => {
 			// allSlides.forEach(())
 		}
 	}
-	if ($('.shops-advantages__slider').length) {
-		let shopsAdvantagesSlider = new Swiper('.shops-advantages__slider', {
-			modules: [Navigation],
-			slidesPerView: 'auto',
-			spaceBetween: `${remToPx(4)}rem`,
-			speed: 500,
-			enabled: true,
-			navigation: {
-				nextEl: '.shops-advantages__slider-navigation-btn--next',
-				prevEl: '.shops-advantages__slider-navigation-btn--prev',
-			},
-			breakpoints: {
-				768: {
-					enabled: false,
-				},
-			},
-		});
-	}
 	$('.main-brand__slider-representative') &&
 		new Swiper('.main-brand__slider-representative', {
 			modules: [Navigation],
