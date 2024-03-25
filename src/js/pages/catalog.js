@@ -117,5 +117,69 @@ $(document).ready(() => {
 		priceSlider.noUiSlider.on('update', function (values) {
 			priceValues.innerHTML = values.map(el => Math.round(el)).join(' - ');
 		});
+
+		function setParameters(name, value) {
+			const url = new URL(window.location.href);
+			if (url.searchParams.get(name)) url.searchParams.delete(name);
+			if (value) url.searchParams.append(name, value);
+			window.history.pushState(null, null, url);
+		}
+
+		const formCatalog = document.querySelector('.catalog-cosmetic__settings')
+
+		formCatalog.addEventListener('submit', (e) => {
+			e.preventDefault()
+			console.log('reset')
+			formCatalog.reset()
+			formCatalog.querySelector('.catalog-cosmetic__filter-text span').textContent = ''
+			priceSlider.noUiSlider.set([0, 10000]);
+
+			const baseUrl = window.location.href.split('?')[0];
+			window.history.replaceState({}, document.title, baseUrl);
+
+			let price = document.getElementById('price-range').innerText.split(' - ');
+			let data = new FormData();
+			console.log(price)
+			data.append('section', document.getElementById('catalog').getAttribute('data-section'));
+			data.append('sort', document.querySelector('.catalog-cosmetic__sort input:checked').value);
+			data.append('category', categories.length ? categories.join(',') : '');
+			data.append('price_from', price[0]);
+			data.append('price_up_to', price[1]);
+			data.append('page', page);
+			
+			sendAjax('/ajax/filter_catalog.php', data, response => {
+				const catalog = document.getElementById('catalog');
+				catalog?.querySelector('.catalog-cosmetic__list')?.remove();
+				catalog?.querySelector('.catalog-cosmetic__pagination')?.remove();
+				document.querySelector('.catalog-cosmetic__container').insertAdjacentHTML('beforeend', response);
+				addPagination();
+			});
+
+		})
+
+		function addPagination() {
+			document
+				.querySelector('.catalog-cosmetic__pagination')
+				.querySelectorAll('.slider-navigation__btn')
+				.forEach(button => {
+					button.querySelector('svg').style.pointerEvents = 'none';
+					button.addEventListener('click', e => {
+						const totalPages = parseInt(document.querySelector('.catalog-cosmetic__pagination .swiper-pagination-total').innerHTML);
+						let filter = false;
+						if (e.target.classList.contains('catalog-cosmetic__slider-navigation-btn--next') && page <= totalPages) {
+							filter = true;
+							page++;
+						} else if (e.target.classList.contains('catalog-cosmetic__slider-navigation-btn--prev') && page > 1) {
+							filter = true;
+							page--;
+						}
+						if (filter) {
+							setParameters('page', page);
+							filterCatalog(getData());
+							location = location.pathname + location.search + '#catalog';
+						}
+					});
+				});
+		}
 	}
 });
